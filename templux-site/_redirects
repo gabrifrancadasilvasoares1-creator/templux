@@ -1,0 +1,10 @@
+# Templux — Netlify Redirects
+
+# Pretty URLs (sem .html na barra de endereços)
+/catalogo                    /catalogo.html                        200
+/sobre                       /sobre.html                           200
+/contato                     /contato.html                         200
+/produto-black-edge-barber   /produto-black-edge-barber.html       200
+
+# 404 personalizado
+/*                           /404.html                             404

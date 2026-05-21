@@ -1,0 +1,35 @@
+TEMPLUX — LICENÇA DE USO
+========================
+Copyright (c) 2025 Templux. Todos os direitos reservados.
+
+LICENÇA PESSOAL / COMERCIAL (por produto adquirido)
+----------------------------------------------------
+
+Ao adquirir este template, você recebe uma licença pessoal,
+não exclusiva e intransferível, sujeita aos termos abaixo.
+
+PERMITIDO:
+- Usar o template em UM (1) projeto ou cliente por licença
+- Modificar, personalizar e adaptar o código livremente
+- Remover ou substituir os créditos visuais da Templux
+- Publicar o site resultante em qualquer hospedagem
+- Usar em projetos comerciais (sites para clientes)
+
+NÃO PERMITIDO:
+- Redistribuir, revender ou compartilhar o template original
+- Oferecer o template como parte de um produto próprio para revenda
+- Clonar ou criar produtos derivados para comercialização
+- Usar em mais de um projeto sem adquirir licença adicional
+- Remover este arquivo LICENSE.txt do pacote original
+
+ISENÇÃO DE GARANTIA:
+Este template é fornecido "como está", sem garantias expressas
+ou implícitas. A Templux não se responsabiliza por eventuais
+falhas, erros ou incompatibilidades com sistemas de terceiros.
+O uso do template é de inteira responsabilidade do comprador.
+
+Para licenças múltiplas, uso em agências ou dúvidas:
+E-mail: contato@templux.com.br
+WhatsApp: +55 (11) 99999-9999
+
+Templux — templux.com.br

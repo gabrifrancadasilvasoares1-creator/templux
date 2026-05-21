@@ -1,0 +1,7 @@
+node_modules/
+.claude/
+template-barbearia.zip
+*.zip
+package-lock.json
+package.json
+screenshot.js

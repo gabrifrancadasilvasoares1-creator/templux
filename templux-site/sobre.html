@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre — Templux</title>
+  <meta name="description" content="Conheça a Templux — templates premium para sites de pequenos negócios. Design moderno, código limpo." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-hero { padding:calc(var(--nav-height) + 80px) 0 80px; position:relative; overflow:hidden; }
+    .about-layout { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+    .about-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); padding:40px; text-align:center; position:relative; overflow:hidden; }
+    .about-card::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; background:radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%); border-radius:50%; pointer-events:none; }
+    .about-card-emoji { font-size:4.5rem; margin-bottom:18px; line-height:1; }
+    .about-card h3 { font-family:var(--font-display); font-size:1.3rem; font-weight:700; margin-bottom:8px; }
+    .about-card p { color:var(--text-secondary); font-size:0.9rem; line-height:1.65; }
+    .value-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px; transition:var(--transition); }
+    .value-card:hover { border-color:var(--border-accent); transform:translateY(-3px); }
+    .value-card .icon { font-size:1.7rem; margin-bottom:12px; }
+    .value-card h3 { font-family:var(--font-display); font-size:0.95rem; font-weight:600; margin-bottom:8px; }
+    .value-card p { color:var(--text-secondary); font-size:0.85rem; line-height:1.6; }
+    .cta-band { position:relative; overflow:hidden; background:linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(59,130,246,0.06) 100%); border:1px solid var(--border-accent); border-radius:var(--radius-xl); padding:72px 60px; text-align:center; }
+    .cta-band::before { content:''; position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:400px; height:400px; background:radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%); pointer-events:none; }
+    @media (max-width:768px) { .about-layout { grid-template-columns:1fr; } .cta-band { padding:48px 24px; } }
+  </style>
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-dot"></div>Temp<span>lux</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="sobre.html" class="active">Sobre</a></li><li><a href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-cta"><a href="contato.html" class="btn btn-ghost">Suporte</a><a href="catalogo.html" class="btn btn-primary btn-sm">Ver templates →</a></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="index.html">Início</a><a href="catalogo.html">Catálogo</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a>
+</div>
+
+<section class="about-hero">
+  <div class="hero-ambient hero-ambient-1" aria-hidden="true"></div>
+  <div class="container">
+    <div class="breadcrumb animate-fade-up"><a href="index.html">Início</a><span class="breadcrumb-sep">›</span><span>Sobre</span></div>
+    <div class="about-layout">
+      <div>
+        <span class="badge badge-accent animate-fade-up delay-1" style="margin-bottom:20px;">✦ Nossa história</span>
+        <h1 class="display-lg animate-fade-up delay-2" style="margin-bottom:18px;">Templates feitos para quem quer resultado.</h1>
+        <p class="body-lg animate-fade-up delay-3" style="color:var(--text-secondary);margin-bottom:16px;">A Templux nasceu de uma observação simples: pequenos negócios precisam de sites profissionais, mas contratar um desenvolvedor custa caro e plataformas genéricas parecem todas iguais.</p>
+        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:32px;" class="animate-fade-up delay-4">Por isso criamos templates HTML, CSS e JS com design de agência — modernos, responsivos, fáceis de editar. Para que barbearias, salões, restaurantes e negócios locais tenham presença digital de verdade, por um preço justo.</p>
+        <a href="catalogo.html" class="btn btn-primary btn-lg animate-fade-up delay-4">Explorar catálogo →</a>
+      </div>
+      <div class="animate-fade-up delay-2">
+        <div class="about-card">
+          <div class="about-card-emoji">🔪</div>
+          <h3>Design de agência por preço de template.</h3>
+          <p>Cada template é pensado para converter — não apenas para ser bonito. Sites que fazem o trabalho de vender por você.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="grid-4">
+      <div class="stat-card reveal"><div class="number">1</div><div class="label">Template disponível agora</div></div>
+      <div class="stat-card reveal"><div class="number">6+</div><div class="label">Nichos em desenvolvimento</div></div>
+      <div class="stat-card reveal"><div class="number">R$29</div><div class="label">Preço inicial</div></div>
+      <div class="stat-card reveal"><div class="number">∞</div><div class="label">Sem mensalidade</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto;text-align:center;" class="reveal">
+      <span class="badge badge-accent" style="margin-bottom:24px;">Nossa missão</span>
+      <h2 class="display-lg" style="margin-bottom:20px;">Acreditamos que todo negócio merece um site que vende.</h2>
+      <p class="body-lg" style="color:var(--text-secondary);margin-bottom:16px;">Não importa se você é autônomo, dono de uma barbearia no bairro ou está montando sua primeira loja. Você merece uma presença online que faça jus ao seu trabalho.</p>
+      <p style="color:var(--text-secondary);line-height:1.8;">A Templux entrega isso sem complicação: comprou, baixou, personalizou, publicou. Sem mensalidade, sem servidor especial, sem precisar entender de programação profunda.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header"><span class="badge badge-accent label">Nossos valores</span><h2 class="display-lg">O que guia cada template</h2></div>
+    <div class="grid-3">
+      <div class="value-card reveal"><div class="icon">🎯</div><h3>Foco em conversão</h3><p>Design bonito é bom. Design que converte é melhor. Cada template é pensado para que o visitante tome uma ação.</p></div>
+      <div class="value-card reveal"><div class="icon">⚡</div><h3>Simplicidade radical</h3><p>HTML, CSS, JS puro. Sem dependências desnecessárias, sem frameworks pesados. Simples e eficaz.</p></div>
+      <div class="value-card reveal"><div class="icon">💎</div><h3>Qualidade sem concessões</h3><p>Cada template passa por revisão de design, código e mobile. Se não parece profissional, não sai.</p></div>
+      <div class="value-card reveal"><div class="icon">🤝</div><h3>Honestidade</h3><p>Preço justo, sem surpresas. O que você vê na demo é o que você recebe. Sem truques.</p></div>
+      <div class="value-card reveal"><div class="icon">📱</div><h3>Mobile primeiro</h3><p>A maioria dos clientes vai ver seu site pelo celular. Todos os templates são otimizados para mobile.</p></div>
+      <div class="value-card reveal"><div class="icon">🛠️</div><h3>Editável por qualquer um</h3><p>Código comentado, README incluso, estrutura clara. Sem precisar ser desenvolvedor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header"><span class="badge badge-accent label">Para quem é</span><h2 class="display-lg">A Templux é para você se...</h2></div>
+    <div class="grid-3">
+      <div class="glass" style="padding:32px;" class="reveal">
+        <div style="font-size:2.2rem;margin-bottom:14px;">💈</div>
+        <h3 class="display-sm" style="margin-bottom:10px;">Você tem um negócio local</h3>
+        <p style="color:var(--text-secondary);font-size:0.875rem;line-height:1.6;">Barbeiro, cabeleireiro, dono de restaurante — quer um site profissional sem gastar uma fortuna.</p>
+      </div>
+      <div class="glass" style="padding:32px;" class="reveal">
+        <div style="font-size:2.2rem;margin-bottom:14px;">💻</div>
+        <h3 class="display-sm" style="margin-bottom:10px;">Você é freelancer ou iniciante</h3>
+        <p style="color:var(--text-secondary);font-size:0.875rem;line-height:1.6;">Quer entregar sites rapidamente para clientes usando um ponto de partida de qualidade.</p>
+      </div>
+      <div class="glass" style="padding:32px;" class="reveal">
+        <div style="font-size:2.2rem;margin-bottom:14px;">📦</div>
+        <h3 class="display-sm" style="margin-bottom:10px;">Você quer aprender editando</h3>
+        <p style="color:var(--text-secondary);font-size:0.875rem;line-height:1.6;">Templates ótimos para quem aprende HTML e CSS — código limpo, comentado e fácil de entender.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2 class="display-lg" style="margin-bottom:14px;">Pronto para começar?</h2>
+      <p style="color:var(--text-secondary);margin-bottom:32px;font-size:1.05rem;">Explore o catálogo e encontre o template ideal para o seu negócio.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="catalogo.html" class="btn btn-primary btn-lg">Ver catálogo →</a>
+        <a href="contato.html" class="btn btn-secondary btn-lg">Falar com a gente</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="font-size:1.3rem;text-decoration:none;"><div class="nav-logo-dot"></div>Temp<span>lux</span></a><p>Templates premium para sites de pequenos negócios.</p></div>
+      <div class="footer-col"><h4>Páginas</h4><ul><li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      <div class="footer-col"><h4>Categorias</h4><ul><li><a href="catalogo.html?cat=barbearia">Barbearia</a></li><li><a href="catalogo.html?cat=salao">Salão</a></li><li><a href="catalogo.html?cat=delivery">Delivery</a></li><li><a href="catalogo.html?cat=restaurante">Restaurante</a></li></ul></div>
+      <div class="footer-col"><h4>Suporte</h4><ul><li><a href="contato.html">Fale conosco</a></li><li><a href="https://wa.me/5521972191212" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://instagram.com/templux" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Templux. Todos os direitos reservados.</span><div class="footer-socials"><a href="https://instagram.com/templux" target="_blank" rel="noopener" aria-label="Instagram">📷</a><a href="https://wa.me/5521972191212" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></div></div>
+  </div>
+</footer>
+<div id="globalToast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

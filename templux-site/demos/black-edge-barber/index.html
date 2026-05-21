@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =============================================
+       SEO BÁSICO — edite conforme sua barbearia
+  ============================================= -->
+  <title>Black Edge Barber | Corte de Elite no Centro</title>
+  <meta name="description" content="Barbearia premium especializada em cortes modernos, barba e tratamentos masculinos. Agende seu horário agora pelo WhatsApp." />
+  <meta name="keywords" content="barbearia, corte de cabelo, barba, barbearia premium, [sua cidade]" />
+  <meta name="author" content="Black Edge Barber" />
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:title" content="Black Edge Barber | Corte de Elite" />
+  <meta property="og:description" content="Experiência premium em cortes masculinos. Agende agora." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seusite.com.br" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons (leve, sem framework) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <!-- Stylesheet principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       NAVBAR
+  ============================================= -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo">
+        <span class="navbar__logo-icon">✦</span>
+        <span class="navbar__logo-text">Black<strong>Edge</strong></span>
+      </a>
+
+      <!-- Links desktop -->
+      <nav class="navbar__links" id="navLinks">
+        <a href="#servicos" class="navbar__link">Serviços</a>
+        <a href="#galeria" class="navbar__link">Galeria</a>
+        <a href="#sobre" class="navbar__link">Sobre</a>
+        <a href="#depoimentos" class="navbar__link">Clientes</a>
+        <a href="#cta" class="navbar__link navbar__link--cta">Agendar</a>
+      </nav>
+
+      <!-- Botão hambúrguer mobile -->
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Menu mobile overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-menu__links">
+        <a href="#servicos" class="mobile-menu__link">Serviços</a>
+        <a href="#galeria" class="mobile-menu__link">Galeria</a>
+        <a href="#sobre" class="mobile-menu__link">Sobre</a>
+        <a href="#depoimentos" class="mobile-menu__link">Clientes</a>
+        <a href="#cta" class="mobile-menu__link mobile-menu__link--cta">Agendar agora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <section class="hero" id="hero">
+    <!-- Fundo decorativo -->
+    <div class="hero__bg">
+      <div class="hero__bg-grid"></div>
+      <div class="hero__bg-gradient"></div>
+    </div>
+
+    <div class="hero__container">
+      <div class="hero__content">
+        <!-- Badge -->
+        <span class="hero__badge fade-in-up" style="--delay: 0s">
+          <i class="ph ph-star-four"></i> Premium Barber Shop
+        </span>
+
+        <!-- Headline -->
+        <h1 class="hero__title fade-in-up" style="--delay: 0.1s">
+          O Corte que<br />
+          <em>Define</em> quem<br />
+          você é.
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="hero__subtitle fade-in-up" style="--delay: 0.2s">
+          Experiência premium em cortes masculinos, barba e tratamentos. Profissionais certificados, ambiente exclusivo.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero__actions fade-in-up" style="--delay: 0.3s">
+          <a href="#cta" class="btn btn--primary">
+            <i class="ph ph-whatsapp-logo"></i>
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#servicos" class="btn btn--ghost">
+            Ver serviços
+            <i class="ph ph-arrow-down-right"></i>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero__stats fade-in-up" style="--delay: 0.4s">
+          <div class="hero__stat">
+            <strong>+2.400</strong>
+            <span>Clientes atendidos</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <strong>8 anos</strong>
+            <span>De experiência</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <strong>4.9 ★</strong>
+            <span>Avaliação média</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagem hero -->
+      <div class="hero__image fade-in-right" style="--delay: 0.2s">
+        <div class="hero__image-wrapper">
+          <!-- Troque pela sua imagem -->
+          <img
+            src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80"
+            alt="Barbeiro profissional realizando corte"
+            loading="eager"
+          />
+          <!-- Floating card -->
+          <div class="hero__card">
+            <i class="ph ph-check-circle hero__card-icon"></i>
+            <div>
+              <strong>Próximo horário</strong>
+              <span>Hoje às 15h disponível</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#servicos" class="hero__scroll" aria-label="Rolar para baixo">
+      <i class="ph ph-arrow-down"></i>
+    </a>
+  </section>
+
+  <!-- =============================================
+       SERVIÇOS
+  ============================================= -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <!-- Cabeçalho da seção -->
+      <div class="section-header reveal">
+        <span class="section-tag">O que oferecemos</span>
+        <h2 class="section-title">Serviços <em>premium</em></h2>
+        <p class="section-desc">Cada detalhe pensado para sua melhor experiência</p>
+      </div>
+
+      <!-- Cards de serviços -->
+      <div class="servicos__grid">
+
+        <div class="servico-card reveal">
+          <div class="servico-card__icon">
+            <i class="ph ph-scissors"></i>
+          </div>
+          <h3 class="servico-card__title">Corte Clássico</h3>
+          <p class="servico-card__desc">Corte tradicional executado com precisão. Inclui lavagem e finalização.</p>
+          <div class="servico-card__price">
+            <span>A partir de</span>
+            <strong>R$ 55</strong>
+          </div>
+          <a href="#cta" class="servico-card__link">Agendar <i class="ph ph-arrow-right"></i></a>
+        </div>
+
+        <div class="servico-card servico-card--featured reveal">
+          <span class="servico-card__badge">Mais popular</span>
+          <div class="servico-card__icon">
+            <i class="ph ph-crown-simple"></i>
+          </div>
+          <h3 class="servico-card__title">Corte + Barba</h3>
+          <p class="servico-card__desc">Combo completo: corte premium + barba modelada + hidratação pós-barba.</p>
+          <div class="servico-card__price">
+            <span>A partir de</span>
+            <strong>R$ 90</strong>
+          </div>
+          <a href="#cta" class="servico-card__link">Agendar <i class="ph ph-arrow-right"></i></a>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-card__icon">
+            <i class="ph ph-drop"></i>
+          </div>
+          <h3 class="servico-card__title">Barba Completa</h3>
+          <p class="servico-card__desc">Modelagem, hidratação e acabamento perfeito. Navalha profissional.</p>
+          <div class="servico-card__price">
+            <span>A partir de</span>
+            <strong>R$ 45</strong>
+          </div>
+          <a href="#cta" class="servico-card__link">Agendar <i class="ph ph-arrow-right"></i></a>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-card__icon">
+            <i class="ph ph-sparkle"></i>
+          </div>
+          <h3 class="servico-card__title">Tratamento Capilar</h3>
+          <p class="servico-card__desc">Hidratação profunda, tonalização e reconstrução para cabelos danificados.</p>
+          <div class="servico-card__price">
+            <span>A partir de</span>
+            <strong>R$ 75</strong>
+          </div>
+          <a href="#cta" class="servico-card__link">Agendar <i class="ph ph-arrow-right"></i></a>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-card__icon">
+            <i class="ph ph-paint-brush"></i>
+          </div>
+          <h3 class="servico-card__title">Coloração</h3>
+          <p class="servico-card__desc">Loiro, platinado, mechas ou cobertura de brancos. Técnicas modernas.</p>
+          <div class="servico-card__price">
+            <span>A partir de</span>
+            <strong>R$ 120</strong>
+          </div>
+          <a href="#cta" class="servico-card__link">Agendar <i class="ph ph-arrow-right"></i></a>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-card__icon">
+            <i class="ph ph-smiley"></i>
+          </div>
+          <h3 class="servico-card__title">Black Label</h3>
+          <p class="servico-card__desc">Experiência VIP: corte + barba + sobrancelha + hidratação + welcome drink.</p>
+          <div class="servico-card__price">
+            <span>A partir de</span>
+            <strong>R$ 160</strong>
+          </div>
+          <a href="#cta" class="servico-card__link">Agendar <i class="ph ph-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       GALERIA
+  ============================================= -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Nosso trabalho</span>
+        <h2 class="section-title">Galeria <em>de cortes</em></h2>
+        <p class="section-desc">Cada corte conta uma história. Veja alguns dos nossos trabalhos.</p>
+      </div>
+    </div>
+
+    <!-- Grid da galeria (sem container para ir full-width) -->
+    <div class="galeria__grid reveal">
+
+      <div class="galeria__item galeria__item--tall">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=500&q=80" alt="Corte degradê moderno" loading="lazy" />
+        <div class="galeria__overlay">
+          <span>Degradê Moderno</span>
+        </div>
+      </div>
+
+      <div class="galeria__item">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500&q=80" alt="Barba modelada" loading="lazy" />
+        <div class="galeria__overlay">
+          <span>Barba Modelada</span>
+        </div>
+      </div>
+
+      <div class="galeria__item">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=500&q=80" alt="Corte clássico" loading="lazy" />
+        <div class="galeria__overlay">
+          <span>Corte Clássico</span>
+        </div>
+      </div>
+
+      <div class="galeria__item galeria__item--wide">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&q=80" alt="Ambiente da barbearia" loading="lazy" />
+        <div class="galeria__overlay">
+          <span>Nosso Espaço</span>
+        </div>
+      </div>
+
+      <div class="galeria__item">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=500&q=80" alt="Finalização profissional" loading="lazy" />
+        <div class="galeria__overlay">
+          <span>Finalização</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       SOBRE
+  ============================================= -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre__inner">
+
+        <!-- Imagem -->
+        <div class="sobre__image reveal">
+          <div class="sobre__image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80"
+              alt="Interior da barbearia Black Edge"
+              loading="lazy"
+            />
+            <div class="sobre__badge">
+              <strong>2016</strong>
+              <span>Fundada</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="sobre__content reveal">
+          <span class="section-tag">Nossa história</span>
+          <h2 class="section-title">Mais que um corte.<br /><em>Uma experiência.</em></h2>
+          <p>A Black Edge nasceu da convicção de que barbearia é lugar de bem-estar, conversa e identidade. Desde 2016, atendemos homens que valorizam cuidado e qualidade.</p>
+          <p>Nosso ambiente foi projetado para você desligar do mundo por uma hora. Cada profissional é certificado e passa por atualização constante. Usamos apenas produtos de alta performance.</p>
+
+          <!-- Diferenciais -->
+          <ul class="sobre__list">
+            <li><i class="ph ph-check-circle"></i> Profissionais com mais de 5 anos de experiência</li>
+            <li><i class="ph ph-check-circle"></i> Produtos premium importados</li>
+            <li><i class="ph ph-check-circle"></i> Ambiente climatizado e exclusivo</li>
+            <li><i class="ph ph-check-circle"></i> Atendimento com hora marcada — sem espera</li>
+          </ul>
+
+          <a href="#cta" class="btn btn--primary">Quero conhecer</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       DEPOIMENTOS
+  ============================================= -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">O que dizem</span>
+        <h2 class="section-title">Clientes <em>satisfeitos</em></h2>
+      </div>
+
+      <div class="depoimentos__grid">
+
+        <div class="depo-card reveal">
+          <div class="depo-card__stars">★★★★★</div>
+          <p class="depo-card__text">"Melhor barbearia que já fui. O ambiente é incrível, o profissional sabe o que faz e o resultado sempre supera o esperado. Virei cliente fiel."</p>
+          <div class="depo-card__author">
+            <img src="https://i.pravatar.cc/48?img=11" alt="Ricardo M." loading="lazy" />
+            <div>
+              <strong>Ricardo M.</strong>
+              <span>Cliente há 3 anos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card reveal">
+          <div class="depo-card__stars">★★★★★</div>
+          <p class="depo-card__text">"Vim pela indicação de um amigo e não me arrependo. A atenção aos detalhes é absurda. O combo corte + barba é obrigatório."</p>
+          <div class="depo-card__author">
+            <img src="https://i.pravatar.cc/48?img=33" alt="Felipe A." loading="lazy" />
+            <div>
+              <strong>Felipe A.</strong>
+              <span>Cliente há 1 ano</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card reveal">
+          <div class="depo-card__stars">★★★★★</div>
+          <p class="depo-card__text">"Atendimento diferenciado do começo ao fim. Saio de lá me sentindo outro. Vale cada centavo."</p>
+          <div class="depo-card__author">
+            <img src="https://i.pravatar.cc/48?img=56" alt="Lucas P." loading="lazy" />
+            <div>
+              <strong>Lucas P.</strong>
+              <span>Cliente há 2 anos</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CTA WHATSAPP
+  ============================================= -->
+  <section class="cta-section" id="cta">
+    <div class="cta-section__bg"></div>
+    <div class="container">
+      <div class="cta-section__inner reveal">
+        <span class="section-tag">Pronto para começar?</span>
+        <h2 class="cta-section__title">
+          Reserve seu horário.<br />
+          <em>Sem complicação.</em>
+        </h2>
+        <p class="cta-section__desc">
+          Atendemos de <strong>segunda a sábado</strong>, das 9h às 20h.<br />
+          Agende em segundos pelo WhatsApp.
+        </p>
+
+        <!-- Botão CTA principal -->
+        <a
+          href="https://wa.me/5521972191212?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
+          class="btn btn--whatsapp btn--large"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="ph ph-whatsapp-logo"></i>
+          Agendar pelo WhatsApp
+        </a>
+
+        <!-- Informações adicionais -->
+        <div class="cta-section__info">
+          <span><i class="ph ph-map-pin"></i> Rua Exemplo, 123 — Centro</span>
+          <span><i class="ph ph-clock"></i> Seg–Sáb: 9h às 20h</span>
+          <span><i class="ph ph-phone"></i> (11) 99999-9999</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <!-- Logo e descrição -->
+        <div class="footer__brand">
+          <a href="#hero" class="navbar__logo">
+            <span class="navbar__logo-icon">✦</span>
+            <span class="navbar__logo-text">Black<strong>Edge</strong></span>
+          </a>
+          <p>Barbearia premium especializada em cortes masculinos modernos. Experiência, estilo e cuidado em cada detalhe.</p>
+          <!-- Redes sociais -->
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Links rápidos -->
+        <div class="footer__col">
+          <h4>Links rápidos</h4>
+          <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#cta">Agendar</a>
+          </nav>
+        </div>
+
+        <!-- Contato -->
+        <div class="footer__col">
+          <h4>Contato</h4>
+          <address>
+            <span><i class="ph ph-map-pin"></i> Rua Exemplo, 123 — Centro</span>
+            <span><i class="ph ph-phone"></i> (11) 99999-9999</span>
+            <span><i class="ph ph-envelope"></i> contato@blackedge.com.br</span>
+            <span><i class="ph ph-clock"></i> Seg–Sáb: 9h às 20h</span>
+          </address>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p>© 2024 Black Edge Barber. Todos os direitos reservados.</p>
+        <p>Desenvolvido com ♥</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       BOTÃO FLUTUANTE WHATSAPP
+  ============================================= -->
+  <a
+    href="https://wa.me/5521972191212?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio!"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Fale no WhatsApp"
+  >
+    <i class="ph ph-whatsapp-logo"></i>
+    <span class="whatsapp-float__tooltip">Agendar agora!</span>
+  </a>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+
+</body>
+</html>
