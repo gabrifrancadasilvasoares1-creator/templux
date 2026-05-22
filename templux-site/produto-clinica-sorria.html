@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Sorria — Template Premium para Clínica Odontológica | Templux</title>
+  <meta name="description" content="Template HTML premium para clínicas odontológicas. Design moderno, responsivo, seções de serviços, antes/depois e WhatsApp integrado. R$29,90 — código 100% seu." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .product-hero { padding: calc(var(--nav-height) + 48px) 0 64px; }
+    .product-layout { display:grid; grid-template-columns:1fr 380px; gap:48px; align-items:start; }
+    .product-sidebar { position:sticky; top:calc(var(--nav-height) + 24px); }
+    .buy-box { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px; }
+    .buy-box-price { font-family:var(--font-display); font-size:2.2rem; font-weight:800; }
+    .buy-box-note { color:var(--text-secondary); font-size:0.82rem; margin:6px 0 20px; }
+    .buy-box-divider { height:1px; background:var(--border); margin:20px 0; }
+    .main-preview { aspect-ratio:16/9; border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-surface); border:1px solid var(--border); margin-bottom:12px; cursor:zoom-in; }
+    .main-preview img { width:100%; height:100%; object-fit:cover; transition:opacity 0.25s ease; }
+    .gallery-thumbs { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:24px; }
+    .gallery-thumb { aspect-ratio:16/9; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer; border:2px solid transparent; transition:border-color 0.15s,transform 0.15s; }
+    .gallery-thumb:hover { transform:translateY(-2px); border-color:var(--border-accent); }
+    .gallery-thumb.active { border-color:var(--accent-bright); }
+    .gallery-thumb img { width:100%; height:100%; object-fit:cover; }
+    .product-section { margin-top:48px; padding-top:48px; border-top:1px solid var(--border); }
+    .product-section-title { font-family:var(--font-display); font-size:1.05rem; font-weight:700; margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+    .product-section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+    .zip-list { display:flex; flex-direction:column; gap:10px; }
+    .zip-item { display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); font-size:0.875rem; color:var(--text-secondary); font-family:monospace; }
+    .zip-item span { color:var(--text-muted); font-size:0.78rem; font-family:var(--font-body); }
+    @media (max-width:600px) { .gallery-thumbs { grid-template-columns:repeat(3,1fr); } }
+    @media (max-width:1024px) { .product-layout { grid-template-columns:1fr; } .product-sidebar { position:static; } }
+  </style>
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-dot"></div>Temp<span>lux</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html" class="active">Catálogo</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contato.html" class="btn btn-ghost">Suporte</a>
+      <a href="catalogo.html" class="btn btn-primary btn-sm">Ver templates →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="index.html">Início</a><a href="catalogo.html">Catálogo</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a>
+</div>
+
+<section class="product-hero">
+  <div class="container">
+    <div class="breadcrumb animate-fade-up">
+      <a href="index.html">Início</a><span class="breadcrumb-sep">›</span>
+      <a href="catalogo.html">Catálogo</a><span class="breadcrumb-sep">›</span>
+      <span>Clínica Sorria</span>
+    </div>
+    <div class="product-layout">
+
+      <!-- COLUNA ESQUERDA -->
+      <div>
+        <div style="margin-bottom:28px;" class="animate-fade-up delay-1">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span class="badge badge-accent">🆕 Novo</span>
+            <span class="badge badge-category">🏥 Saúde</span>
+            <span class="badge badge-green">● HTML/CSS/JS</span>
+          </div>
+          <h1 class="display-lg" style="margin-bottom:12px;">Clínica Sorria</h1>
+          <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.7;">Landing page premium para clínicas odontológicas com design claro, moderno, seções de serviços, antes/depois e WhatsApp integrado.</p>
+        </div>
+
+        <!-- GALERIA PRINCIPAL -->
+        <div class="main-preview animate-fade-up delay-2" onclick="openLightbox(currentSrc)">
+          <img src="assets/images/products/clinica-sorria-cover.jpg" alt="Clínica Sorria — Visão geral" id="mainImg" />
+        </div>
+
+        <!-- MINIATURAS -->
+        <div class="gallery-thumbs animate-fade-up delay-3">
+          <div class="gallery-thumb active" onclick="setPreview(this,'assets/images/products/clinica-sorria-cover.jpg','Visão geral')" title="Visão geral">
+            <img src="assets/images/products/clinica-sorria-cover.jpg" alt="Visão geral" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-hero.jpg','Hero')" title="Hero">
+            <img src="assets/images/products/clinica-sorria-hero.jpg" alt="Hero" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-services.jpg','Serviços')" title="Serviços">
+            <img src="assets/images/products/clinica-sorria-services.jpg" alt="Serviços" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-trust.jpg','Confiança')" title="Confiança">
+            <img src="assets/images/products/clinica-sorria-trust.jpg" alt="Confiança" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-cta.jpg','CTA')" title="CTA">
+            <img src="assets/images/products/clinica-sorria-cta.jpg" alt="CTA" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- DESCRIÇÃO -->
+        <div class="product-section reveal">
+          <div class="product-section-title">Descrição completa</div>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">O <strong style="color:var(--text-primary);">Clínica Sorria</strong> é um template premium desenvolvido para clínicas odontológicas e profissionais de saúde que querem presença online profissional. Design claro, elegante e com foco total em conversão — do agendamento ao WhatsApp.</p>
+          <p style="color:var(--text-secondary);line-height:1.8;">Inclui seções estratégicas: hero com prova social, barra de confiança, grid de serviços, seção sobre a clínica, resultados antes/depois, depoimentos de pacientes, FAQ e CTA de agendamento. Pronto para editar e publicar.</p>
+        </div>
+
+        <!-- BENEFÍCIOS -->
+        <div class="product-section reveal">
+          <div class="product-section-title">O que você leva</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">✓</div>Design premium e moderno</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>100% responsivo (mobile-first)</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>Fácil de editar</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>HTML / CSS / JS puro</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>WhatsApp integrado</div>
+            </div>
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">✓</div>Seção antes/depois</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>SEO básico incluso</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>Código organizado e comentado</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>Sem mensalidade</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>Código 100% seu</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEÇÕES DO TEMPLATE -->
+        <div class="product-section reveal">
+          <div class="product-section-title">Seções incluídas</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">→</div>Hero com prova social</div>
+              <div class="feature-item"><div class="feature-icon">→</div>Barra de confiança (stats)</div>
+              <div class="feature-item"><div class="feature-icon">→</div>Grid de serviços (6 cards)</div>
+              <div class="feature-item"><div class="feature-icon">→</div>Sobre a clínica</div>
+            </div>
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">→</div>Resultados antes/depois</div>
+              <div class="feature-item"><div class="feature-icon">→</div>Depoimentos de pacientes</div>
+              <div class="feature-item"><div class="feature-icon">→</div>FAQ accordion</div>
+              <div class="feature-item"><div class="feature-icon">→</div>CTA de agendamento</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TECNOLOGIAS -->
+        <div class="product-section reveal">
+          <div class="product-section-title">Tecnologias</div>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Flexbox / Grid</span>
+            <span class="tech-tag">CSS Animations</span>
+            <span class="tech-tag">Google Fonts</span>
+            <span class="tech-tag">Sem frameworks</span>
+          </div>
+        </div>
+
+        <!-- ZIP -->
+        <div class="product-section reveal">
+          <div class="product-section-title">O que vem no ZIP</div>
+          <div class="zip-list">
+            <div class="zip-item">📄 index.html <span>— Arquivo principal do template</span></div>
+            <div class="zip-item">🎨 style.css <span>— Estilos completos e organizados</span></div>
+            <div class="zip-item">⚡ script.js <span>— Interações e animações</span></div>
+            <div class="zip-item">🖼️ assets/icons/ <span>— Favicon SVG incluso</span></div>
+            <div class="zip-item">📋 README.txt <span>— Instruções de uso passo a passo</span></div>
+            <div class="zip-item">📜 LICENSE.txt <span>— Licença de uso comercial</span></div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="product-section reveal">
+          <div class="product-section-title">Perguntas frequentes</div>
+          <div id="faqList">
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">Preciso saber programar para usar?<div class="faq-icon">+</div></button>
+              <div class="faq-answer"><p>Não. Abra o arquivo em qualquer editor de texto, procure os textos que quer alterar e substitua. O README explica tudo passo a passo.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">Onde posso hospedar o site?<div class="faq-icon">+</div></button>
+              <div class="faq-answer"><p>Em qualquer hospedagem: Hostinger, GitHub Pages (gratuito), Netlify (gratuito) ou qualquer plano compartilhado. Nenhum servidor especial necessário.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">Posso usar para o meu cliente?<div class="faq-icon">+</div></button>
+              <div class="faq-answer"><p>Sim. A licença permite uso comercial em um projeto por compra. Para múltiplos clientes, entre em contato para licença múltipla.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">Como recebo o arquivo após a compra?<div class="faq-icon">+</div></button>
+              <div class="faq-answer"><p>Imediatamente após o pagamento, você recebe o link de download por e-mail. Acesso instantâneo e automático.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" onclick="toggleFaq(this)">Tem suporte após a compra?<div class="faq-icon">+</div></button>
+              <div class="faq-answer"><p>Sim. Suporte via WhatsApp e e-mail para dúvidas sobre como editar e publicar. Resposta em até 24h úteis.</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR STICKY -->
+      <div class="product-sidebar animate-fade-up delay-2">
+        <div class="buy-box">
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+            <span class="buy-box-price">R$29,90</span>
+            <span class="badge badge-gold">pagamento único</span>
+          </div>
+          <p class="buy-box-note">Sem mensalidade. Código 100% seu para sempre.</p>
+          <a href="LINK_DA_CAKTO_AQUI" class="btn btn-primary btn-lg btn-full" target="_blank" rel="noopener" style="margin-bottom:10px;animation:pulse-glow 2.5s ease-in-out infinite;">
+            🛒 Comprar agora — R$29,90
+          </a>
+          <a href="demos/clinica-sorria/index.html" class="btn btn-secondary btn-lg btn-full" target="_blank" rel="noopener" style="margin-bottom:10px;">
+            👁️ Ver demo do template
+          </a>
+          <a href="../template-clinica-dental.zip" class="btn btn-ghost btn-sm btn-full" download>
+            ⬇️ Baixar amostra do ZIP
+          </a>
+          <div class="buy-box-divider"></div>
+          <div class="feature-list">
+            <div class="feature-item"><div class="feature-icon">✓</div>Download imediato</div>
+            <div class="feature-item"><div class="feature-icon">✓</div>Suporte incluído</div>
+            <div class="feature-item"><div class="feature-icon">✓</div>Licença comercial</div>
+            <div class="feature-item"><div class="feature-icon">✓</div>Código comentado</div>
+          </div>
+          <div class="buy-box-divider"></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="badge badge-category">HTML5</span>
+            <span class="badge badge-category">CSS3</span>
+            <span class="badge badge-category">JavaScript</span>
+            <span class="badge badge-category">Responsivo</span>
+          </div>
+          <p style="display:flex;align-items:center;gap:8px;color:var(--text-muted);font-size:0.78rem;margin-top:16px;">🔒 Pagamento seguro via Cakto</p>
+        </div>
+        <div style="margin-top:14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+          <p style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;">Compartilhar</p>
+          <div style="display:flex;gap:8px;">
+            <button onclick="copyLink()" class="btn btn-secondary btn-sm" style="flex:1;">🔗 Copiar link</button>
+            <a href="https://wa.me/?text=Olha%20esse%20template%20para%20cl%C3%ADnica%20odontol%C3%B3gica%20da%20Templux!" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" style="flex:1;">💬 Compartilhar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="font-size:1.3rem;text-decoration:none;"><div class="nav-logo-dot"></div>Temp<span>lux</span></a>
+        <p>Templates premium para sites de pequenos negócios. Design moderno, código limpo, resultado real.</p>
+      </div>
+      <div class="footer-col"><h4>Páginas</h4><ul><li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      <div class="footer-col"><h4>Categorias</h4><ul><li><a href="catalogo.html?cat=barbearia">Barbearia</a></li><li><a href="catalogo.html?cat=saude">Saúde</a></li><li><a href="catalogo.html?cat=delivery">Delivery</a></li><li><a href="catalogo.html?cat=restaurante">Restaurante</a></li></ul></div>
+      <div class="footer-col"><h4>Suporte</h4><ul><li><a href="contato.html">Fale conosco</a></li><li><a href="https://wa.me/5521972191212" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener">TikTok</a></li><li><a href="mailto:templux2026@gmail.com">E-mail</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Templux. Todos os direitos reservados.</span>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener" aria-label="Instagram">📷</a><a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        <a href="https://wa.me/5521972191212" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="globalToast" class="toast"></div>
+<script src="script.js"></script>
+<script>
+  let currentSrc='assets/images/products/clinica-sorria-cover.jpg';
+  function setPreview(thumb,src,alt){
+    const img=document.getElementById('mainImg');
+    img.style.opacity='0';
+    setTimeout(()=>{img.src=src;img.alt=alt;img.style.opacity='1';},200);
+    currentSrc=src;
+    document.querySelectorAll('.gallery-thumb').forEach(t=>t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+  function openLightbox(src){
+    const lb=document.getElementById('lightbox');
+    document.getElementById('lbImg').src=src;
+    lb.style.display='flex';
+    document.body.style.overflow='hidden';
+  }
+  function closeLightbox(){
+    document.getElementById('lightbox').style.display='none';
+    document.body.style.overflow='';
+  }
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+  function toggleFaq(btn){const item=btn.closest('.faq-item');document.querySelectorAll('.faq-item.open').forEach(o=>{if(o!==item)o.classList.remove('open');});item.classList.toggle('open');}
+</script>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+  <img id="lbImg" src="" alt="Preview" style="max-width:92vw;max-height:92vh;border-radius:8px;box-shadow:0 8px 64px rgba(0,0,0,0.8);" onclick="event.stopPropagation()" />
+  <button onclick="closeLightbox()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;">✕</button>
+</div>
+</body>
+</html>

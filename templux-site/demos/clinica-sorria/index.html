@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Sorria — Odontologia Premium</title>
+  <meta name="description" content="Odontologia de excelência com tecnologia de última geração. Clareamento, implantes, ortodontia e muito mais. Agende sua avaliação gratuita." />
+  <meta name="keywords" content="dentista, clínica odontológica, implante dentário, clareamento dental, ortodontia, lentes dentais" />
+  <meta name="author" content="Clínica Sorria" />
+  <meta property="og:title" content="Clínica Sorria — Odontologia Premium" />
+  <meta property="og:description" content="Sorrisos que transformam. Cuidado que dura. Agende sua avaliação gratuita." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#inicio" class="navbar__logo">
+      <div class="navbar__logo-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C9.5 2 7 4 7 7c0 2.5 1 4.5 2 6.5L10 19c.5 2 1 3 2 3s1.5-1 2-3l1-5.5c1-2 2-4 2-6.5 0-3-2.5-5-5-5z" fill="white"/></svg>
+      </div>
+      Clínica<span>Sorria</span>
+    </a>
+    <nav class="navbar__links" id="navLinks">
+      <a href="#servicos" class="navbar__link">Serviços</a>
+      <a href="#sobre" class="navbar__link">Sobre</a>
+      <a href="#resultados" class="navbar__link">Resultados</a>
+      <a href="#depoimentos" class="navbar__link">Depoimentos</a>
+      <a href="#contato" class="navbar__link">Contato</a>
+    </nav>
+    <a href="#contato" class="btn btn--primary btn--sm navbar__cta">Agendar avaliação</a>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#servicos">Serviços</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#resultados">Resultados</a>
+  <a href="#depoimentos">Depoimentos</a>
+  <a href="#contato">Contato</a>
+  <a href="#contato" class="btn btn--primary" style="text-align:center;margin-top:8px;">Agendar avaliação</a>
+</div>
+
+<!-- ═══════════════════════════════════════ HERO -->
+<section id="inicio" class="hero">
+  <div class="hero__bg-blob hero__bg-blob--1"></div>
+  <div class="hero__bg-blob hero__bg-blob--2"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__badge reveal">
+        <span class="hero__badge-dot"></span>
+        Clínica Premium · São Paulo
+      </div>
+      <h1 class="hero__title reveal reveal-d1">
+        Sorrisos que<br>
+        <span class="gradient-text">Transformam.</span><br>
+        Cuidado que Dura.
+      </h1>
+      <p class="hero__sub reveal reveal-d2">
+        Odontologia de excelência com tecnologia de última geração. Agende sua avaliação gratuita e descubra o sorriso que você merece.
+      </p>
+      <div class="hero__actions reveal reveal-d3">
+        <a href="#contato" class="btn btn--primary btn--lg">
+          Agendar avaliação gratuita
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn btn--wa btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <div class="hero__proof reveal reveal-d4">
+        <div class="hero__avatars">
+          <div class="hero__avatar" style="background:#3b82f6;">M</div>
+          <div class="hero__avatar" style="background:#6366f1;">A</div>
+          <div class="hero__avatar" style="background:#0ea5e9;">R</div>
+          <div class="hero__avatar" style="background:#1a56db;">J</div>
+        </div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <p class="hero__proof-text"><strong>4.9/5</strong> · +800 avaliações</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero__image reveal reveal-d2">
+      <div class="hero__img-wrap">
+        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=85" alt="Clínica Odontológica Premium" loading="eager" />
+        <div class="hero__img-overlay"></div>
+      </div>
+      <div class="hero__badge-float hero__badge-float--bottom">
+        <div class="hero__badge-float-icon" style="background:#f0fdf4;">✓</div>
+        <div>
+          <strong>Avaliação gratuita</strong>
+          <span>Sem compromisso</span>
+        </div>
+      </div>
+      <div class="hero__badge-float hero__badge-float--top">
+        <strong>+15</strong>
+        <span>anos de experiência</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ TRUST BAR -->
+<section class="trust">
+  <div class="container trust__grid">
+    <div class="trust__item reveal">
+      <div class="trust__emoji">🏆</div>
+      <strong>+15</strong>
+      <span>Anos de experiência</span>
+    </div>
+    <div class="trust__item reveal reveal-d1">
+      <div class="trust__emoji">😊</div>
+      <strong>+8.000</strong>
+      <span>Pacientes atendidos</span>
+    </div>
+    <div class="trust__item reveal reveal-d2">
+      <div class="trust__emoji">👨‍⚕️</div>
+      <strong>4</strong>
+      <span>Especialistas certificados</span>
+    </div>
+    <div class="trust__item reveal reveal-d3">
+      <div class="trust__emoji">⚡</div>
+      <strong>100%</strong>
+      <span>Tecnologia digital</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ SERVICES -->
+<section id="servicos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">O que oferecemos</div>
+      <h2 class="section-title reveal reveal-d1">Tratamentos <span class="gradient-text">completos</span><br>para o seu sorriso</h2>
+      <p class="section-sub reveal reveal-d2">Da prevenção à transformação estética — com os mais altos padrões de qualidade.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+        <span class="service-card__tag">Estético</span>
+        <h3>Clareamento Dental</h3>
+        <p>Clareamento a laser com resultado visível em uma única sessão. Dentes até 8 tons mais claros de forma segura e duradoura.</p>
+        <div class="service-card__link">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <span class="service-card__tag">Cirúrgico</span>
+        <h3>Implantes Dentários</h3>
+        <p>Implantes de titânio com osseointegração avançada. A solução definitiva e natural para dentes perdidos, com durabilidade vitalícia.</p>
+        <div class="service-card__link">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+        </div>
+        <span class="service-card__tag">Alinhamento</span>
+        <h3>Ortodontia</h3>
+        <p>Aparelho fixo, removível e alinhadores invisíveis. Sorriso perfeitamente alinhado com conforto e discrição em qualquer idade.</p>
+        <div class="service-card__link">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C9.5 2 7 4 7 7c0 2.5 1 4.5 2 6.5L10 19c.5 2 1 3 2 3s1.5-1 2-3l1-5.5c1-2 2-4 2-6.5 0-3-2.5-5-5-5z"/></svg>
+        </div>
+        <span class="service-card__tag">Preventivo</span>
+        <h3>Limpeza Dental</h3>
+        <p>Remoção profissional de tártaro e polimento cuidadoso. Essencial para a saúde gengival e um sorriso sempre fresco e saudável.</p>
+        <div class="service-card__link">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="service-card__tag">Premium</span>
+        <h3>Lentes Dentais</h3>
+        <p>Facetas de porcelana ultra-finas que transformam o formato, cor e tamanho dos dentes. Resultado natural e extremamente durável.</p>
+        <div class="service-card__link">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span class="service-card__tag">Infantil</span>
+        <h3>Odontopediatria</h3>
+        <p>Atendimento infantil especializado em ambiente acolhedor e lúdico. Os primeiros passos para uma vida toda de saúde bucal.</p>
+        <div class="service-card__link">Saiba mais <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ ABOUT -->
+<section id="sobre" class="section section--gray">
+  <div class="container about__inner">
+    <div class="about__image reveal">
+      <div class="about__img-wrap">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=85" alt="Nossa equipe" loading="lazy" />
+      </div>
+      <div class="about__badge">
+        <strong>+15</strong>
+        <span>anos cuidando<br>de sorrisos</span>
+      </div>
+    </div>
+    <div class="about__content">
+      <div class="section-badge reveal">Nossa clínica</div>
+      <h2 class="section-title section-title--left reveal reveal-d1">Tecnologia e <span class="gradient-text">humanidade</span><br>em cada consulta</h2>
+      <p class="about__text reveal reveal-d2">Fundada em 2009, a Clínica Sorria nasceu da crença de que todo paciente merece atendimento premium — com carinho, precisão e os melhores recursos disponíveis.</p>
+      <p class="about__text reveal reveal-d3">Nossa equipe de especialistas combina anos de experiência com protocolos modernos, garantindo procedimentos seguros, resultados previsíveis e um sorriso que você vai querer mostrar para o mundo.</p>
+      <ul class="about__list reveal reveal-d4">
+        <li><span class="about__check">✓</span>Equipamentos de tomografia digital 3D</li>
+        <li><span class="about__check">✓</span>Esterilização certificada e rastreável</li>
+        <li><span class="about__check">✓</span>Profissionais com especialização internacional</li>
+        <li><span class="about__check">✓</span>Ambiente climatizado e acolhedor</li>
+        <li><span class="about__check">✓</span>Atendimento de segunda a sábado</li>
+      </ul>
+      <a href="#contato" class="btn btn--primary btn--lg reveal reveal-d5">
+        Conhecer a clínica
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ BEFORE/AFTER -->
+<section id="resultados" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">Resultados reais</div>
+      <h2 class="section-title reveal reveal-d1">Transformações que <span class="gradient-text">falam por si</span></h2>
+      <p class="section-sub reveal reveal-d2">Cada sorriso transformado é uma história de confiança e excelência.</p>
+    </div>
+    <div class="results-grid">
+      <!-- Mesma foto nos dois lados: grayscale no antes, colorida no depois -->
+      <div class="result-card reveal">
+        <div class="result-card__images">
+          <div class="result-card__img result-card__img--before">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=85&fit=crop&crop=faces" alt="Antes do tratamento" loading="lazy" />
+            <span class="result-card__label result-card__label--before">Antes</span>
+          </div>
+          <div class="result-card__divider">
+            <div class="result-card__divider-line"></div>
+            <div class="result-card__divider-icon">↔</div>
+          </div>
+          <div class="result-card__img result-card__img--after">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=85&fit=crop&crop=faces" alt="Depois do tratamento" loading="lazy" />
+            <span class="result-card__label result-card__label--after">Depois</span>
+          </div>
+        </div>
+        <div class="result-card__body">
+          <h3>Lentes de Porcelana</h3>
+          <span class="result-card__time">2 sessões</span>
+          <p>Transformação completa com facetas ultrafinas. Sorriso natural, branco e duradouro.</p>
+        </div>
+      </div>
+      <div class="result-card reveal reveal-d1">
+        <div class="result-card__images">
+          <div class="result-card__img result-card__img--before">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=85&fit=crop&crop=faces" alt="Antes do tratamento" loading="lazy" />
+            <span class="result-card__label result-card__label--before">Antes</span>
+          </div>
+          <div class="result-card__divider">
+            <div class="result-card__divider-line"></div>
+            <div class="result-card__divider-icon">↔</div>
+          </div>
+          <div class="result-card__img result-card__img--after">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=85&fit=crop&crop=faces" alt="Depois do tratamento" loading="lazy" />
+            <span class="result-card__label result-card__label--after">Depois</span>
+          </div>
+        </div>
+        <div class="result-card__body">
+          <h3>Clareamento a Laser</h3>
+          <span class="result-card__time">1 sessão</span>
+          <p>Dentes até 8 tons mais claros em uma única visita. Resultado imediato e seguro.</p>
+        </div>
+      </div>
+      <div class="result-card reveal reveal-d2">
+        <div class="result-card__images">
+          <div class="result-card__img result-card__img--before">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=85&fit=crop&crop=faces" alt="Antes do tratamento" loading="lazy" />
+            <span class="result-card__label result-card__label--before">Antes</span>
+          </div>
+          <div class="result-card__divider">
+            <div class="result-card__divider-line"></div>
+            <div class="result-card__divider-icon">↔</div>
+          </div>
+          <div class="result-card__img result-card__img--after">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=85&fit=crop&crop=faces" alt="Depois do tratamento" loading="lazy" />
+            <span class="result-card__label result-card__label--after">Depois</span>
+          </div>
+        </div>
+        <div class="result-card__body">
+          <h3>Ortodontia Invisível</h3>
+          <span class="result-card__time">12 meses</span>
+          <p>Alinhamento perfeito com alinhadores transparentes e discretos no dia a dia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-cta reveal">
+      <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+        Quero meu resultado assim
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ TESTIMONIALS -->
+<section id="depoimentos" class="section section--gray">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">Depoimentos</div>
+      <h2 class="section-title reveal reveal-d1">O que nossos <span class="gradient-text">pacientes</span> dizem</h2>
+      <div class="section-rating reveal reveal-d2">
+        <div class="stars">★★★★★</div>
+        <span><strong>4.9 / 5</strong> · +800 avaliações no Google</span>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars testimonial-card__stars">★★★★★</div>
+        <p>"Fiz minhas lentes de porcelana aqui e o resultado superou todas as expectativas. O atendimento é impecável do início ao fim. Me sinto completamente diferente quando sorrio!"</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#3b82f6;">MC</div>
+          <div>
+            <strong>Mariana Costa</strong>
+            <span>Professora · Lentes de Porcelana</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d1">
+        <div class="stars testimonial-card__stars">★★★★★</div>
+        <p>"Fiz o implante após anos com dente faltando. A equipe me deixou tranquilo durante todo o processo. Recuperação rápida e resultado natural. Recomendo sem hesitar."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#6366f1;">RM</div>
+          <div>
+            <strong>Rafael Mendes</strong>
+            <span>Empresário · Implante Dentário</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d2">
+        <div class="stars testimonial-card__stars">★★★★★</div>
+        <p>"Tratamento com alinhadores invisíveis em 10 meses. Não acreditei como ficou rápido e sem dor. O acompanhamento foi excelente, com muito cuidado em cada etapa."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#0ea5e9;">JP</div>
+          <div>
+            <strong>Juliana Pires</strong>
+            <span>Designer · Alinhadores Invisíveis</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars testimonial-card__stars">★★★★★</div>
+        <p>"Como profissional de saúde, sou exigente com higiene e protocolos. A clínica é referência nesse sentido. Equipamentos modernos e equipe altamente capacitada."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#0d9488;">CA</div>
+          <div>
+            <strong>Carlos Almeida</strong>
+            <span>Médico · Clareamento + Limpeza</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d1">
+        <div class="stars testimonial-card__stars">★★★★★</div>
+        <p>"Trouxe minha filha para o atendimento infantil e ela saiu feliz! Nunca vi uma criança gostar tanto de dentista. O ambiente é pensado para deixar as crianças à vontade."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#8b5cf6;">FL</div>
+          <div>
+            <strong>Fernanda Lima</strong>
+            <span>Advogada · Odontopediatria</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d2">
+        <div class="stars testimonial-card__stars">★★★★★</div>
+        <p>"Clareamento a laser em uma sessão. Saí com um sorriso 8 tons mais claro. O resultado é visível e natural. Já indiquei para toda a família e todos os meus amigos."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar" style="background:#0284c7;">AS</div>
+          <div>
+            <strong>André Santos</strong>
+            <span>Arquiteto · Clareamento a Laser</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">Dúvidas frequentes</div>
+      <h2 class="section-title reveal reveal-d1">Perguntas <span class="gradient-text">frequentes</span></h2>
+      <p class="section-sub reveal reveal-d2">Não encontrou sua dúvida? Fale com a gente pelo WhatsApp.</p>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          A avaliação inicial é realmente gratuita?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <p>Sim, 100% gratuita e sem compromisso. Nossa primeira consulta é completa — o dentista analisa sua saúde bucal, tira suas dúvidas e apresenta as melhores opções de tratamento para você.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Aceitam convênios odontológicos?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <p>Trabalhamos com os principais convênios do mercado, incluindo Unimed, Bradesco Dental, Amil, SulAmérica e outros. Entre em contato para confirmar se seu convênio está na nossa lista.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-d2">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          A aplicação de anestesia é dolorosa?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <p>Usamos anestesia tópica antes da injeção, tornando o processo praticamente indolor. Nossos profissionais são treinados para aplicar com máxima suavidade e conforto do paciente.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Quanto tempo dura o tratamento com implante?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <p>O processo completo varia de 3 a 6 meses, incluindo o período de osseointegração. Casos simples podem ter solução em tempo menor com protocolos modernos de carga imediata.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-d1">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          O clareamento danifica o esmalte dos dentes?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <p>Não, quando realizado por profissionais habilitados. Usamos gel clareador com concentração adequada e monitoramento constante para preservar o esmalte e garantir resultados seguros.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-d2">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Vocês atendem emergências odontológicas?
+          <div class="faq-icon">+</div>
+        </button>
+        <div class="faq-answer">
+          <p>Sim. Temos horários reservados para urgências como dores agudas, fraturas dentárias e abscessos. Entre em contato pelo WhatsApp e priorizaremos seu atendimento imediatamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ CTA -->
+<section id="contato" class="cta-section">
+  <div class="cta-section__blob cta-section__blob--1"></div>
+  <div class="cta-section__blob cta-section__blob--2"></div>
+  <div class="container cta-section__inner">
+    <div class="cta-section__badge reveal">
+      <span class="cta-section__badge-dot"></span>
+      Avaliação gratuita disponível
+    </div>
+    <h2 class="cta-section__title reveal reveal-d1">
+      Agende sua avaliação<br>
+      <span class="cta-section__title-accent">gratuita hoje mesmo</span>
+    </h2>
+    <p class="cta-section__sub reveal reveal-d2">
+      Dê o primeiro passo para o sorriso que você sempre quis. Sem compromisso, sem taxas ocultas — só cuidado de verdade.
+    </p>
+    <div class="cta-section__actions reveal reveal-d3">
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20gratuita." target="_blank" rel="noopener" class="btn btn--wa-dark btn--xl">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a href="tel:+5511999999999" class="btn btn--ghost-white btn--xl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9A16 16 0 0015 16.09l1.13-.93a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Ligar agora
+      </a>
+    </div>
+    <div class="cta-section__trust reveal reveal-d4">
+      <div class="cta-section__trust-item">✓ Avaliação 100% gratuita</div>
+      <div class="cta-section__trust-item">✓ Sem fila de espera</div>
+      <div class="cta-section__trust-item">✓ WhatsApp 24h</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#inicio" class="navbar__logo footer__logo">
+        <div class="navbar__logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C9.5 2 7 4 7 7c0 2.5 1 4.5 2 6.5L10 19c.5 2 1 3 2 3s1.5-1 2-3l1-5.5c1-2 2-4 2-6.5 0-3-2.5-5-5-5z" fill="white"/></svg>
+        </div>
+        Clínica<span>Sorria</span>
+      </a>
+      <p>Odontologia de excelência para quem exige o melhor cuidado para seu sorriso.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram" class="footer__social">📷</a>
+        <a href="#" aria-label="Facebook" class="footer__social">👤</a>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer__social">💬</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Tratamentos</h4>
+      <ul>
+        <li><a href="#servicos">Clareamento Dental</a></li>
+        <li><a href="#servicos">Implantes Dentários</a></li>
+        <li><a href="#servicos">Ortodontia</a></li>
+        <li><a href="#servicos">Limpeza Dental</a></li>
+        <li><a href="#servicos">Lentes Dentais</a></li>
+        <li><a href="#servicos">Odontopediatria</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Clínica</h4>
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Agendamento</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <ul class="footer__contact">
+        <li>📍 Rua Exemplo, 123 — Pinheiros<br>São Paulo / SP</li>
+        <li>📞 (11) 9 9999-9999</li>
+        <li>✉️ contato@clinicasorria.com.br</li>
+        <li>🕐 Seg–Sex: 8h–19h · Sáb: 8h–13h</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© 2025 Clínica Sorria. Todos os direitos reservados.</span>
+      <span>CRO-SP 12345</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════ WHATSAPP FLOAT -->
+<a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener" class="wa-float" id="waFloat" aria-label="WhatsApp">
+  <div class="wa-float__ring"></div>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<div id="globalToast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
