@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,13 +46,17 @@
             <div class="contact-card-icon" style="background:rgba(37,211,102,0.1);color:#25d366;">💬</div>
             <div><h3>WhatsApp</h3><p>A forma mais rápida. Respondemos na hora.</p><a href="https://wa.me/5521972191212" target="_blank" rel="noopener">Abrir conversa →</a></div>
           </a>
-          <a href="mailto:contato@templux.com.br" class="contact-card">
+          <a href="mailto:templux2026@gmail.com" class="contact-card">
             <div class="contact-card-icon" style="background:rgba(139,92,246,0.1);color:var(--accent-bright);">✉️</div>
-            <div><h3>E-mail</h3><p>Para assuntos formais. Resposta em até 24h úteis.</p><a href="mailto:contato@templux.com.br">contato@templux.com.br</a></div>
+            <div><h3>E-mail</h3><p>Para assuntos formais. Resposta em até 24h úteis.</p><a href="mailto:templux2026@gmail.com">templux2026@gmail.com</a></div>
           </a>
-          <a href="https://instagram.com/templux" target="_blank" rel="noopener" class="contact-card">
+          <a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener" class="contact-card">
             <div class="contact-card-icon" style="background:rgba(225,48,108,0.1);color:#e1306c;">📷</div>
-            <div><h3>Instagram</h3><p>Lançamentos e novidades em primeira mão.</p><a href="https://instagram.com/templux" target="_blank" rel="noopener">@templux →</a></div>
+            <div><h3>Instagram</h3><p>Lançamentos e novidades em primeira mão.</p><a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener">@templux2026 →</a></div>
+          </a>
+          <a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-card-icon" style="background:rgba(0,0,0,0.06);color:#000;">🎵</div>
+            <div><h3>TikTok</h3><p>Templates em ação e bastidores do processo.</p><a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener">@templux7 →</a></div>
           </a>
         </div>
 
@@ -101,16 +105,16 @@
       <div class="footer-brand"><a href="index.html" class="nav-logo" style="font-size:1.3rem;text-decoration:none;"><div class="nav-logo-dot"></div>Temp<span>lux</span></a><p>Templates premium para sites de pequenos negócios.</p></div>
       <div class="footer-col"><h4>Páginas</h4><ul><li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="contato.html">Contato</a></li></ul></div>
       <div class="footer-col"><h4>Categorias</h4><ul><li><a href="catalogo.html?cat=barbearia">Barbearia</a></li><li><a href="catalogo.html?cat=salao">Salão</a></li><li><a href="catalogo.html?cat=delivery">Delivery</a></li><li><a href="catalogo.html?cat=restaurante">Restaurante</a></li></ul></div>
-      <div class="footer-col"><h4>Contato</h4><ul><li><a href="https://wa.me/5521972191212" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:contato@templux.com.br">E-mail</a></li><li><a href="https://instagram.com/templux" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+      <div class="footer-col"><h4>Contato</h4><ul><li><a href="https://wa.me/5521972191212" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="mailto:templux2026@gmail.com">E-mail</a></li><li><a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener">TikTok</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2025 Templux. Todos os direitos reservados.</span><div class="footer-socials"><a href="https://instagram.com/templux" target="_blank" rel="noopener" aria-label="Instagram">📷</a><a href="https://wa.me/5521972191212" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></div></div>
+    <div class="footer-bottom"><span>© 2025 Templux. Todos os direitos reservados.</span><div class="footer-socials"><a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener" aria-label="Instagram">📷</a><a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener" aria-label="TikTok">🎵</a><a href="https://wa.me/5521972191212" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a></div></div>
   </div>
 </footer>
 <div id="globalToast" class="toast"></div>
 <script src="script.js"></script>
 <script>
   function toggleFaq(btn){const item=btn.closest('.faq-item');document.querySelectorAll('.faq-item.open').forEach(o=>{if(o!==item)o.classList.remove('open');});item.classList.toggle('open');}
-  function sendEmail(){const name=document.getElementById('formName').value.trim(),email=document.getElementById('formEmail').value.trim(),subject=document.getElementById('formSubject').value.trim(),message=document.getElementById('formMessage').value.trim();if(!name||!email||!message){showToast('Preencha nome, e-mail e mensagem.');return;}const body='Nome: '+name+'\nE-mail: '+email+'\n\n'+message;window.location.href='mailto:contato@templux.com.br?subject='+encodeURIComponent(subject||'Contato Templux')+'&body='+encodeURIComponent(body);}
+  function sendEmail(){const name=document.getElementById('formName').value.trim(),email=document.getElementById('formEmail').value.trim(),subject=document.getElementById('formSubject').value.trim(),message=document.getElementById('formMessage').value.trim();if(!name||!email||!message){showToast('Preencha nome, e-mail e mensagem.');return;}const body='Nome: '+name+'\nE-mail: '+email+'\n\n'+message;window.location.href='mailto:templux2026@gmail.com?subject='+encodeURIComponent(subject||'Contato Templux')+'&body='+encodeURIComponent(body);}
 </script>
 </body>
 </html>
