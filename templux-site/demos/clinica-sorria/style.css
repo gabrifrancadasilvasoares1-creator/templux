@@ -3,6 +3,9 @@
    style.css — v2 · Professional UI
 ═══════════════════════════════════════════════════════════ */
 
+/* ─── COLOR SCHEME — força tema claro, bloqueia auto-dark ── */
+:root { color-scheme: light only; }
+
 /* ─── RESET ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
