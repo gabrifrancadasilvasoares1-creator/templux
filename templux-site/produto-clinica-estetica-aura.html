@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Estética Aura — Template Luxury para Clínica Estética | Templux</title>
+  <meta name="description" content="Template HTML rosa nude luxury para clínicas estéticas. Procedimentos, antes/depois, equipe médica e agendamento gratuito. R$29,90 — código 100% seu." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .product-hero { padding: calc(var(--nav-height) + 48px) 0 64px; }
+    .product-layout { display:grid; grid-template-columns:1fr 380px; gap:48px; align-items:start; }
+    .product-sidebar { position:sticky; top:calc(var(--nav-height) + 24px); }
+    .buy-box { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px; }
+    .buy-box-price { font-family:var(--font-display); font-size:2.2rem; font-weight:800; }
+    .buy-box-note { color:var(--text-secondary); font-size:0.82rem; margin:6px 0 20px; }
+    .buy-box-divider { height:1px; background:var(--border); margin:20px 0; }
+    .main-preview { aspect-ratio:16/9; border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-surface); border:1px solid var(--border); margin-bottom:12px; cursor:zoom-in; }
+    .main-preview img { width:100%; height:100%; object-fit:cover; transition:opacity 0.25s ease; }
+    .gallery-thumbs { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:24px; }
+    .gallery-thumb { aspect-ratio:16/9; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer; border:2px solid transparent; transition:border-color 0.15s,transform 0.15s; }
+    .gallery-thumb:hover { transform:translateY(-2px); border-color:var(--border-accent); }
+    .gallery-thumb.active { border-color:var(--accent-bright); }
+    .gallery-thumb img { width:100%; height:100%; object-fit:cover; }
+    .product-section { margin-top:48px; padding-top:48px; border-top:1px solid var(--border); }
+    .product-section-title { font-family:var(--font-display); font-size:1.05rem; font-weight:700; margin-bottom:20px; display:flex; align-items:center; gap:10px; }
+    .product-section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+    .zip-list { display:flex; flex-direction:column; gap:10px; }
+    .zip-item { display:flex; align-items:center; gap:12px; padding:12px 16px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); font-size:0.875rem; color:var(--text-secondary); font-family:monospace; }
+    .zip-item span { color:var(--text-muted); font-size:0.78rem; font-family:var(--font-body); }
+    @media (max-width:600px) { .gallery-thumbs { grid-template-columns:repeat(3,1fr); } }
+    @media (max-width:1024px) { .product-layout { grid-template-columns:1fr; } .product-sidebar { position:static; } }
+  </style>
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-dot"></div>Temp<span>lux</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html" class="active">Catálogo</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contato.html" class="btn btn-ghost">Suporte</a>
+      <a href="catalogo.html" class="btn btn-primary btn-sm">Ver templates →</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="index.html">Início</a><a href="catalogo.html">Catálogo</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a>
+</div>
+
+<section class="product-hero">
+  <div class="container">
+    <div class="breadcrumb animate-fade-up">
+      <a href="index.html">Início</a><span class="breadcrumb-sep">›</span>
+      <a href="catalogo.html">Catálogo</a><span class="breadcrumb-sep">›</span>
+      <span>Clínica Estética Aura</span>
+    </div>
+    <div class="product-layout">
+
+      <div>
+        <div style="margin-bottom:28px;" class="animate-fade-up delay-1">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span class="badge badge-accent">🆕 Novo</span>
+            <span class="badge badge-category">✨ Estética</span>
+            <span class="badge badge-green">● HTML/CSS/JS</span>
+          </div>
+          <h1 class="display-lg" style="margin-bottom:12px;">Clínica Estética Aura</h1>
+          <p style="color:var(--text-secondary);font-size:1.05rem;line-height:1.7;">Landing page luxury rosa nude para clínicas estéticas e dermatologistas. Procedimentos, antes/depois, equipe médica credenciada e CTA de avaliação gratuita.</p>
+        </div>
+
+        <div class="main-preview animate-fade-up delay-2" onclick="openLightbox(currentSrc)">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=85" alt="Clínica Estética Aura — Hero" id="mainImg" />
+        </div>
+
+        <div class="gallery-thumbs animate-fade-up delay-3">
+          <div class="gallery-thumb active" onclick="setPreview(this,'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=85','Hero')" title="Hero">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&q=80" alt="Hero" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1200&q=85','Procedimentos')" title="Procedimentos">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=300&q=80" alt="Procedimentos" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=1200&q=85','Resultados')" title="Resultados">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=300&q=80" alt="Resultados" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1200&q=85','Equipe')" title="Equipe">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80" alt="Equipe" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'https://images.unsplash.com/photo-1600334089648-b0d3d966502e?w=1200&q=85','Agendamento')" title="Agendamento">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d3d966502e?w=300&q=80" alt="Agendamento" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="product-section reveal">
+          <div class="product-section-title">Descrição completa</div>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">O <strong style="color:var(--text-primary);">Clínica Estética Aura</strong> é um template elegante e feminino para clínicas estéticas, dermatologistas e biomédicas que querem transmitir luxo, confiança e cuidado. Paleta rosa nude com toques de branco e fundo levíssimo.</p>
+          <p style="color:var(--text-secondary);line-height:1.8;">Tipografia Cormorant Garamond (serifada, elegante) combinada com Nunito (arredondada, acolhedora). Elementos decorativos sutis como pétalas animadas e gradientes suaves completam a atmosfera premium de spa de luxo.</p>
+        </div>
+
+        <div class="product-section reveal">
+          <div class="product-section-title">O que você leva</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">✓</div>Tema luxury rosa nude + branco</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>100% responsivo mobile-first</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>5 cards de procedimentos</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>3 resultados antes/depois</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>WhatsApp flutuante</div>
+            </div>
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">✓</div>3 cards da equipe médica</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>3 depoimentos de pacientes</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>Pétalas animadas no hero</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>Barra de trust/credenciais</div>
+              <div class="feature-item"><div class="feature-icon">✓</div>Código 100% seu para sempre</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-section reveal">
+          <div class="product-section-title">Seções incluídas</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">→</div>Hero com float badges e stats</div>
+              <div class="feature-item"><div class="feature-icon">→</div>Barra de credenciais (5 itens)</div>
+              <div class="feature-item"><div class="feature-icon">→</div>5 procedimentos com preço e tempo</div>
+              <div class="feature-item"><div class="feature-icon">→</div>3 resultados antes e depois</div>
+            </div>
+            <div class="feature-list">
+              <div class="feature-item"><div class="feature-icon">→</div>Equipe médica com CRM</div>
+              <div class="feature-item"><div class="feature-icon">→</div>Depoimentos de pacientes</div>
+              <div class="feature-item"><div class="feature-icon">→</div>CTA de avaliação gratuita</div>
+              <div class="feature-item"><div class="feature-icon">→</div>Footer completo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-section reveal">
+          <div class="product-section-title">Tecnologias</div>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">CSS Animations</span><span class="tech-tag">IntersectionObserver</span>
+            <span class="tech-tag">Cormorant Garamond + Nunito</span><span class="tech-tag">Sem frameworks</span>
+          </div>
+        </div>
+
+        <div class="product-section reveal">
+          <div class="product-section-title">O que vem no ZIP</div>
+          <div class="zip-list">
+            <div class="zip-item">📄 index.html <span>— Arquivo principal do template</span></div>
+            <div class="zip-item">🎨 style.css <span>— Tema luxury rosa nude completo</span></div>
+            <div class="zip-item">⚡ script.js <span>— Animações e interações</span></div>
+            <div class="zip-item">🖼️ assets/icons/favicon.svg <span>— Ícone do site</span></div>
+            <div class="zip-item">📋 docs/README.md <span>— Instruções de uso</span></div>
+          </div>
+        </div>
+
+        <div class="product-section reveal">
+          <div class="product-section-title">Perguntas frequentes</div>
+          <div id="faqList">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Posso usar para dermatologista ou biomédica?<div class="faq-icon">+</div></button><div class="faq-answer"><p>Sim. O template foi desenhado para qualquer profissional de estética: clínicas, dermatologistas, biomédicas, esteticistas e spas.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Posso adicionar mais procedimentos?<div class="faq-icon">+</div></button><div class="faq-answer"><p>Sim. Basta duplicar um .proc-card no HTML e editar o conteúdo. O grid se ajusta automaticamente.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Preciso saber programar para usar?<div class="faq-icon">+</div></button><div class="faq-answer"><p>Não. Abra o HTML em um editor de texto e substitua os textos. O README orienta todo o processo.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Como recebo após a compra?<div class="faq-icon">+</div></button><div class="faq-answer"><p>Imediatamente após o pagamento você recebe o link de download por e-mail. Acesso automático e instantâneo.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-sidebar animate-fade-up delay-2">
+        <div class="buy-box">
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+            <span class="buy-box-price">R$29,90</span>
+            <span class="badge badge-gold">pagamento único</span>
+          </div>
+          <p class="buy-box-note">Sem mensalidade. Código 100% seu para sempre.</p>
+          <a href="LINK_CAKTO_AQUI" class="btn btn-primary btn-lg btn-full" target="_blank" rel="noopener" style="margin-bottom:10px;animation:pulse-glow 2.5s ease-in-out infinite;">
+            🛒 Comprar agora — R$29,90
+          </a>
+          <a href="demos/clinica-estetica-aura/index.html" class="btn btn-secondary btn-lg btn-full" target="_blank" rel="noopener" style="margin-bottom:10px;">
+            👁️ Ver demo do template
+          </a>
+          <div class="buy-box-divider"></div>
+          <div class="feature-list">
+            <div class="feature-item"><div class="feature-icon">✓</div>Download imediato</div>
+            <div class="feature-item"><div class="feature-icon">✓</div>Suporte incluído</div>
+            <div class="feature-item"><div class="feature-icon">✓</div>Licença comercial</div>
+            <div class="feature-item"><div class="feature-icon">✓</div>Código organizado</div>
+          </div>
+          <div class="buy-box-divider"></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span class="badge badge-category">HTML5</span>
+            <span class="badge badge-category">CSS3</span>
+            <span class="badge badge-category">JavaScript</span>
+            <span class="badge badge-category">Responsivo</span>
+          </div>
+          <p style="display:flex;align-items:center;gap:8px;color:var(--text-muted);font-size:0.78rem;margin-top:16px;">🔒 Pagamento seguro via Cakto</p>
+        </div>
+        <div style="margin-top:14px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px;">
+          <p style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:10px;">Outros templates:</p>
+          <a href="produto-academia-premium.html" style="display:block;font-size:0.875rem;color:var(--text-secondary);padding:6px 0;border-bottom:1px solid var(--border);">🏋️ Academia Premium →</a>
+          <a href="produto-barbearia-imperial.html" style="display:block;font-size:0.875rem;color:var(--text-secondary);padding:6px 0;border-bottom:1px solid var(--border);">🔪 Barbearia Imperial →</a>
+          <a href="produto-devfolio-dark.html" style="display:block;font-size:0.875rem;color:var(--text-secondary);padding:6px 0;border-bottom:1px solid var(--border);">💻 DevFolio Dark →</a>
+          <a href="produto-clinica-sorria.html" style="display:block;font-size:0.875rem;color:var(--text-secondary);padding:6px 0;">🦷 Clínica Sorria →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="font-size:1.3rem;text-decoration:none;"><div class="nav-logo-dot"></div>Temp<span>lux</span></a>
+        <p>Templates premium para sites de pequenos negócios. Design moderno, código limpo, resultado real.</p>
+      </div>
+      <div class="footer-col"><h4>Páginas</h4><ul><li><a href="index.html">Início</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      <div class="footer-col"><h4>Suporte</h4><ul><li><a href="contato.html">Fale conosco</a></li><li><a href="https://wa.me/5521972191212" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Templux. Todos os direitos reservados.</span></div>
+  </div>
+</footer>
+<div id="globalToast" class="toast"></div>
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:none;align-items:center;justify-content:center;cursor:zoom-out;" onclick="closeLightbox()">
+  <img id="lightboxImg" style="max-width:92vw;max-height:90vh;border-radius:8px;object-fit:contain;" />
+</div>
+<script src="script.js"></script>
+<script>
+let currentSrc = document.getElementById('mainImg').src;
+function setPreview(thumb, src) {
+  document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active')); thumb.classList.add('active');
+  const img = document.getElementById('mainImg'); img.style.opacity = '0';
+  setTimeout(() => { img.src = src; currentSrc = src; img.style.opacity = '1'; }, 200);
+}
+function openLightbox(src) { const lb = document.getElementById('lightbox'); document.getElementById('lightboxImg').src = src; lb.style.display = 'flex'; }
+function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+function copyLink() { navigator.clipboard.writeText(window.location.href).then(() => { const t = document.getElementById('globalToast'); t.textContent = '✓ Link copiado!'; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 3000); }); }
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item'); const answer = item.querySelector('.faq-answer'); const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(o => { o.classList.remove('open'); o.querySelector('.faq-answer').style.maxHeight = '0'; });
+  if (!isOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+}
+</script>
+</body>
+</html>

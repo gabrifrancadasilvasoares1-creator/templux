@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>Aura Clínica Estética — Beleza & Bem-estar Premium</title>
+  <meta name="description" content="Clínica estética premium com procedimentos de alta tecnologia. Botox, preenchimento, laser, limpeza de pele e muito mais. Agende sua avaliação gratuita." />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ NAVBAR ════════════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#inicio" class="navbar__logo">
+      <div class="navbar__logo-icon">✦</div>
+      <span>Aura <em>Clínica</em></span>
+    </a>
+    <nav class="navbar__links" id="navLinks">
+      <a href="#procedimentos" class="navbar__link">Procedimentos</a>
+      <a href="#resultados" class="navbar__link">Resultados</a>
+      <a href="#equipe" class="navbar__link">Equipe</a>
+      <a href="#depoimentos" class="navbar__link">Avaliações</a>
+      <a href="#contato" class="navbar__link">Agendar</a>
+    </nav>
+    <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--rose btn--sm navbar__cta">Agendar avaliação</a>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#procedimentos">Procedimentos</a>
+  <a href="#resultados">Resultados</a>
+  <a href="#equipe">Equipe</a>
+  <a href="#depoimentos">Avaliações</a>
+  <a href="#contato">Agendar</a>
+  <a href="LINK_CAKTO_AQUI" class="btn btn--rose" style="text-align:center;margin-top:12px;">Agendar avaliação</a>
+</div>
+
+<!-- ═══ HERO ════════════════════════════════════════════════════ -->
+<section id="inicio" class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__petal hero__petal--1"></div>
+  <div class="hero__petal hero__petal--2"></div>
+  <div class="hero__petal hero__petal--3"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__label reveal">
+        <span>✦</span> Clínica Estética Premium — São Paulo
+      </div>
+      <h1 class="hero__title reveal reveal-d1">
+        Realce sua<br>
+        <em>beleza natural</em><br>
+        com precisão.
+      </h1>
+      <p class="hero__sub reveal reveal-d2">
+        Procedimentos estéticos de alta tecnologia realizados por especialistas certificados. Resultado natural, seguro e que você vai amar desde a primeira sessão.
+      </p>
+      <div class="hero__actions reveal reveal-d3">
+        <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--rose btn--xl">
+          Agendar avaliação gratuita
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#procedimentos" class="btn btn--outline btn--xl">Conhecer serviços</a>
+      </div>
+      <div class="hero__trust reveal reveal-d4">
+        <div class="hero__trust-item"><strong>+3.500</strong><span>pacientes atendidas</span></div>
+        <div class="hero__trust-sep"></div>
+        <div class="hero__trust-item"><strong>12 anos</strong><span>de experiência</span></div>
+        <div class="hero__trust-sep"></div>
+        <div class="hero__trust-item"><strong>4.9 ★</strong><span>no Google</span></div>
+      </div>
+    </div>
+    <div class="hero__visual reveal reveal-d2">
+      <div class="hero__img-wrap">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=85" alt="Clínica Estética Aura" loading="eager" />
+        <div class="hero__img-mask"></div>
+      </div>
+      <div class="hero__float hero__float--1">
+        <span class="hero__float-icon">✨</span>
+        <div><strong>Avaliação gratuita</strong><span>sem compromisso</span></div>
+      </div>
+      <div class="hero__float hero__float--2">
+        <span class="hero__float-icon">🌸</span>
+        <div><strong>Resultado em 1 sessão</strong><span>para maioria dos procedimentos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST STRIP ════════════════════════════════════════════ -->
+<section class="trust-strip">
+  <div class="container trust-strip__grid">
+    <div class="trust-strip__item reveal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Anvisa regulamentada</span>
+    </div>
+    <div class="trust-strip__item reveal reveal-d1">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span>Médicos especialistas</span>
+    </div>
+    <div class="trust-strip__item reveal reveal-d2">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+      <span>Produtos originais importados</span>
+    </div>
+    <div class="trust-strip__item reveal reveal-d3">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span>Agendamento online</span>
+    </div>
+    <div class="trust-strip__item reveal reveal-d4">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      <span>Resultados naturais</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCEDIMENTOS ════════════════════════════════════════════ -->
+<section id="procedimentos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">Nossos tratamentos</div>
+      <h2 class="section-title reveal reveal-d1">Procedimentos que<br><em>transformam</em></h2>
+      <p class="section-sub reveal reveal-d2">Cada tratamento é personalizado para o seu tipo de pele, objetivos e estilo de vida. Porque beleza não tem receita única.</p>
+    </div>
+    <div class="procs-grid">
+      <div class="proc-card proc-card--wide reveal">
+        <div class="proc-card__img">
+          <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=85" alt="Botox" loading="lazy" />
+        </div>
+        <div class="proc-card__body">
+          <span class="proc-card__cat">Harmonização</span>
+          <h3>Botox & Toxina Botulínica</h3>
+          <p>Suavização de linhas de expressão, prevenção de rugas e lifting facial sem cirurgia. Resultado natural por até 6 meses.</p>
+          <div class="proc-card__meta">
+            <span>🕐 45 min</span>
+            <span>✨ Resultado imediato</span>
+          </div>
+          <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--rose btn--sm">Agendar</a>
+        </div>
+      </div>
+      <div class="proc-card reveal reveal-d1">
+        <div class="proc-card__img">
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=85" alt="Preenchimento" loading="lazy" />
+        </div>
+        <div class="proc-card__body">
+          <span class="proc-card__cat">Harmonização</span>
+          <h3>Preenchimento Facial</h3>
+          <p>Volume e contorno para maçãs do rosto, lábios e olheiras com ácido hialurônico. Resultado imediato e natural.</p>
+          <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--outline-rose btn--sm">Agendar</a>
+        </div>
+      </div>
+      <div class="proc-card reveal reveal-d2">
+        <div class="proc-card__img">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=85" alt="Laser" loading="lazy" />
+        </div>
+        <div class="proc-card__body">
+          <span class="proc-card__cat">Tecnologia</span>
+          <h3>Laser & Fototerapia</h3>
+          <p>Tratamento de manchas, rejuvenescimento e depilação a laser com equipamentos de última geração.</p>
+          <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--outline-rose btn--sm">Agendar</a>
+        </div>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-card__img">
+          <img src="https://images.unsplash.com/photo-1559841644-08984562005b?w=600&q=85" alt="Limpeza de pele" loading="lazy" />
+        </div>
+        <div class="proc-card__body">
+          <span class="proc-card__cat">Skincare</span>
+          <h3>Limpeza Profunda Premium</h3>
+          <p>Protocolo exclusivo de limpeza com esfoliação enzimática, extração e hidratação profunda.</p>
+          <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--outline-rose btn--sm">Agendar</a>
+        </div>
+      </div>
+      <div class="proc-card reveal reveal-d1">
+        <div class="proc-card__img">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d3d966502e?w=600&q=85" alt="Corporal" loading="lazy" />
+        </div>
+        <div class="proc-card__body">
+          <span class="proc-card__cat">Corporal</span>
+          <h3>Modelagem & Drenagem</h3>
+          <p>Redução de medidas, celulite e acúmulo de líquidos com protocolos corporais avançados.</p>
+          <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--outline-rose btn--sm">Agendar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTADOS ═══════════════════════════════════════════════ -->
+<section id="resultados" class="section section--blush">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">Antes e depois</div>
+      <h2 class="section-title reveal reveal-d1">Transformações<br><em>reais</em></h2>
+      <p class="section-sub reveal reveal-d2">Cada resultado é único — assim como você. Conheça algumas das nossas pacientes e suas histórias de transformação.</p>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="result-card__imgs">
+          <div class="result-card__img result-card__img--before">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=85&fit=crop&crop=faces" alt="Antes" loading="lazy" />
+            <span class="result-tag result-tag--before">Antes</span>
+          </div>
+          <div class="result-card__img result-card__img--after">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=85&fit=crop&crop=faces" alt="Depois" loading="lazy" />
+            <span class="result-tag result-tag--after">Depois</span>
+          </div>
+        </div>
+        <div class="result-card__info">
+          <strong>Mariana, 38</strong>
+          <span>Botox + Preenchimento · 1 sessão</span>
+        </div>
+      </div>
+      <div class="result-card reveal reveal-d1">
+        <div class="result-card__imgs">
+          <div class="result-card__img result-card__img--before">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=85&fit=crop&crop=faces" alt="Antes" loading="lazy" />
+            <span class="result-tag result-tag--before">Antes</span>
+          </div>
+          <div class="result-card__img result-card__img--after">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=85&fit=crop&crop=faces" alt="Depois" loading="lazy" />
+            <span class="result-tag result-tag--after">Depois</span>
+          </div>
+        </div>
+        <div class="result-card__info">
+          <strong>Camila, 31</strong>
+          <span>Laser manchas · 3 sessões</span>
+        </div>
+      </div>
+      <div class="result-card reveal reveal-d2">
+        <div class="result-card__imgs">
+          <div class="result-card__img result-card__img--before">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=85&fit=crop&crop=faces" alt="Antes" loading="lazy" />
+            <span class="result-tag result-tag--before">Antes</span>
+          </div>
+          <div class="result-card__img result-card__img--after">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=85&fit=crop&crop=faces" alt="Depois" loading="lazy" />
+            <span class="result-tag result-tag--after">Depois</span>
+          </div>
+        </div>
+        <div class="result-card__info">
+          <strong>Fernanda, 45</strong>
+          <span>Rejuvenescimento facial · 2 sessões</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EQUIPE ════════════════════════════════════════════════════ -->
+<section id="equipe" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">Nossa equipe</div>
+      <h2 class="section-title reveal reveal-d1">Especialistas que<br><em>cuidam de você</em></h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-card__img">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&q=85&fit=crop&crop=faces" alt="Dra. Amanda" loading="lazy" />
+        </div>
+        <div class="team-card__info">
+          <strong>Dra. Amanda Vieira</strong>
+          <span>Médica Dermatologista · CRM 12345/SP</span>
+          <p>12 anos em dermatologia estética. Especialista em harmonização facial e protocolos anti-aging. Formada pela USP.</p>
+          <div class="team-card__crm">CRM 12345 SP · CFM</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-d1">
+        <div class="team-card__img">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=85&fit=crop&crop=faces" alt="Dra. Renata" loading="lazy" />
+        </div>
+        <div class="team-card__info">
+          <strong>Dra. Renata Lopes</strong>
+          <span>Biomédica Esteta · CRBM 45678</span>
+          <p>Especialista em bioestimuladores, limpeza avançada de pele e protocolos de skincare personalizados.</p>
+          <div class="team-card__crm">CRBM 45678 · CREFITO</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-d2">
+        <div class="team-card__img">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&q=85&fit=crop&crop=faces" alt="Dra. Patricia" loading="lazy" />
+        </div>
+        <div class="team-card__info">
+          <strong>Dra. Patricia Cunha</strong>
+          <span>Esteticista · Tecnóloga em Estética</span>
+          <p>Referência em tratamentos corporais e faciais não invasivos. Especialista em drenagem linfática e massagem modeladora.</p>
+          <div class="team-card__crm">CREFITO 789456 · ES</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEPOIMENTOS ══════════════════════════════════════════════ -->
+<section id="depoimentos" class="section section--blush">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge reveal">Avaliações</div>
+      <h2 class="section-title reveal reveal-d1">O que dizem nossas<br><em>pacientes</em></h2>
+      <div class="section-stars reveal reveal-d2">★★★★★ <span>4.9 · +680 avaliações no Google</span></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-card__star">★★★★★</div>
+        <p>"Fui muito bem atendida desde o primeiro contato. A Dra. Amanda é incrível, super atenciosa e o resultado do preenchimento ficou absolutamente natural. Me sinto muito mais confiante."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">LP</div>
+          <div><strong>Luana Pereira</strong><span>Paciente há 2 anos</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d1">
+        <div class="testimonial-card__star">★★★★★</div>
+        <p>"Sempre tive medo de procedimentos estéticos, mas a equipe da Aura foi tão acolhedora que me senti segura em cada etapa. O laser para manchas transformou minha pele em 3 sessões."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">TS</div>
+          <div><strong>Talita Sousa</strong><span>Paciente há 1 ano</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d2">
+        <div class="testimonial-card__star">★★★★★</div>
+        <p>"O ambiente é lindo, cheiroso, relaxante. Mas o que mais me impressionou foi o cuidado técnico. Cada procedimento é explicado com detalhes e eu confio 100% na equipe."</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">JF</div>
+          <div><strong>Juliana Freitas</strong><span>Paciente há 6 meses</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA / AGENDAMENTO ════════════════════════════════════════ -->
+<section id="contato" class="cta-section">
+  <div class="cta-section__deco cta-section__deco--1"></div>
+  <div class="cta-section__deco cta-section__deco--2"></div>
+  <div class="container cta-section__inner">
+    <div class="section-badge reveal" style="margin:0 auto 20px;">Comece hoje</div>
+    <h2 class="cta-section__title reveal reveal-d1">
+      Sua melhor versão<br><em>espera por você.</em>
+    </h2>
+    <p class="cta-section__sub reveal reveal-d2">
+      Agende sua avaliação gratuita e descubra quais procedimentos são ideais para você. Sem compromisso, sem pressão.
+    </p>
+    <div class="cta-section__actions reveal reveal-d3">
+      <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--rose btn--xl">
+        Agendar avaliação gratuita
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/5511999999999?text=Olá! Vim pelo site e quero agendar uma avaliação." target="_blank" rel="noopener" class="btn btn--wa btn--xl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="cta-section__guarantee reveal reveal-d4">
+      <span>✓ Avaliação gratuita</span>
+      <span>✓ Sem compromisso</span>
+      <span>✓ Resultado garantido</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#inicio" class="navbar__logo footer__logo">
+        <div class="navbar__logo-icon">✦</div>
+        <span>Aura <em>Clínica</em></span>
+      </a>
+      <p>Beleza com propósito. Estética com ciência. Cuidado com alma.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram" class="footer__social">📷</a>
+        <a href="#" aria-label="TikTok" class="footer__social">🎵</a>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="footer__social">💬</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Procedimentos</h4>
+      <ul>
+        <li><a href="#procedimentos">Botox & Toxina</a></li>
+        <li><a href="#procedimentos">Preenchimento Facial</a></li>
+        <li><a href="#procedimentos">Laser & Fototerapia</a></li>
+        <li><a href="#procedimentos">Limpeza Premium</a></li>
+        <li><a href="#procedimentos">Modelagem Corporal</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>A Clínica</h4>
+      <ul>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#equipe">Nossa Equipe</a></li>
+        <li><a href="#depoimentos">Avaliações</a></li>
+        <li><a href="#contato">Agendamento</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <ul class="footer__contact">
+        <li>📍 Av. Paulista, 1000 — Bela Vista<br>São Paulo / SP</li>
+        <li>📞 (11) 9 9999-9999</li>
+        <li>✉️ contato@auraclinica.com.br</li>
+        <li>🕐 Seg–Sex: 8h–19h · Sáb: 9h–16h</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© 2025 Aura Clínica Estética. Todos os direitos reservados.</span>
+      <span>CRM SP · ANVISA regulamentado</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5511999999999?text=Olá! Quero agendar uma avaliação na Aura Clínica." target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+  <div class="wa-float__ring"></div>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

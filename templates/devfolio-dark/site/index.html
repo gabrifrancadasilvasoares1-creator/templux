@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Alex.dev — Full Stack Developer</title>
+  <meta name="description" content="Desenvolvedor full stack especializado em React, Node.js e sistemas escaláveis. Disponível para projetos freelance e oportunidades CLT." />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ CURSOR ════════════════════════════════════════════════════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- ═══ NAVBAR ════════════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#inicio" class="navbar__logo">
+      <span class="navbar__logo-bracket">&lt;</span>alex.dev<span class="navbar__logo-bracket">/&gt;</span>
+    </a>
+    <nav class="navbar__links" id="navLinks">
+      <a href="#sobre" class="navbar__link">sobre</a>
+      <a href="#skills" class="navbar__link">skills</a>
+      <a href="#projetos" class="navbar__link">projetos</a>
+      <a href="#experiencia" class="navbar__link">experiência</a>
+      <a href="#contato" class="navbar__link">contato</a>
+    </nav>
+    <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--neon btn--sm navbar__cta">Contratar</a>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#sobre">sobre</a>
+  <a href="#skills">skills</a>
+  <a href="#projetos">projetos</a>
+  <a href="#experiencia">experiência</a>
+  <a href="#contato">contato</a>
+  <a href="LINK_CAKTO_AQUI" class="btn btn--neon" style="text-align:center;margin-top:12px;">Contratar</a>
+</div>
+
+<!-- ═══ HERO ════════════════════════════════════════════════════ -->
+<section id="inicio" class="hero">
+  <div class="hero__grid-bg"></div>
+  <div class="hero__glow hero__glow--1"></div>
+  <div class="hero__glow hero__glow--2"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__status reveal">
+        <span class="hero__dot"></span>
+        disponível para projetos
+      </div>
+      <div class="hero__greeting reveal reveal-d1">
+        <span class="code-comment">// olá, eu sou</span>
+      </div>
+      <h1 class="hero__title reveal reveal-d2">
+        Alex<br>
+        <span class="hero__title-name">Fernandes</span>
+      </h1>
+      <div class="hero__role reveal reveal-d3">
+        <span class="code-bracket">&lt;</span>
+        <span id="typingText"></span>
+        <span class="typing-cursor">|</span>
+        <span class="code-bracket">/&gt;</span>
+      </div>
+      <p class="hero__sub reveal reveal-d3">
+        Transformo ideias em produtos digitais de alta qualidade. Especialista em interfaces modernas, APIs robustas e arquiteturas que escalam.
+      </p>
+      <div class="hero__actions reveal reveal-d4">
+        <a href="#projetos" class="btn btn--neon btn--xl">Ver projetos</a>
+        <a href="#contato" class="btn btn--ghost btn--xl">Falar comigo</a>
+      </div>
+      <div class="hero__quick-stats reveal reveal-d4">
+        <div class="hero__stat"><strong>5+</strong><span>anos exp.</span></div>
+        <div class="hero__stat-sep">//</div>
+        <div class="hero__stat"><strong>40+</strong><span>projetos</span></div>
+        <div class="hero__stat-sep">//</div>
+        <div class="hero__stat"><strong>98%</strong><span>clientes satisfeitos</span></div>
+      </div>
+    </div>
+    <div class="hero__terminal reveal reveal-d2">
+      <div class="terminal">
+        <div class="terminal__bar">
+          <div class="terminal__dots">
+            <span class="terminal__dot terminal__dot--red"></span>
+            <span class="terminal__dot terminal__dot--yellow"></span>
+            <span class="terminal__dot terminal__dot--green"></span>
+          </div>
+          <span class="terminal__title">alex@dev ~ portfolio</span>
+        </div>
+        <div class="terminal__body">
+          <div class="terminal__line"><span class="t-prompt">$</span> whoami</div>
+          <div class="terminal__line t-output">Alex Fernandes · Full Stack Dev</div>
+          <div class="terminal__line t-blank"></div>
+          <div class="terminal__line"><span class="t-prompt">$</span> cat skills.txt</div>
+          <div class="terminal__line t-output"><span class="t-key">frontend:</span> React, Next.js, TypeScript</div>
+          <div class="terminal__line t-output"><span class="t-key">backend:</span>  Node.js, Python, Go</div>
+          <div class="terminal__line t-output"><span class="t-key">cloud:</span>    AWS, Docker, Kubernetes</div>
+          <div class="terminal__line t-output"><span class="t-key">database:</span> PostgreSQL, MongoDB, Redis</div>
+          <div class="terminal__line t-blank"></div>
+          <div class="terminal__line"><span class="t-prompt">$</span> git log --oneline -3</div>
+          <div class="terminal__line t-output"><span class="t-hash">a1b2c3d</span> feat: launch portfolio v3</div>
+          <div class="terminal__line t-output"><span class="t-hash">e4f5g6h</span> fix: performance on mobile</div>
+          <div class="terminal__line t-output"><span class="t-hash">i7j8k9l</span> chore: update deps</div>
+          <div class="terminal__line t-blank"></div>
+          <div class="terminal__line"><span class="t-prompt">$</span> <span class="terminal__cursor">▋</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TECH STACK BAR ══════════════════════════════════════════ -->
+<div class="tech-bar">
+  <div class="tech-bar__track">
+    <div class="tech-bar__inner" id="techTrack">
+      <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span>
+      <span>Python</span><span>Go</span><span>PostgreSQL</span><span>MongoDB</span>
+      <span>Redis</span><span>Docker</span><span>Kubernetes</span><span>AWS</span>
+      <span>GraphQL</span><span>REST API</span><span>Git</span><span>Linux</span>
+      <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span>
+      <span>Python</span><span>Go</span><span>PostgreSQL</span><span>MongoDB</span>
+      <span>Redis</span><span>Docker</span><span>Kubernetes</span><span>AWS</span>
+      <span>GraphQL</span><span>REST API</span><span>Git</span><span>Linux</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SOBRE ════════════════════════════════════════════════════ -->
+<section id="sobre" class="section">
+  <div class="container sobre-grid">
+    <div class="sobre-img reveal">
+      <div class="sobre-img__wrap">
+        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&q=85&fit=crop&crop=faces" alt="Alex Fernandes" loading="lazy" />
+        <div class="sobre-img__border"></div>
+      </div>
+      <div class="sobre-img__badge">
+        <span>🏆</span>
+        <div><strong>Toptal Top 3%</strong><span>Developer</span></div>
+      </div>
+    </div>
+    <div class="sobre-content">
+      <div class="section-label reveal">
+        <span class="code-comment">// sobre_mim.js</span>
+      </div>
+      <h2 class="section-title reveal reveal-d1">
+        Código limpo.<br>Produto <span class="text-neon">real.</span>
+      </h2>
+      <p class="sobre-content__text reveal reveal-d2">
+        Sou desenvolvedor full stack com 5+ anos de experiência construindo produtos que realmente funcionam. Trabalhei em startups, agências e projetos próprios — do MVP ao sistema com 100k usuários.
+      </p>
+      <p class="sobre-content__text reveal reveal-d2">
+        Meu diferencial não é apenas escrever código: é entender o problema de negócio, propor a solução certa e entregar algo que o usuário final vai amar usar.
+      </p>
+      <div class="sobre-values reveal reveal-d3">
+        <div class="sobre-value">
+          <span class="sobre-value__icon">⚡</span>
+          <div><strong>Código de qualidade</strong><p>Clean code, testes, documentação e padrões que escalam.</p></div>
+        </div>
+        <div class="sobre-value">
+          <span class="sobre-value__icon">🎯</span>
+          <div><strong>Foco no resultado</strong><p>Entrego o que importa para o negócio, não apenas funcionalidades.</p></div>
+        </div>
+        <div class="sobre-value">
+          <span class="sobre-value__icon">🤝</span>
+          <div><strong>Comunicação clara</strong><p>Updates regulares, sem surpresas e sempre alinhado com você.</p></div>
+        </div>
+      </div>
+      <div class="sobre-cta reveal reveal-d4">
+        <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--neon btn--md">Contratar agora</a>
+        <a href="#projetos" class="btn btn--ghost btn--md">Ver projetos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ════════════════════════════════════════════════════ -->
+<section id="skills" class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label reveal"><span class="code-comment">// tecnologias.map()</span></div>
+      <h2 class="section-title reveal reveal-d1">Stack &amp; <span class="text-neon">Skills</span></h2>
+    </div>
+    <div class="skills-layout">
+      <div class="skills-bars">
+        <h3 class="skills-cat-title reveal">Frontend</h3>
+        <div class="skill-bar reveal reveal-d1"><div class="skill-bar__header"><span>React / Next.js</span><span>95%</span></div><div class="skill-bar__track"><div class="skill-bar__fill" data-width="95"></div></div></div>
+        <div class="skill-bar reveal reveal-d2"><div class="skill-bar__header"><span>TypeScript</span><span>90%</span></div><div class="skill-bar__track"><div class="skill-bar__fill" data-width="90"></div></div></div>
+        <div class="skill-bar reveal reveal-d3"><div class="skill-bar__header"><span>CSS / Tailwind / Sass</span><span>92%</span></div><div class="skill-bar__track"><div class="skill-bar__fill" data-width="92"></div></div></div>
+        <h3 class="skills-cat-title reveal" style="margin-top:32px;">Backend</h3>
+        <div class="skill-bar reveal reveal-d1"><div class="skill-bar__header"><span>Node.js / Express</span><span>90%</span></div><div class="skill-bar__track"><div class="skill-bar__fill" data-width="90"></div></div></div>
+        <div class="skill-bar reveal reveal-d2"><div class="skill-bar__header"><span>Python / FastAPI</span><span>82%</span></div><div class="skill-bar__track"><div class="skill-bar__fill" data-width="82"></div></div></div>
+        <div class="skill-bar reveal reveal-d3"><div class="skill-bar__header"><span>PostgreSQL / MongoDB</span><span>88%</span></div><div class="skill-bar__track"><div class="skill-bar__fill" data-width="88"></div></div></div>
+      </div>
+      <div class="skills-tags">
+        <h3 class="skills-cat-title reveal">Ferramentas &amp; Cloud</h3>
+        <div class="tags-grid reveal reveal-d1">
+          <div class="tag-chip">Docker</div><div class="tag-chip">Kubernetes</div>
+          <div class="tag-chip">AWS</div><div class="tag-chip">GCP</div>
+          <div class="tag-chip">Git / GitHub</div><div class="tag-chip">CI/CD</div>
+          <div class="tag-chip">GraphQL</div><div class="tag-chip">REST API</div>
+          <div class="tag-chip">Redis</div><div class="tag-chip">Nginx</div>
+          <div class="tag-chip">Linux</div><div class="tag-chip">Vercel</div>
+          <div class="tag-chip">Stripe</div><div class="tag-chip">Firebase</div>
+          <div class="tag-chip">Prisma</div><div class="tag-chip">Jest</div>
+        </div>
+        <h3 class="skills-cat-title reveal" style="margin-top:36px;">Método de trabalho</h3>
+        <div class="method-cards reveal reveal-d1">
+          <div class="method-card">
+            <span class="method-card__num">01</span>
+            <strong>Briefing</strong>
+            <p>Entendo o problema, o usuário e os objetivos antes de escrever uma linha.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card__num">02</span>
+            <strong>Prototipação</strong>
+            <p>Rascunho rápido para validar a direção antes de construir.</p>
+          </div>
+          <div class="method-card">
+            <span class="method-card__num">03</span>
+            <strong>Entrega</strong>
+            <p>Deploy, documentação e suporte pós-lançamento inclusos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJETOS ═════════════════════════════════════════════════ -->
+<section id="projetos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label reveal"><span class="code-comment">// projetos.filter(featured)</span></div>
+      <h2 class="section-title reveal reveal-d1">Projetos em <span class="text-neon">Destaque</span></h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card project-card--featured reveal">
+        <div class="project-card__img">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=85" alt="Projeto SaaS" loading="lazy" />
+          <div class="project-card__overlay">
+            <a href="#" class="project-card__link">Ver projeto →</a>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span>
+          </div>
+          <h3>FinanceOS — Plataforma SaaS</h3>
+          <p>Sistema de gestão financeira para PMEs com dashboard em tempo real, relatórios automáticos e integração bancária via Open Finance.</p>
+          <div class="project-card__meta">
+            <span>🏢 SaaS B2B</span>
+            <span>📅 2024</span>
+            <span>⭐ 1.200 usuários</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d1">
+        <div class="project-card__img">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=85" alt="Projeto E-commerce" loading="lazy" />
+          <div class="project-card__overlay">
+            <a href="#" class="project-card__link">Ver projeto →</a>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span>Next.js</span><span>Stripe</span><span>MongoDB</span>
+          </div>
+          <h3>Loja Premium E-commerce</h3>
+          <p>E-commerce de nicho com performance extrema — 98 no Lighthouse, checkout 1 clique e painel admin completo.</p>
+          <div class="project-card__meta">
+            <span>🛒 E-commerce</span>
+            <span>📅 2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-d2">
+        <div class="project-card__img">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=85" alt="App Mobile" loading="lazy" />
+          <div class="project-card__overlay">
+            <a href="#" class="project-card__link">Ver projeto →</a>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span>React Native</span><span>Firebase</span><span>Go</span>
+          </div>
+          <h3>Delivery App — 50k downloads</h3>
+          <p>Aplicativo de delivery local com rastreamento em tempo real, sistema de avaliações e painel para restaurantes.</p>
+          <div class="project-card__meta">
+            <span>📱 Mobile App</span>
+            <span>📅 2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-card__img">
+          <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=85" alt="API" loading="lazy" />
+          <div class="project-card__overlay">
+            <a href="#" class="project-card__link">Ver projeto →</a>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__tags">
+            <span>Python</span><span>FastAPI</span><span>Redis</span>
+          </div>
+          <h3>API de Notificações — 10M req/dia</h3>
+          <p>Microserviço de notificações push, e-mail e SMS com filas, retry e dashboard de métricas em tempo real.</p>
+          <div class="project-card__meta">
+            <span>⚡ Microserviço</span>
+            <span>📅 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="projects-more reveal">
+      <p>Esses são apenas alguns dos projetos. Tenho outros 30+ no portfólio completo.</p>
+      <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--neon btn--md">Ver portfólio completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIÊNCIA ══════════════════════════════════════════════ -->
+<section id="experiencia" class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label reveal"><span class="code-comment">// experiencia.sort(date)</span></div>
+      <h2 class="section-title reveal reveal-d1">Trajetória <span class="text-neon">Profissional</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__content">
+          <div class="timeline-item__header">
+            <div>
+              <strong>Senior Full Stack Developer</strong>
+              <span class="timeline-item__company">TechCorp — São Paulo</span>
+            </div>
+            <span class="timeline-item__date">2022 – atual</span>
+          </div>
+          <p>Líder técnico de um time de 6 devs. Responsável pela migração de um monolito legado para microsserviços, reduzindo o tempo de deploy de 2h para 8 minutos.</p>
+          <div class="timeline-item__tags">
+            <span>React</span><span>Node.js</span><span>K8s</span><span>AWS</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-d1">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__content">
+          <div class="timeline-item__header">
+            <div>
+              <strong>Full Stack Developer</strong>
+              <span class="timeline-item__company">StartupX — Remoto</span>
+            </div>
+            <span class="timeline-item__date">2020 – 2022</span>
+          </div>
+          <p>Desenvolvedor principal de um produto SaaS do zero ao Series A. O produto chegou a 500k usuários em 18 meses com o time de 3 pessoas.</p>
+          <div class="timeline-item__tags">
+            <span>Next.js</span><span>Python</span><span>PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-d2">
+        <div class="timeline-item__dot"></div>
+        <div class="timeline-item__content">
+          <div class="timeline-item__header">
+            <div>
+              <strong>Frontend Developer</strong>
+              <span class="timeline-item__company">Agência Digital W — São Paulo</span>
+            </div>
+            <span class="timeline-item__date">2019 – 2020</span>
+          </div>
+          <p>Desenvolvimento de interfaces para clientes enterprise. +20 projetos entregues em 12 meses incluindo e-commerces e aplicativos web.</p>
+          <div class="timeline-item__tags">
+            <span>React</span><span>TypeScript</span><span>GraphQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEPOIMENTOS ══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label reveal"><span class="code-comment">// reviews.map(client)</span></div>
+      <h2 class="section-title reveal reveal-d1">O Que Dizem <span class="text-neon">os Clientes</span></h2>
+    </div>
+    <div class="dev-testimonials">
+      <div class="dev-testimonial reveal">
+        <div class="dev-testimonial__stars">★★★★★</div>
+        <p>"Alex entregou o projeto 2 semanas antes do prazo, com qualidade acima do combinado. O código é limpo, documentado e fácil de manter. Definitivamente vou contratar de novo."</p>
+        <div class="dev-testimonial__author">
+          <div class="dev-testimonial__avatar" style="background:#22c55e;">JP</div>
+          <div>
+            <strong>João Paulo</strong>
+            <span>CEO · FinanceOS</span>
+          </div>
+        </div>
+      </div>
+      <div class="dev-testimonial reveal reveal-d1">
+        <div class="dev-testimonial__stars">★★★★★</div>
+        <p>"Comunicação impecável, proativo e muito técnico. Resolveu um problema de performance que nossa equipe interna tentava resolver há 3 meses. Em 2 semanas entregou a solução."</p>
+        <div class="dev-testimonial__author">
+          <div class="dev-testimonial__avatar" style="background:#a855f7;">CS</div>
+          <div>
+            <strong>Carla Souza</strong>
+            <span>CTO · StartupX</span>
+          </div>
+        </div>
+      </div>
+      <div class="dev-testimonial reveal reveal-d2">
+        <div class="dev-testimonial__stars">★★★★★</div>
+        <p>"Terceiro projeto que fazemos juntos. A consistência da qualidade é impressionante. É o tipo de profissional que você quer manter no seu radar indefinidamente."</p>
+        <div class="dev-testimonial__author">
+          <div class="dev-testimonial__avatar" style="background:#f97316;">MR</div>
+          <div>
+            <strong>Miguel Rocha</strong>
+            <span>Fundador · Loja Premium</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTATO ══════════════════════════════════════════════════ -->
+<section id="contato" class="cta-section">
+  <div class="cta-section__glow"></div>
+  <div class="container cta-section__inner">
+    <div class="section-label reveal" style="justify-content:center;">
+      <span class="code-comment">// contato.send()</span>
+    </div>
+    <h2 class="cta-section__title reveal reveal-d1">
+      Vamos construir<br><span class="text-neon">algo incrível.</span>
+    </h2>
+    <p class="cta-section__sub reveal reveal-d2">
+      Tem um projeto em mente? Respondo em até 24h. Disponível para freelance, consultoria e posições CLT.
+    </p>
+    <div class="cta-section__actions reveal reveal-d3">
+      <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--neon btn--xl">
+        Contratar agora
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn btn--ghost btn--xl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="cta-section__links reveal reveal-d4">
+      <a href="mailto:alex@fernandes.dev" class="cta-link">✉️ alex@fernandes.dev</a>
+      <a href="#" class="cta-link">💼 LinkedIn</a>
+      <a href="#" class="cta-link">🐙 GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#inicio" class="navbar__logo">
+      <span class="navbar__logo-bracket">&lt;</span>alex.dev<span class="navbar__logo-bracket">/&gt;</span>
+    </a>
+    <p class="footer__copy">© 2025 Alex Fernandes · Desenvolvedor Full Stack</p>
+    <div class="footer__links">
+      <a href="#sobre">sobre</a>
+      <a href="#projetos">projetos</a>
+      <a href="#contato">contato</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

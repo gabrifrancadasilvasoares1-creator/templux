@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Imperial Barber Club — Barbearia Premium</title>
+  <meta name="description" content="A experiência de barbearia mais sofisticada da cidade. Cortes, barbas e rituais de grooming para o homem que se cuida de verdade." />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══════════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#inicio" class="navbar__logo">
+      <div class="navbar__logo-emblem">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M8 12h8M12 8v8"/></svg>
+      </div>
+      Imperial<span>Barber</span>
+    </a>
+    <nav class="navbar__links" id="navLinks">
+      <a href="#servicos" class="navbar__link">Serviços</a>
+      <a href="#galeria" class="navbar__link">Galeria</a>
+      <a href="#equipe" class="navbar__link">Barbeiros</a>
+      <a href="#depoimentos" class="navbar__link">Avaliações</a>
+      <a href="#contato" class="navbar__link">Contato</a>
+    </nav>
+    <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--gold btn--sm navbar__cta">Agendar horário</a>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#servicos">Serviços</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#equipe">Barbeiros</a>
+  <a href="#depoimentos">Avaliações</a>
+  <a href="#contato">Contato</a>
+  <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--gold" style="text-align:center;margin-top:12px;">Agendar horário</a>
+</div>
+
+<!-- ═══ HERO ═════════════════════════════════════════════════════ -->
+<section id="inicio" class="hero">
+  <div class="hero__overlay"></div>
+  <div class="hero__bg-img">
+    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=90" alt="Barbearia Imperial" loading="eager" />
+  </div>
+  <div class="hero__grain"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__eyebrow reveal">
+        <div class="hero__line"></div>
+        <span>Est. 2008 · São Paulo</span>
+        <div class="hero__line"></div>
+      </div>
+      <h1 class="hero__title reveal reveal-d1">
+        A Arte do<br>
+        <em>Corte Perfeito</em>
+      </h1>
+      <p class="hero__sub reveal reveal-d2">
+        Barbearia premium para homens que valorizam sofisticação, precisão e uma experiência acima do comum. Mais do que um corte — um ritual.
+      </p>
+      <div class="hero__actions reveal reveal-d3">
+        <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--gold btn--xl">
+          Agendar agora
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#servicos" class="btn btn--outline btn--xl">Ver serviços</a>
+      </div>
+      <div class="hero__badges reveal reveal-d4">
+        <div class="hero__badge-item">
+          <strong>+15</strong><span>anos de excelência</span>
+        </div>
+        <div class="hero__badge-sep"></div>
+        <div class="hero__badge-item">
+          <strong>4.9★</strong><span>Google Reviews</span>
+        </div>
+        <div class="hero__badge-sep"></div>
+        <div class="hero__badge-item">
+          <strong>+8.000</strong><span>clientes atendidos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll">
+    <div class="hero__scroll-dot"></div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE BAR ══════════════════════════════════════════ -->
+<section class="exp-bar">
+  <div class="container exp-bar__grid">
+    <div class="exp-bar__item reveal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Produtos premium importados</span>
+    </div>
+    <div class="exp-bar__item reveal reveal-d1">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span>Barbeiros master certificados</span>
+    </div>
+    <div class="exp-bar__item reveal reveal-d2">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span>Agendamento online 24h</span>
+    </div>
+    <div class="exp-bar__item reveal reveal-d3">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+      <span>Ambiente exclusivo e climatizado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVIÇOS ════════════════════════════════════════════════ -->
+<section id="servicos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">
+        <div class="hero__line"></div><span>Nossos serviços</span><div class="hero__line"></div>
+      </div>
+      <h2 class="section-title reveal reveal-d1">Rituais de<br><em>Grooming Premium</em></h2>
+      <p class="section-sub reveal reveal-d2">Cada serviço é executado com precisão artesanal, produtos selecionados e atenção absoluta aos detalhes.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2v6c0 2.21 1.79 4 4 4h4c2.21 0 4-1.79 4-4V2"/><path d="M2 7h20M8 15.5c0 1.93 1.57 3.5 3.5 3.5S15 17.43 15 15.5V15"/><path d="M11.5 22v-3M12.5 22v-3"/></svg>
+        </div>
+        <div class="service-card__body">
+          <h3>Corte Clássico</h3>
+          <p>Corte com navalha, máquina de precisão e acabamento impecável. Para o homem que quer estar sempre no ponto.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 65</span>
+            <span class="service-card__time">~ 45 min</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3 9 4-18 3 9h4"/></svg>
+        </div>
+        <div class="service-card__body">
+          <h3>Barba a Navalha</h3>
+          <p>Ritual completo de barba com toalha quente, óleo de tratamento e acabamento com navalha reta tradicional.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 55</span>
+            <span class="service-card__time">~ 40 min</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card service-card--featured reveal reveal-d2">
+        <div class="service-card__badge">Mais pedido</div>
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="service-card__body">
+          <h3>Combo Imperial</h3>
+          <p>Corte + barba completa + hidratação facial + sobrancelha. A experiência completa do Imperial Barber Club.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 120</span>
+            <span class="service-card__time">~ 90 min</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="service-card__body">
+          <h3>Hidratação Facial</h3>
+          <p>Máscara capilar premium + tratamento de pele com produtos importados para cuidar da pele do rosto.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 45</span>
+            <span class="service-card__time">~ 30 min</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="service-card__body">
+          <h3>Coloração & Luzes</h3>
+          <p>Coloração profissional, luzes e descoloração com produtos de alta qualidade. Visual novo, impacto real.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">A partir de R$ 90</span>
+            <span class="service-card__time">~ 60 min</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+        </div>
+        <div class="service-card__body">
+          <h3>Sobrancelha</h3>
+          <p>Design de sobrancelha masculina com navalha, cera e acabamento que complementa seu look com naturalidade.</p>
+          <div class="service-card__footer">
+            <span class="service-card__price">R$ 25</span>
+            <span class="service-card__time">~ 15 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta reveal">
+      <p>Precisa de algo especial? Fale conosco e montamos um pacote exclusivo.</p>
+      <a href="https://wa.me/5511999999999?text=Olá! Vim pelo site e quero saber mais sobre os serviços." target="_blank" rel="noopener" class="btn btn--gold btn--md">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALERIA ════════════════════════════════════════════════ -->
+<section id="galeria" class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">
+        <div class="hero__line"></div><span>Galeria</span><div class="hero__line"></div>
+      </div>
+      <h2 class="section-title reveal reveal-d1">O Trabalho<br><em>Fala por Si</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item gallery-item--tall reveal">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=85" alt="Corte clássico" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Corte Clássico</span></div>
+      </div>
+      <div class="gallery-item reveal reveal-d1">
+        <img src="https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?w=600&q=85" alt="Barba" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Barba a Navalha</span></div>
+      </div>
+      <div class="gallery-item reveal reveal-d2">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=85" alt="Ambiente" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Nosso Ambiente</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=85" alt="Degradê" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Degradê Premium</span></div>
+      </div>
+      <div class="gallery-item gallery-item--wide reveal reveal-d1">
+        <img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?w=800&q=85" alt="Combo Imperial" loading="lazy" />
+        <div class="gallery-item__overlay"><span>Combo Imperial</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EQUIPE ══════════════════════════════════════════════════ -->
+<section id="equipe" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">
+        <div class="hero__line"></div><span>A equipe</span><div class="hero__line"></div>
+      </div>
+      <h2 class="section-title reveal reveal-d1">Mestres do<br><em>Ofício</em></h2>
+    </div>
+    <div class="barbers-grid">
+      <div class="barber-card reveal">
+        <div class="barber-card__img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=85&fit=crop&crop=faces" alt="Barbeiro Marcos" loading="lazy" />
+          <div class="barber-card__badge">Head Barber</div>
+        </div>
+        <div class="barber-card__info">
+          <strong>Marcos Oliveira</strong>
+          <span>Fundador · 15 anos de experiência</span>
+          <p>Especialista em cortes clássicos e navalhamento. Treinado em São Paulo, Lisboa e Nova York.</p>
+          <div class="barber-card__specialties">
+            <span>Clássico</span><span>Navalha</span><span>Degradê</span>
+          </div>
+        </div>
+      </div>
+      <div class="barber-card reveal reveal-d1">
+        <div class="barber-card__img">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=85&fit=crop&crop=faces" alt="Barbeiro Rafael" loading="lazy" />
+          <div class="barber-card__badge">Senior Barber</div>
+        </div>
+        <div class="barber-card__info">
+          <strong>Rafael Gomes</strong>
+          <span>Senior Barber · 8 anos</span>
+          <p>Mestre em coloração e técnicas modernas. Especialista em design de barba e sobrancelha masculina.</p>
+          <div class="barber-card__specialties">
+            <span>Coloração</span><span>Barba</span><span>Moderno</span>
+          </div>
+        </div>
+      </div>
+      <div class="barber-card reveal reveal-d2">
+        <div class="barber-card__img">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=85&fit=crop&crop=faces" alt="Barbeiro Lucas" loading="lazy" />
+          <div class="barber-card__badge">Barber</div>
+        </div>
+        <div class="barber-card__info">
+          <strong>Lucas Ferreira</strong>
+          <span>Barber · 5 anos</span>
+          <p>Referência em cortes contemporâneos e tendências internacionais. Especialista em undercut e fade.</p>
+          <div class="barber-card__specialties">
+            <span>Fade</span><span>Undercut</span><span>Tendências</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DEPOIMENTOS ════════════════════════════════════════════ -->
+<section id="depoimentos" class="section section--dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow reveal">
+        <div class="hero__line"></div><span>Avaliações</span><div class="hero__line"></div>
+      </div>
+      <h2 class="section-title reveal reveal-d1">O Que Dizem<br><em>Nossos Clientes</em></h2>
+      <div class="section-rating reveal reveal-d2">
+        <div class="stars">★★★★★</div>
+        <span>4.9 · +420 avaliações no Google</span>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-card__quote">"</div>
+        <p>Fui indicado por um amigo e nunca mais fui em outro lugar. O Marcos tem uma habilidade que só se vê em barbeiros com décadas de experiência. Ambiente incrível, atendimento impecável.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">RB</div>
+          <div>
+            <strong>Roberto Barros</strong>
+            <span>Cliente há 3 anos</span>
+          </div>
+          <div class="stars" style="margin-left:auto;font-size:.85rem;">★★★★★</div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d1">
+        <div class="testimonial-card__quote">"</div>
+        <p>Comecei com o Combo Imperial e saí irreconhecível — no bom sentido. O nível de atenção aos detalhes é absurdo. Vale cada centavo e mais um pouco.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">TM</div>
+          <div>
+            <strong>Thiago Melo</strong>
+            <span>Cliente há 1 ano</span>
+          </div>
+          <div class="stars" style="margin-left:auto;font-size:.85rem;">★★★★★</div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d2">
+        <div class="testimonial-card__quote">"</div>
+        <p>Melhor barbearia que já fui na vida. Já morei em 4 cidades diferentes, conheço barbearia boa — mas essa é outra categoria. O ritual de barba é uma experiência única.</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">AM</div>
+          <div>
+            <strong>André Moreira</strong>
+            <span>Cliente há 2 anos</span>
+          </div>
+          <div class="stars" style="margin-left:auto;font-size:.85rem;">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA / AGENDAMENTO ═══════════════════════════════════════ -->
+<section id="contato" class="cta-section">
+  <div class="cta-section__bg">
+    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1400&q=80" alt="" loading="lazy" />
+  </div>
+  <div class="cta-section__overlay"></div>
+  <div class="container cta-section__inner">
+    <div class="section-eyebrow reveal" style="justify-content:center;">
+      <div class="hero__line"></div><span>Agende agora</span><div class="hero__line"></div>
+    </div>
+    <h2 class="cta-section__title reveal reveal-d1">
+      Seu melhor<br><em>visual espera por você.</em>
+    </h2>
+    <p class="cta-section__sub reveal reveal-d2">
+      Reserve seu horário agora e venha viver a experiência do Imperial Barber Club. Pontualidade, sofisticação e resultado garantido.
+    </p>
+    <div class="cta-section__actions reveal reveal-d3">
+      <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--gold btn--xl">
+        Reservar meu horário
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/5511999999999?text=Olá! Quero agendar um horário no Imperial Barber Club." target="_blank" rel="noopener" class="btn btn--outline-wa btn--xl">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="cta-section__info reveal reveal-d4">
+      <div class="cta-info-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Rua das Pedras, 82 — Vila Nobre, São Paulo</span>
+      </div>
+      <div class="cta-info-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Seg–Sáb: 9h–20h · Dom: 10h–16h</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#inicio" class="navbar__logo footer__logo">
+        <div class="navbar__logo-emblem">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        Imperial<span>Barber</span>
+      </a>
+      <p>Barbearia premium para homens que valorizam sofisticação, precisão e uma experiência acima do comum.</p>
+      <div class="footer__socials">
+        <a href="#" aria-label="Instagram" class="footer__social">📷</a>
+        <a href="#" aria-label="TikTok" class="footer__social">🎵</a>
+        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer__social">💬</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#servicos">Corte Clássico</a></li>
+        <li><a href="#servicos">Barba a Navalha</a></li>
+        <li><a href="#servicos">Combo Imperial</a></li>
+        <li><a href="#servicos">Coloração & Luzes</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>A Barbearia</h4>
+      <ul>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#equipe">Nossa Equipe</a></li>
+        <li><a href="#depoimentos">Avaliações</a></li>
+        <li><a href="#contato">Agendamento</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <ul class="footer__contact">
+        <li>📍 Rua das Pedras, 82 — Vila Nobre<br>São Paulo / SP</li>
+        <li>📞 (11) 9 9999-9999</li>
+        <li>✉️ contato@imperialbarber.com.br</li>
+        <li>🕐 Seg–Sáb: 9h–20h · Dom: 10h–16h</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>© 2025 Imperial Barber Club. Todos os direitos reservados.</span>
+      <a href="LINK_CAKTO_AQUI" target="_blank" rel="noopener" class="btn btn--gold btn--sm">Agendar horário</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5511999999999?text=Olá! Quero agendar um horário." target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+  <div class="wa-float__ring"></div>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.43c-.094.332.225.637.553.533l5.796-1.521A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.697-.518-5.232-1.422L3.5 21.5l.96-3.165A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
