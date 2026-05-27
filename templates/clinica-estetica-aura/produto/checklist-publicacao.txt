@@ -1,0 +1,34 @@
+CHECKLIST DE PUBLICAÇÃO — Clínica Estética Aura
+================================================
+
+ANTES DE PUBLICAR NA CAKTO:
+[ ] Receber link de checkout real da Cakto
+[ ] Substituir LINK_CAKTO_AQUI em: produto-clinica-estetica-aura.html (2 botões) + catalogo.html (1 card)
+[ ] Confirmar que link abre corretamente no navegador
+
+PRODUTO NA CAKTO:
+[ ] Título: Clínica Estética Aura — Template HTML Rosa Nude Premium
+[ ] Preço: R$29,90
+[ ] Descrição: copiar de descricao-cakto.txt
+[ ] Imagem de capa: usar hero-desktop.jpg (preview/screenshots/)
+[ ] Configurar entrega do ZIP: clinica-estetica-aura.zip
+
+SITE TEMPLUX:
+[ ] Demo ao vivo: templux.com.br/demos/clinica-estetica-aura/ — funcionando?
+[ ] Página do produto: templux.com.br/produto-clinica-estetica-aura.html — funcionando?
+[ ] Card no catálogo: screenshot real e badge correto?
+[ ] Botão "Comprar" no catálogo: aponta para link Cakto real?
+
+REDES SOCIAIS:
+[ ] Post no Instagram: usar legenda-instagram.txt + hero-desktop.jpg
+[ ] Post no TikTok: gravar vídeo seguindo roteiro-video.txt
+[ ] Hashtags: copiar de hashtags.txt
+
+PRODUTO FINAL:
+[ ] ZIP testado e funcional
+[ ] index.html abre no navegador sem erro
+[ ] Pétalas animadas funcionando no hero
+[ ] Auto Dark Mode bloqueado (color-scheme: light)
+[ ] WhatsApp funciona
+[ ] FAQ accordion funciona
+[ ] Responsivo em 390px e 1440px

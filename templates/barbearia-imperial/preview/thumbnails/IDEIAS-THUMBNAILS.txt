@@ -1,0 +1,37 @@
+IDEIAS DE THUMBNAILS — Barbearia Imperial
+==========================================
+
+IDEIA 1 — "Detalhe do dourado"
+Crop focado no headline do hero com a textura de grain ao fundo.
+Borda dourada fina ao redor da imagem.
+Texto externo: "Barbearia Imperial · R$29,90 · templux.com.br"
+Clima: escuro, masculino, premium.
+
+IDEIA 2 — "Mockup de celular dark"
+hero-mobile.jpg dentro de mockup de iPhone preto fosco.
+Fundo: preto puro com granulado sutil.
+Texto topo: "SITE DE BARBEARIA" em dourado.
+Texto base: "Template Premium · R$29,90"
+
+IDEIA 3 — "Antes e depois do negócio"
+Esquerda: ícone de site simples/feio (genérico).
+Direita: screenshot hero-desktop.jpg.
+Texto central: seta + "Sua barbearia assim"
+Callout: "sem agência · R$29,90"
+
+IDEIA 4 — "Tira de serviços"
+Crop na grade de serviços mostrando os preços (Corte R$65, Barba R$55, Combo Imperial R$120).
+Texto sobreposto: "Mostre seus serviços com estilo"
+Borda dourada lateral.
+
+IDEIA 5 — "Split desktop + mobile"
+Metade esquerda: hero-desktop.jpg.
+Metade direita: hero-mobile.jpg.
+Texto central vertical: "100% responsivo"
+Rodapé: "R$29,90 · templux.com.br"
+
+PROPORÇÕES RECOMENDADAS:
+- Feed Instagram / TikTok capa: 1080x1080px (1:1)
+- Stories / Reels vertical: 1080x1920px (9:16)
+- YouTube thumbnail: 1280x720px (16:9)
+- Capa Cakto: 1200x630px

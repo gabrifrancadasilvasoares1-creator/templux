@@ -1,0 +1,32 @@
+TÍTULO DO PRODUTO:
+Barbearia Imperial — Template HTML Luxury Dark Gold para Barbearias Premium
+
+DESCRIÇÃO CURTA (até 160 caracteres):
+Landing page dark gold premium para barbearias. Galeria, serviços, equipe e agendamento. Visual masculino e sofisticado. Pronto para usar.
+
+DESCRIÇÃO LONGA:
+O Barbearia Imperial é o template definitivo para barbearias que querem transmitir sofisticação, exclusividade e seriedade desde o primeiro olhar. O design combina fundo escuro intenso com detalhes em dourado — criando uma experiência visual que faz o cliente sentir que entrou em um lugar especial antes mesmo de visitar fisicamente.
+
+Cada seção foi pensada para o universo masculino premium: hero com foto de fundo atmosférica e overlay de textura, barra de experiência e diferenciais, grid de serviços com preços, galeria interativa com efeito parallax no hover, cards dos barbeiros com especialidades, depoimentos e CTA final de alto impacto.
+
+O template é 100% responsivo, abre com duplo clique no HTML e não exige servidor ou instalação. Editar é simples: basta trocar os textos, atualizar o número de WhatsApp e configurar o link de agendamento.
+
+O QUE ESTÁ INCLUSO:
+- index.html — página completa e funcional
+- style.css — dark gold theme com animações premium
+- script.js — parallax na galeria, reveal no scroll, menu mobile
+- favicon.svg — ícone da barbearia
+- README.md — instruções rápidas
+- COMO-EDITAR.md — guia detalhado de personalização
+- LICENCA-DE-USO.txt — termos de uso
+
+PÚBLICO IDEAL:
+Donos de barbearia, barber shops, barbearias premium, studios de grooming masculino que querem um site profissional com visual de alto padrão, sem pagar agência.
+
+DIFERENCIAIS:
+- Visual dark gold exclusivo — passa luxo e masculinidade premium
+- Galeria com efeito parallax interativo no hover
+- Grid de serviços com preços e destaque no combo mais popular
+- Cards da equipe com tags de especialidade
+- Sem taxa de agência — por R$29,90 você tem o mesmo nível de quem cobra R$3.000+
+- Código limpo, abre com duplo clique

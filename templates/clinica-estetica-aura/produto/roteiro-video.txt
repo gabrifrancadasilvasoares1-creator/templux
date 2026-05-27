@@ -1,0 +1,28 @@
+DURAÇÃO IDEAL: 20-28 segundos
+
+CENA 1 (0-3s): [fundo branco — pétalas aparecem suavemente]
+TEXTO NA TELA: "Sua clínica merece um site assim"
+MÚSICA: piano suave, ambient feminino premium, instrumental delicado
+
+CENA 2 (3-9s): [scroll lento pelo hero]
+Mostrar: animação de pétalas flutuando
+Mostrar: headline principal + trust strip com selos
+Mostrar: floating badge de avaliação gratuita
+TEXTO NA TELA: "Rosa nude. Premium. Elegante."
+
+CENA 3 (9-17s): [cortes rápidos entre seções]
+Mostrar: grid de procedimentos (Botox, Preenchimento, Laser...)
+Mostrar: cards da equipe médica com CRM
+Mostrar: galeria antes/depois
+TEXTO NA TELA: "Credibilidade que converte"
+
+CENA 4 (17-22s): [mobile na mão ou simulado]
+Mostrar: hero no mobile, visual feminino impecável
+TEXTO NA TELA: "100% responsivo"
+
+CENA 5 (22-28s): [tela final]
+TEXTO NA TELA: "Clínica Estética Aura — R$29,90"
+TEXTO NA TELA: "templux.com.br"
+
+MÚSICA SUGERIDA: piano + strings suaves, ambiente spa/wellness, sem letra
+VOZ (opcional): "Template para clínica estética. Rosa nude, animações de pétalas, vinte e nove reais e noventa."

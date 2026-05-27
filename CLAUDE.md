@@ -494,7 +494,65 @@ Motivo: `netlify.toml` tem `Cache-Control: immutable` em `/assets/*`.
 
 ---
 
-## 14. Checklist Final Obrigatório
+## 14. Regra de Finalização Obrigatória — Pastas Não Podem Ficar Vazias
+
+> **Lei absoluta:** nenhum template pode ser considerado finalizado enquanto as pastas principais estiverem vazias.
+
+Após criar o código (`site/`), você DEVE preencher obrigatoriamente:
+
+### produto/ — todos os arquivos abaixo são obrigatórios
+- `descricao-cakto.txt` — título, descrição curta/longa, público, diferenciais
+- `copy-venda.txt` — headline, benefícios, objeções, CTAs
+- `legenda-instagram.txt` — post pronto para copiar e colar
+- `legenda-tiktok.txt` — hook de 1-2 linhas
+- `hashtags.txt` — 30 para Instagram + 5 para TikTok
+- `roteiro-video.txt` — script de vídeo 20-30s cena a cena
+- `checklist-publicacao.txt` — lista de verificação antes do lançamento
+
+### preview/screenshots/ — obrigatório
+- Gerar via Puppeteer sempre que possível (script adaptado de `shot_catalog.js`)
+- Capturas mínimas: hero-desktop, full-desktop, sessão-principal, planos/servicos, cta, hero-mobile
+- Se não for possível gerar automaticamente: criar `INSTRUCOES-PRINTS.md` explicando viewport, scroll, seções e nomes de arquivo
+
+### preview/thumbnails/ — obrigatório
+- Criar `IDEIAS-THUMBNAILS.txt` com mínimo 5 ideias baseadas no hero real do template
+- Incluir proporções recomendadas (1:1, 9:16, 16:9)
+
+### pacote-venda/ — obrigatório
+- Criar `NOME-DO-TEMPLATE.zip` contendo `site/` + `docs/`
+- Testar conteúdo do ZIP após criar
+- ZIP nunca deve ultrapassar 10MB
+
+### Como gerar o ZIP (PowerShell — padrão obrigatório)
+```powershell
+$src = "templates/NOME"
+$zip = "$src/pacote-venda/NOME.zip"
+$tmp = "_tmp_NOME"
+New-Item -ItemType Directory -Path "$tmp/NOME" | Out-Null
+Copy-Item "$src/site" "$tmp/NOME/site" -Recurse
+New-Item -ItemType Directory -Path "$tmp/NOME/docs" | Out-Null
+Copy-Item "$src/docs/README.md"          "$tmp/NOME/docs/"
+Copy-Item "$src/docs/COMO-EDITAR.md"     "$tmp/NOME/docs/"
+Copy-Item "$src/docs/LICENCA-DE-USO.txt" "$tmp/NOME/docs/"
+Copy-Item "$src/docs/README.md"          "$tmp/NOME/"
+Copy-Item "$src/docs/COMO-EDITAR.md"     "$tmp/NOME/"
+Copy-Item "$src/docs/LICENCA-DE-USO.txt" "$tmp/NOME/"
+Compress-Archive -Path "$tmp/NOME" -DestinationPath $zip -Force
+Remove-Item $tmp -Recurse -Force
+```
+
+### Fallback — o que fazer quando não for possível gerar automaticamente
+| Pasta | Fallback obrigatório |
+|---|---|
+| `preview/screenshots/` | Criar `INSTRUCOES-PRINTS.md` com viewport, seções e nomes |
+| `preview/mockups/` | Criar `INSTRUCOES-MOCKUP.md` com ferramenta e fonte da imagem |
+| `preview/thumbnails/` | Criar `IDEIAS-THUMBNAILS.txt` — nunca omitir |
+| `produto/` | Não tem fallback — criar sempre, sem exceção |
+| `pacote-venda/` | Não tem fallback — criar sempre, sem exceção |
+
+---
+
+## 15. Checklist Final Obrigatório
 
 Um template só pode ser marcado como **FINALIZADO** se todos os itens estiverem marcados:
 
@@ -551,7 +609,7 @@ Um template só pode ser marcado como **FINALIZADO** se todos os itens estiverem
 
 ---
 
-## 15. Estrutura Atual do Projeto
+## 16. Estrutura Atual do Projeto
 
 ```
 templux/
@@ -578,7 +636,7 @@ templux/
 
 ---
 
-## 16. Fluxo Completo — Criação de Novo Template
+## 17. Fluxo Completo — Criação de Novo Template
 
 ```
 1. RECEBER BRIEFING

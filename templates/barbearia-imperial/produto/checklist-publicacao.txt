@@ -1,0 +1,33 @@
+CHECKLIST DE PUBLICAÇÃO — Barbearia Imperial
+=============================================
+
+ANTES DE PUBLICAR NA CAKTO:
+[ ] Receber link de checkout real da Cakto
+[ ] Substituir LINK_CAKTO_AQUI em: produto-barbearia-imperial.html (2 botões) + catalogo.html (1 card)
+[ ] Confirmar que link abre corretamente no navegador
+
+PRODUTO NA CAKTO:
+[ ] Título: Barbearia Imperial — Template HTML Luxury Dark Gold
+[ ] Preço: R$29,90
+[ ] Descrição: copiar de descricao-cakto.txt
+[ ] Imagem de capa: usar hero-desktop.jpg (preview/screenshots/)
+[ ] Configurar entrega do ZIP: barbearia-imperial.zip
+
+SITE TEMPLUX:
+[ ] Demo ao vivo: templux.com.br/demos/barbearia-imperial/ — funcionando?
+[ ] Página do produto: templux.com.br/produto-barbearia-imperial.html — funcionando?
+[ ] Card no catálogo: screenshot real e badge correto?
+[ ] Botão "Comprar" no catálogo: aponta para link Cakto real?
+
+REDES SOCIAIS:
+[ ] Post no Instagram: usar legenda-instagram.txt + hero-desktop.jpg
+[ ] Post no TikTok: gravar vídeo seguindo roteiro-video.txt
+[ ] Hashtags: copiar de hashtags.txt
+
+PRODUTO FINAL:
+[ ] ZIP testado e funcional
+[ ] index.html abre no navegador sem erro
+[ ] WhatsApp funciona
+[ ] Menu mobile funciona
+[ ] Galeria com parallax funciona no hover
+[ ] Responsivo em 390px e 1440px

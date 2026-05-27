@@ -1,0 +1,28 @@
+DURAÇÃO IDEAL: 22-30 segundos
+
+CENA 1 (0-3s): [tela preta — texto em verde neon digitando]
+TEXTO NA TELA: "> portfólio_que_fecha_cliente.exe"
+MÚSICA: phonk eletrônico, synthwave, beat tech
+
+CENA 2 (3-9s): [scroll lento pelo hero]
+Mostrar: cursor animado se movendo pela tela
+Mostrar: efeito de digitação nos cargos ("Full Stack Developer", "React Specialist"...)
+Mostrar: terminal decorativo com output de código
+TEXTO NA TELA: "Cursor animado. Terminal interativo."
+
+CENA 3 (9-17s): [cortes rápidos]
+Mostrar: skill bars enchendo (React 95%, Node 88%...)
+Mostrar: tech marquee rolando infinito
+Mostrar: grid de projetos com card featured
+TEXTO NA TELA: "Mostra quem você é antes da entrevista."
+
+CENA 4 (17-22s): [zoom out mostrando mobile]
+Mostrar: hero no mobile limpo e responsivo
+TEXTO NA TELA: "Funciona em qualquer tela"
+
+CENA 5 (22-28s): [tela final]
+TEXTO NA TELA: "DevFolio Dark — R$29,90"
+TEXTO NA TELA: "templux.com.br"
+
+MÚSICA SUGERIDA: synthwave / phonk eletrônico instrumental, clima tech/cyber
+VOZ (opcional): "Portfólio premium para dev. Cursor animado, terminal interativo, vinte e nove reais e noventa."

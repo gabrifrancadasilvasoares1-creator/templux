@@ -1,0 +1,36 @@
+IDEIAS DE THUMBNAILS — DevFolio Dark
+======================================
+
+IDEIA 1 — "Terminal no hero"
+Crop focado no terminal decorativo do template com o output de código simulado.
+Borda verde neon ao redor.
+Texto externo: "DevFolio Dark · R$29,90 · templux.com.br"
+Clima: escuro, tech, hacker vibes.
+
+IDEIA 2 — "Mockup de tela wide"
+hero-desktop.jpg dentro de mockup de MacBook escuro.
+Fundo: preto com grade de pontos verdes sutil.
+Texto topo: "PORTFÓLIO DE DEV" em verde neon.
+Texto base: "Template Premium · R$29,90"
+
+IDEIA 3 — "Skill bars em destaque"
+Crop na seção de skill bars mostrando React 95%, Node 88%, etc. preenchendo.
+Texto sobreposto: "Mostra suas skills com estilo"
+Borda roxa lateral.
+
+IDEIA 4 — "Cursor animado"
+Screenshot do hero com o cursor customizado visível na tela.
+Seta apontando para o cursor com texto: "cursor animado único"
+Fundo escuro com rastro de luz verde.
+
+IDEIA 5 — "Comparação github vs template"
+Esquerda: print de perfil GitHub simples/genérico.
+Direita: screenshot hero-desktop.jpg.
+Texto central: "vs" com seta.
+Legenda: "Qual fecha mais cliente?"
+
+PROPORÇÕES RECOMENDADAS:
+- Feed Instagram / TikTok capa: 1080x1080px (1:1)
+- Stories / Reels vertical: 1080x1920px (9:16)
+- YouTube thumbnail: 1280x720px (16:9)
+- Capa Cakto: 1200x630px

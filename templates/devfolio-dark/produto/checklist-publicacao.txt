@@ -1,0 +1,34 @@
+CHECKLIST DE PUBLICAÇÃO — DevFolio Dark
+========================================
+
+ANTES DE PUBLICAR NA CAKTO:
+[ ] Receber link de checkout real da Cakto
+[ ] Substituir LINK_CAKTO_AQUI em: produto-devfolio-dark.html (2 botões) + catalogo.html (1 card)
+[ ] Confirmar que link abre corretamente no navegador
+
+PRODUTO NA CAKTO:
+[ ] Título: DevFolio Dark — Template HTML Portfólio para Desenvolvedores
+[ ] Preço: R$29,90
+[ ] Descrição: copiar de descricao-cakto.txt
+[ ] Imagem de capa: usar hero-desktop.jpg (preview/screenshots/)
+[ ] Configurar entrega do ZIP: devfolio-dark.zip
+
+SITE TEMPLUX:
+[ ] Demo ao vivo: templux.com.br/demos/devfolio-dark/ — funcionando?
+[ ] Página do produto: templux.com.br/produto-devfolio-dark.html — funcionando?
+[ ] Card no catálogo: screenshot real e badge correto?
+[ ] Botão "Comprar" no catálogo: aponta para link Cakto real?
+
+REDES SOCIAIS:
+[ ] Post no Instagram: usar legenda-instagram.txt + hero-desktop.jpg
+[ ] Post no TikTok: gravar vídeo seguindo roteiro-video.txt
+[ ] Hashtags: copiar de hashtags.txt
+
+PRODUTO FINAL:
+[ ] ZIP testado e funcional
+[ ] index.html abre no navegador sem erro
+[ ] Cursor animado funciona no desktop
+[ ] Efeito de digitação funciona
+[ ] Skill bars animam no scroll
+[ ] Cursor desativa no touch/mobile automaticamente
+[ ] Responsivo em 390px e 1440px

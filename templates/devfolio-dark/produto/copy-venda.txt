@@ -1,0 +1,26 @@
+HEADLINE PRINCIPAL:
+O portfólio que faz recrutador parar o scroll e mandar mensagem
+
+SUBHEADLINE:
+Template dark neon com cursor animado, terminal interativo e efeito de digitação. Porque portfólio genérico não conquista cliente premium.
+
+LISTA DE BENEFÍCIOS:
+✓ Cursor customizado com rastro fluido — diferencial visual imediato
+✓ Efeito de digitação rotativo nos cargos do hero
+✓ Terminal decorativo simulando output de código real
+✓ Skill bars animados que preenchem ao rolar a página
+✓ Tech marquee infinita mostrando suas stacks
+✓ Grid de projetos com card em destaque
+✓ Timeline de experiência elegante
+✓ 100% responsivo — cursor desativado automaticamente no touch
+
+OBJEÇÕES QUEBRADAS:
+"Meu GitHub já serve de portfólio" → GitHub mostra código. Esse template mostra personalidade, contexto e resultado — o que fecha cliente ou consegue emprego.
+"É difícil de editar" → O COMO-EDITAR explica cada seção. Troca nome, projetos, links e está pronto.
+"Meu concorrente pode comprar igual" → Cada dev customiza diferente. O código é seu. A história é sua.
+
+CTA PRINCIPAL:
+Comprar template agora — R$29,90
+
+CTA SECUNDÁRIO:
+Ver demonstração ao vivo →

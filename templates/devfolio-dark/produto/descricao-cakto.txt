@@ -1,0 +1,33 @@
+TÍTULO DO PRODUTO:
+DevFolio Dark — Template HTML de Portfólio Premium para Desenvolvedores
+
+DESCRIÇÃO CURTA (até 160 caracteres):
+Portfólio dark neon para devs e freelancers. Terminal interativo, efeito digitação, skill bars e cursor customizado. Impressiona qualquer cliente.
+
+DESCRIÇÃO LONGA:
+O DevFolio Dark é o template de portfólio mais sofisticado para desenvolvedores que querem se destacar. O design combina fundo ultra-escuro com detalhes em verde neon e roxo vibrante — transmitindo competência técnica, modernidade e personalidade desde o primeiro segundo.
+
+Destaques únicos: cursor personalizado com rastro fluido, efeito de digitação rotativo nos cargos do hero, terminal decorativo interativo com output de código simulado, barra infinita de tecnologias dominadas, skill bars animados que preenchem no scroll, grid de projetos com card em destaque, timeline de experiência e seção de contato direta.
+
+Perfeito para freelancers, desenvolvedores full stack, front-end e back-end que querem impressionar clientes e recrutadores com um portfólio que realmente mostra quem é a pessoa antes de qualquer entrevista.
+
+O QUE ESTÁ INCLUSO:
+- index.html — portfólio completo e funcional
+- style.css — dark neon theme, cursor custom, animações
+- script.js — cursor com lerp, efeito digitação, skill bars, terminal
+- favicon.svg — ícone em código
+- README.md — instruções de uso
+- COMO-EDITAR.md — guia para personalizar nome, projetos e links
+- LICENCA-DE-USO.txt — termos de uso
+
+PÚBLICO IDEAL:
+Desenvolvedores front-end, full stack, back-end, mobile; freelancers de tecnologia; estudantes de programação que estão montando seu primeiro portfólio profissional; profissionais de TI em busca de recolocação ou novos clientes.
+
+DIFERENCIAIS:
+- Cursor customizado com rastro animado (lerp trail)
+- Efeito digitação rotativo nos cargos do hero
+- Terminal decorativo interativo — único entre os templates do mercado
+- Skill bars que animam no scroll com cor gradiente neon-roxo
+- Tech marquee infinita com logos de tecnologias
+- Grid de projetos com card em destaque (featured)
+- 100% responsivo — cursor custom desativado no touch automaticamente

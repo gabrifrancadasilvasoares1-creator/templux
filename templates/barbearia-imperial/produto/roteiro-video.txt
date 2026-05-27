@@ -1,0 +1,27 @@
+DURAÇÃO IDEAL: 20-28 segundos
+
+CENA 1 (0-3s): [tela escura — texto surge em dourado]
+TEXTO NA TELA: "Site de barbearia que transmite luxo"
+MÚSICA: jazz trap, hip hop masculino, beat grave e elegante
+
+CENA 2 (3-9s): [scroll lento pelo hero do template]
+Mostrar: foto de fundo atmosférica + headline com grain overlay
+Mostrar: barra de diferenciais (equipamentos, instrutores, 7 dias)
+TEXTO NA TELA: "Dark gold. Premium. Sofisticado."
+
+CENA 3 (9-17s): [cortes rápidos entre seções]
+Mostrar: grid de serviços com preços (Corte, Barba, Combo Imperial)
+Mostrar: galeria com efeito de hover parallax
+Mostrar: cards dos barbeiros com especialidades
+TEXTO NA TELA: "Tudo incluso. Sem mensalidade."
+
+CENA 4 (17-22s): [mobile na mão ou simulado]
+Mostrar: hero no mobile, menu hamburger
+TEXTO NA TELA: "100% responsivo"
+
+CENA 5 (22-28s): [tela final]
+TEXTO NA TELA: "Barbearia Imperial — R$29,90"
+TEXTO NA TELA: "templux.com.br"
+
+MÚSICA SUGERIDA: trap/jazz instrumental masculino, beat marcado sem letra
+VOZ (opcional): "Template premium para barbearia. Dark gold, pronto pra usar, vinte e nove reais e noventa."

@@ -1,0 +1,36 @@
+IDEIAS DE THUMBNAILS — Clínica Estética Aura
+=============================================
+
+IDEIA 1 — "Pétalas em destaque"
+Crop focado no hero com as pétalas animadas visíveis.
+Borda rosa suave ao redor.
+Texto externo: "Clínica Estética Aura · R$29,90 · templux.com.br"
+Clima: feminino, elegante, premium.
+
+IDEIA 2 — "Mockup de celular rosé"
+hero-mobile.jpg dentro de mockup de iPhone rosa/branco.
+Fundo: branco com pétalas decorativas nos cantos.
+Texto topo: "SITE DE CLÍNICA ESTÉTICA" em rosa.
+Texto base: "Template Premium · R$29,90"
+
+IDEIA 3 — "Trust strip em destaque"
+Crop na barra de credenciais (Anvisa · médicos · resultados naturais).
+Texto sobreposto: "Passa confiança desde o primeiro clique"
+Detalhe rosa na borda inferior.
+
+IDEIA 4 — "Antes e depois"
+Recorte na seção de resultados mostrando o card de antes/depois.
+Texto: "Mostre seus resultados com elegância"
+Borda rosada.
+
+IDEIA 5 — "Comparação Instagram vs site"
+Esquerda: ícone do Instagram com legenda "Depende do algoritmo".
+Direita: hero-desktop.jpg com legenda "Sua vitrine permanente".
+Texto central: "Qual você prefere?"
+Rodapé: "R$29,90 · templux.com.br"
+
+PROPORÇÕES RECOMENDADAS:
+- Feed Instagram / TikTok capa: 1080x1080px (1:1)
+- Stories / Reels vertical: 1080x1920px (9:16)
+- YouTube thumbnail: 1280x720px (16:9)
+- Capa Cakto: 1200x630px

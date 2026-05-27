@@ -1,0 +1,33 @@
+TÍTULO DO PRODUTO:
+Clínica Estética Aura — Template HTML Luxury Rose para Clínicas Estéticas e Spas
+
+DESCRIÇÃO CURTA (até 160 caracteres):
+Landing page rosa nude premium para clínicas estéticas. Procedimentos, equipe médica, antes/depois e agendamento. Elegante e feminino.
+
+DESCRIÇÃO LONGA:
+O Clínica Estética Aura é o template ideal para clínicas de estética, spas e centros de bem-estar que querem transmitir luxo, confiança e cuidado desde o primeiro acesso. O design usa paleta rosa nude com fundo branco quente — clean, feminino e sofisticado — com animações sutis de pétalas flutuantes no hero que criam uma atmosfera única de leveza e premium.
+
+O template inclui: hero com floating badges de credenciais, barra de confiança com certificações (Anvisa, médicos especialistas, produtos originais), grade de procedimentos com card em destaque, seção da equipe médica com CRM, galeria de resultados antes/depois com filtro visual, depoimentos de pacientes, FAQ e CTA duplo (agendamento online + WhatsApp).
+
+Toda a paleta foi protegida contra o Auto Dark Mode do Chrome e Edge — o template sempre aparece com tema claro, sem distorções de cor em nenhum dispositivo.
+
+O QUE ESTÁ INCLUSO:
+- index.html — landing page completa e funcional
+- style.css — rosa nude, pétalas CSS, color-scheme light
+- script.js — reveal no scroll, FAQ accordion, contadores
+- favicon.svg — ícone elegante
+- README.md — instruções rápidas
+- COMO-EDITAR.md — guia de personalização completo
+- LICENCA-DE-USO.txt — termos de uso
+
+PÚBLICO IDEAL:
+Clínicas estéticas, spas urbanos, centros de bem-estar, dermatologistas com atendimento estético, profissionais de harmonização facial, limpeza de pele, laser e tratamentos corporais.
+
+DIFERENCIAIS:
+- Animações de pétalas flutuantes no hero — visual único e memorável
+- Proteção total contra Auto Dark Mode (color-scheme: light only)
+- Seção de equipe com CRM — transmite credibilidade médica
+- Grid de procedimentos com card featured em destaque
+- Galeria antes/depois com efeito de saturação
+- Barra de confiança com selos de credencial
+- Design que passa luxo sem exagero — clean e feminino premium
