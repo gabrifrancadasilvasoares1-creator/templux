@@ -1,0 +1,13 @@
+{
+  "name": "templux-drive-export",
+  "version": "1.0.0",
+  "description": "Upload ZIPs da Templux para o Google Drive e gera links de download para Cakto",
+  "type": "commonjs",
+  "scripts": {
+    "auth": "node auth.js",
+    "upload": "node upload.js"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}
