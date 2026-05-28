@@ -20,7 +20,7 @@
     .gallery-thumb { aspect-ratio:16/9; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer; border:2px solid transparent; transition:border-color 0.15s,transform 0.15s; }
     .gallery-thumb:hover { transform:translateY(-2px); border-color:var(--border-accent); }
     .gallery-thumb.active { border-color:var(--accent-bright); }
-    .gallery-thumb img { width:100%; height:100%; object-fit:cover; }
+    .gallery-thumb img { width:100%; height:100%; object-fit:cover; object-position:top center; }
     .product-section { margin-top:48px; padding-top:48px; border-top:1px solid var(--border); }
     .product-section-title { font-family:var(--font-display); font-size:1.05rem; font-weight:700; margin-bottom:20px; display:flex; align-items:center; gap:10px; }
     .product-section-title::after { content:''; flex:1; height:1px; background:var(--border); }
@@ -99,23 +99,6 @@
             <img src="assets/images/products/academia-premium-preview-cta.webp" alt="CTA Final" loading="lazy" />
           </div>
         </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-mobile.jpg','Hero Mobile')" title="Hero Mobile">
-            <img src="assets/images/products/academia-premium-mobile.jpg" alt="Hero Mobile" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-programas.jpg','Programas')" title="Programas">
-            <img src="assets/images/products/academia-premium-programas.jpg" alt="Programas" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-planos.jpg','Planos')" title="Planos">
-            <img src="assets/images/products/academia-premium-planos.jpg" alt="Planos" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-cta.jpg','CTA')" title="CTA">
-            <img src="assets/images/products/academia-premium-cta.jpg" alt="CTA" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-cover.jpg','Visão geral')" title="Visão geral">
-            <img src="assets/images/products/academia-premium-cover.jpg" alt="Visão geral" loading="lazy" />
-          </div>
-        </div>
-
         <div class="product-section reveal">
           <div class="product-section-title">Descrição completa</div>
           <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">O <strong style="color:var(--text-primary);">Academia Premium</strong> é um template dark e atlético com identidade visual forte (black + orange), desenvolvido para academias, boxes de crossfit e centros de treinamento que querem uma presença online impactante e que converte.</p>

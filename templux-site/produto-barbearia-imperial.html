@@ -20,7 +20,7 @@
     .gallery-thumb { aspect-ratio:16/9; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer; border:2px solid transparent; transition:border-color 0.15s,transform 0.15s; }
     .gallery-thumb:hover { transform:translateY(-2px); border-color:var(--border-accent); }
     .gallery-thumb.active { border-color:var(--accent-bright); }
-    .gallery-thumb img { width:100%; height:100%; object-fit:cover; }
+    .gallery-thumb img { width:100%; height:100%; object-fit:cover; object-position:top center; }
     .product-section { margin-top:48px; padding-top:48px; border-top:1px solid var(--border); }
     .product-section-title { font-family:var(--font-display); font-size:1.05rem; font-weight:700; margin-bottom:20px; display:flex; align-items:center; gap:10px; }
     .product-section-title::after { content:''; flex:1; height:1px; background:var(--border); }
@@ -99,20 +99,6 @@
             <img src="assets/images/products/barbearia-imperial-preview-cta.webp" alt="CTA Final" loading="lazy" />
           </div>
         </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/barbearia-imperial-mobile.jpg','Hero Mobile')" title="Hero Mobile">
-            <img src="assets/images/products/barbearia-imperial-mobile.jpg" alt="Hero Mobile" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/barbearia-imperial-secao.jpg','Serviços')" title="Serviços">
-            <img src="assets/images/products/barbearia-imperial-secao.jpg" alt="Serviços" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/barbearia-imperial-cta.jpg','CTA')" title="CTA">
-            <img src="assets/images/products/barbearia-imperial-cta.jpg" alt="CTA" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/barbearia-imperial-cover.jpg','Visão geral')" title="Visão geral">
-            <img src="assets/images/products/barbearia-imperial-cover.jpg" alt="Visão geral" loading="lazy" />
-          </div>
-        </div>
-
         <div class="product-section reveal">
           <div class="product-section-title">Descrição completa</div>
           <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:16px;">O <strong style="color:var(--text-primary);">Barbearia Imperial</strong> é um template de alto padrão inspirado na sofisticação das melhores barbearias do mundo. Tema escuro com detalhes dourados, tipografia serifada Playfair Display e textura de grain sutil criam uma atmosfera premium.</p>
