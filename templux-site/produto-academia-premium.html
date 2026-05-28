@@ -16,7 +16,7 @@
     .buy-box-divider { height:1px; background:var(--border); margin:20px 0; }
     .main-preview { aspect-ratio:16/9; border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-surface); border:1px solid var(--border); margin-bottom:12px; cursor:zoom-in; }
     .main-preview img { width:100%; height:100%; object-fit:cover; object-position:top center; transition:opacity 0.25s ease; }
-    .gallery-thumbs { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:24px; }
+    .gallery-thumbs { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; margin-bottom:24px; }
     .gallery-thumb { aspect-ratio:16/9; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer; border:2px solid transparent; transition:border-color 0.15s,transform 0.15s; }
     .gallery-thumb:hover { transform:translateY(-2px); border-color:var(--border-accent); }
     .gallery-thumb.active { border-color:var(--accent-bright); }
@@ -73,13 +73,32 @@
         </div>
 
         <div class="main-preview animate-fade-up delay-2" onclick="openLightbox(currentSrc)">
-          <img src="assets/images/products/academia-premium-hero.jpg" alt="Academia Premium — Hero" id="mainImg" />
+          <img src="assets/images/products/academia-premium-preview-hero-desktop.webp" alt="Academia Premium — Hero Desktop" id="mainImg" />
         </div>
 
         <div class="gallery-thumbs animate-fade-up delay-3">
-          <div class="gallery-thumb active" onclick="setPreview(this,'assets/images/products/academia-premium-hero.jpg','Hero Desktop')" title="Hero Desktop">
-            <img src="assets/images/products/academia-premium-hero.jpg" alt="Hero Desktop" loading="lazy" />
+          <div class="gallery-thumb active" onclick="setPreview(this,'assets/images/products/academia-premium-preview-hero-desktop.webp','Hero Desktop')" title="Hero Desktop">
+            <img src="assets/images/products/academia-premium-preview-hero-desktop.webp" alt="Hero Desktop" loading="lazy" />
           </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-preview-hero-mobile.webp','Hero Mobile')" title="Hero Mobile">
+            <img src="assets/images/products/academia-premium-preview-hero-mobile.webp" alt="Hero Mobile" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-preview-sobre.webp','Equipe')" title="Equipe">
+            <img src="assets/images/products/academia-premium-preview-sobre.webp" alt="Equipe" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-preview-resultados.webp','Resultados')" title="Resultados">
+            <img src="assets/images/products/academia-premium-preview-resultados.webp" alt="Resultados" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-preview-skills.webp','Programas')" title="Programas">
+            <img src="assets/images/products/academia-premium-preview-skills.webp" alt="Programas" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-preview-depoimentos.webp','Planos')" title="Planos">
+            <img src="assets/images/products/academia-premium-preview-depoimentos.webp" alt="Planos" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-preview-cta.webp','CTA Final')" title="CTA Final">
+            <img src="assets/images/products/academia-premium-preview-cta.webp" alt="CTA Final" loading="lazy" />
+          </div>
+        </div>
           <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/academia-premium-mobile.jpg','Hero Mobile')" title="Hero Mobile">
             <img src="assets/images/products/academia-premium-mobile.jpg" alt="Hero Mobile" loading="lazy" />
           </div>

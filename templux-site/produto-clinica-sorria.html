@@ -16,7 +16,7 @@
     .buy-box-divider { height:1px; background:var(--border); margin:20px 0; }
     .main-preview { aspect-ratio:16/9; border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-surface); border:1px solid var(--border); margin-bottom:12px; cursor:zoom-in; }
     .main-preview img { width:100%; height:100%; object-fit:cover; object-position:top center; transition:opacity 0.25s ease; }
-    .gallery-thumbs { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:24px; }
+    .gallery-thumbs { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; margin-bottom:24px; }
     .gallery-thumb { aspect-ratio:16/9; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer; border:2px solid transparent; transition:border-color 0.15s,transform 0.15s; }
     .gallery-thumb:hover { transform:translateY(-2px); border-color:var(--border-accent); }
     .gallery-thumb.active { border-color:var(--accent-bright); }
@@ -75,14 +75,32 @@
 
         <!-- GALERIA PRINCIPAL -->
         <div class="main-preview animate-fade-up delay-2" onclick="openLightbox(currentSrc)">
-          <img src="assets/images/products/clinica-sorria-cover.jpg?v=2" alt="Clínica Sorria — Hero Desktop" id="mainImg" />
+          <img src="assets/images/products/clinica-sorria-preview-hero-desktop.webp" alt="Clínica Sorria — Hero Desktop" id="mainImg" />
         </div>
 
-        <!-- MINIATURAS -->
         <div class="gallery-thumbs animate-fade-up delay-3">
-          <div class="gallery-thumb active" onclick="setPreview(this,'assets/images/products/clinica-sorria-cover.jpg?v=2','Hero Desktop')" title="Hero Desktop">
-            <img src="assets/images/products/clinica-sorria-cover.jpg?v=2" alt="Hero Desktop" loading="lazy" />
+          <div class="gallery-thumb active" onclick="setPreview(this,'assets/images/products/clinica-sorria-preview-hero-desktop.webp','Hero Desktop')" title="Hero Desktop">
+            <img src="assets/images/products/clinica-sorria-preview-hero-desktop.webp" alt="Hero Desktop" loading="lazy" />
           </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-preview-hero-mobile.webp','Hero Mobile')" title="Hero Mobile">
+            <img src="assets/images/products/clinica-sorria-preview-hero-mobile.webp" alt="Hero Mobile" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-preview-sobre.webp','Sobre')" title="Sobre">
+            <img src="assets/images/products/clinica-sorria-preview-sobre.webp" alt="Sobre" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-preview-resultados.webp','Resultados')" title="Resultados">
+            <img src="assets/images/products/clinica-sorria-preview-resultados.webp" alt="Resultados" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-preview-skills.webp','Serviços')" title="Serviços">
+            <img src="assets/images/products/clinica-sorria-preview-skills.webp" alt="Serviços" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-preview-depoimentos.webp','Depoimentos')" title="Depoimentos">
+            <img src="assets/images/products/clinica-sorria-preview-depoimentos.webp" alt="Depoimentos" loading="lazy" />
+          </div>
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-preview-cta.webp','CTA Final')" title="CTA Final">
+            <img src="assets/images/products/clinica-sorria-preview-cta.webp" alt="CTA Final" loading="lazy" />
+          </div>
+        </div>
           <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/clinica-sorria-mobile.jpg','Hero Mobile')" title="Hero Mobile">
             <img src="assets/images/products/clinica-sorria-mobile.jpg" alt="Hero Mobile" loading="lazy" />
           </div>
