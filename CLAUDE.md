@@ -313,24 +313,69 @@ Mínimo obrigatório: **4 imagens**. Ideal: todas as 7. Priorizar as partes mais
 
 ### Configuração técnica obrigatória (Puppeteer)
 
+#### Desktop — todas as seções
 ```js
-// Desktop — todas as seções
 viewport: { width: 1440, height: 900, deviceScaleFactor: 1.5 }
 format: 'webp', quality: 88
-// Antes de cada captura:
+
+// Antes de cada captura — forçar animações visíveis:
 await page.evaluate(() => {
-  document.querySelectorAll('.reveal, [data-aos]').forEach(el => {
-    el.classList.add('visible', 'aos-animate');
+  document.querySelectorAll('.reveal, [data-aos], [class*="animate"], [class*="fade"]').forEach(el => {
     el.style.opacity = '1';
     el.style.transform = 'none';
+    el.style.visibility = 'visible';
+    el.style.transition = 'none';
+    el.style.animation = 'none';
+    el.classList.add('visible', 'aos-animate', 'animated');
   });
 });
 await new Promise(r => setTimeout(r, 600));
-
-// Mobile hero
-viewport: { width: 390, height: 844, deviceScaleFactor: 2 }
-clip: { x: 0, y: 0, width: 390, height: 700 }  // captura só o hero
 ```
+
+#### Mobile hero — obrigatório e crítico
+```js
+// 1. Abrir com viewport mobile real
+viewport: { width: 390, height: 844, deviceScaleFactor: 2, isMobile: true }
+
+// 2. Carregar página, revelar animações, pre-scroll para lazy images
+
+// 3. Fechar menu mobile, voltar ao topo — SEM mexer no padding-top do hero
+await page.evaluate(() => {
+  const menu = document.querySelector('.nav-mobile, #mobileMenu, .mobile-menu');
+  if (menu) { menu.style.display = 'none'; menu.classList.remove('active', 'open'); }
+  window.scrollTo(0, 0);
+});
+
+// 4. Medir o bounding box REAL da seção hero (inclui conteúdo maior que viewport)
+const heroClip = await page.evaluate((heroSel) => {
+  const candidates = [heroSel, '#inicio', '#hero', '.hero', '.hero-section', 'section:first-of-type'];
+  let el = null;
+  for (const sel of candidates) { el = document.querySelector(sel); if (el) break; }
+  if (!el) return { x: 0, y: 0, width: 390, height: window.innerHeight };
+  const rect = el.getBoundingClientRect();
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  return {
+    x: 0,
+    y: Math.round(Math.max(0, rect.top + scrollTop)),
+    width: 390,
+    height: Math.round(el.offsetHeight),   // altura REAL, não da viewport
+  };
+}, tmpl.sections.hero);
+
+// 5. Se a hero for maior que 844px, expandir viewport para capturar tudo
+const neededH = heroClip.y + heroClip.height;
+if (neededH > 844) {
+  await page.setViewport({ width: 390, height: neededH, deviceScaleFactor: 2, isMobile: true });
+  await wait(200); await revealAll(page); await wait(200);
+}
+
+// 6. Screenshot com clip = bounding box da hero (resultado: portrait ~780x1800-2400px)
+await page.screenshot({ path: outFile, type: 'webp', quality: 88, clip: heroClip });
+```
+
+> **Regra absoluta**: NUNCA usar `clip: { height: 219 }` ou qualquer recorte paisagem 16:9 para
+> a imagem mobile. O resultado obrigatório é portrait vertical (~780×1800–2400 px).
+> Largura sempre 780px (390 CSS × deviceScaleFactor 2). Altura definida pela hero real.
 
 Salvar em `templates/NOME/preview/screenshots/` com os nomes do padrão acima.
 
@@ -341,11 +386,23 @@ Salvar em `templates/NOME/preview/screenshots/` com os nomes do padrão acima.
 1. Copiar para `templux-site/assets/images/products/NOME-preview-hero-desktop.webp` etc.
 2. Atualizar `produto-NOME.html` — galeria com as imagens na ordem obrigatória
 3. Atualizar card em `catalogo.html` — usar `preview-hero-desktop.webp` como cover
-4. CSS obrigatório em todas as páginas de produto:
+4. CSS já presente no `style.css` global — **não duplicar** nas páginas de produto:
 
 ```css
+/* Desktop — cobre e alinha ao topo */
 .main-preview img { object-fit: cover; object-position: top center; }
 .gallery-thumb img { object-fit: cover; object-position: top center; }
+
+/* Mobile portrait — exibe completa sem corte, fundo escuro */
+.gallery-thumb img[src*="-hero-mobile"],
+.main-preview img[src*="-hero-mobile"] {
+  object-fit: contain;
+  object-position: top center;
+}
+.gallery-thumb:has(img[src*="-hero-mobile"]),
+.main-preview:has(img[src*="-hero-mobile"]) {
+  background: #050505;
+}
 ```
 
 ---
