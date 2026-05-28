@@ -15,12 +15,12 @@
     .buy-box-note { color:var(--text-secondary); font-size:0.82rem; margin:6px 0 20px; }
     .buy-box-divider { height:1px; background:var(--border); margin:20px 0; }
     .main-preview { aspect-ratio:16/9; border-radius:var(--radius-lg); overflow:hidden; background:var(--bg-surface); border:1px solid var(--border); margin-bottom:12px; cursor:zoom-in; }
-    .main-preview img { width:100%; height:100%; object-fit:cover; transition:opacity 0.25s ease; }
+    .main-preview img { width:100%; height:100%; object-fit:cover; object-position:top center; transition:opacity 0.25s ease; }
     .gallery-thumbs { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:24px; }
     .gallery-thumb { aspect-ratio:16/9; border-radius:var(--radius-sm); overflow:hidden; cursor:pointer; border:2px solid transparent; transition:border-color 0.15s,transform 0.15s; }
     .gallery-thumb:hover { transform:translateY(-2px); border-color:var(--border-accent); }
     .gallery-thumb.active { border-color:var(--accent-bright); }
-    .gallery-thumb img { width:100%; height:100%; object-fit:cover; }
+    .gallery-thumb img { width:100%; height:100%; object-fit:cover; object-position:top center; }
     .device-showcase { display:grid; grid-template-columns:1fr auto; gap:32px; align-items:end; padding:32px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-xl); margin-top:0; }
     .device-desktop-frame { position:relative; border-radius:10px 10px 0 0; border:3px solid #3a3a4a; background:#1a1a2e; box-shadow:0 20px 60px rgba(0,0,0,0.5); overflow:hidden; }
     .device-desktop-bar { height:24px; background:#252535; display:flex; align-items:center; gap:6px; padding:0 12px; }
@@ -86,26 +86,23 @@
         </div>
 
         <!-- GALERIA PRINCIPAL -->
-        <div class="main-preview animate-fade-up delay-2" onclick="openLightbox(currentSrc)" style="aspect-ratio:unset;background:#0d0d12;">
-          <img src="assets/images/products/black-edge-mockup.png" alt="Black Edge Barber — Mockup" id="mainImg" style="object-fit:contain;background:#0d0d12;" />
+        <div class="main-preview animate-fade-up delay-2" onclick="openLightbox(currentSrc)">
+          <img src="assets/images/products/black-edge-cover.jpg" alt="Black Edge Barber — Hero Desktop" id="mainImg" />
         </div>
 
         <!-- MINIATURAS -->
         <div class="gallery-thumbs animate-fade-up delay-3">
-          <div class="gallery-thumb active" onclick="setPreview(this,'assets/images/products/black-edge-mockup.png','Mockup')" title="Mockup">
-            <img src="assets/images/products/black-edge-mockup.png" alt="Mockup" loading="lazy" style="object-fit:contain;background:#0d0d12;" />
+          <div class="gallery-thumb active" onclick="setPreview(this,'assets/images/products/black-edge-cover.jpg','Hero Desktop')" title="Hero Desktop">
+            <img src="assets/images/products/black-edge-cover.jpg" alt="Hero Desktop" loading="lazy" />
           </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/black-edge-cover.jpg','Hero')" title="Hero">
-            <img src="assets/images/products/black-edge-cover.jpg" alt="Hero" loading="lazy" />
+          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/black-edge-barber-mobile.jpg','Hero Mobile')" title="Hero Mobile">
+            <img src="assets/images/products/black-edge-barber-mobile.jpg" alt="Hero Mobile" loading="lazy" />
           </div>
           <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/black-edge-gallery-1.jpg','Serviços')" title="Serviços">
             <img src="assets/images/products/black-edge-gallery-1.jpg" alt="Serviços" loading="lazy" />
           </div>
           <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/black-edge-cta.jpg','CTA')" title="CTA">
             <img src="assets/images/products/black-edge-cta.jpg" alt="CTA" loading="lazy" />
-          </div>
-          <div class="gallery-thumb" onclick="setPreview(this,'assets/images/products/black-edge-mobile-hero.jpg','Mobile')" title="Mobile">
-            <img src="assets/images/products/black-edge-mobile-hero.jpg" alt="Mobile" loading="lazy" />
           </div>
         </div>
 
