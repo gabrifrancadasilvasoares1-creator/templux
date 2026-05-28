@@ -11,8 +11,9 @@
   <meta property="og:title" content="Templux — Templates Premium para Sites" />
   <meta property="og:description" content="Templates prontos para barbearias, salões, delivery e negócios locais. A partir de R$29,90." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://templux.com.br" />
+  <meta property="og:url" content="https://templux.com.br" />  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     /* === HERO === */
     .hero {
@@ -85,8 +86,20 @@
     .cta-band p { color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 32px; }
     .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
+    /* === FEATURED GRID === */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .featured-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
     @media (max-width: 768px) {
       .features-grid, .steps-grid { grid-template-columns: 1fr; }
+      .featured-grid { grid-template-columns: 1fr; }
       .cta-band { padding: 48px 24px; }
       .hero-proof { gap: 16px; }
     }
@@ -189,12 +202,12 @@
   <div class="container">
     <div class="grid-4">
       <div class="stat-card reveal">
-        <div class="number">1</div>
-        <div class="label">Template disponível agora</div>
+        <div class="number">6</div>
+        <div class="label">Templates disponíveis agora</div>
       </div>
       <div class="stat-card reveal">
-        <div class="number">6+</div>
-        <div class="label">Nichos em desenvolvimento</div>
+        <div class="number">5+</div>
+        <div class="label">Nichos atendidos</div>
       </div>
       <div class="stat-card reveal">
         <div class="number">R$29</div>
@@ -214,45 +227,86 @@
 <section class="section" id="templates">
   <div class="container">
     <div class="section-header">
-      <span class="badge badge-accent label">✦ Template em Destaque</span>
-      <h2 class="display-lg">Black Edge Barber</h2>
-      <p>O primeiro template da Templux — design premium, responsivo e pronto para publicar.</p>
+      <span class="badge badge-accent label">✦ Templates em Destaque</span>
+      <h2 class="display-lg">Escolha o seu nicho</h2>
+      <p>6 templates prontos para uso — barbearias, academias, clínicas, portfólios e mais.</p>
     </div>
 
-    <!-- BLACK EDGE BARBER — DESTAQUE PRINCIPAL -->
-    <article class="product-featured-card reveal">
-      <div class="product-featured-thumb">
-        <img src="assets/images/products/black-edge-mockup.png" alt="Template Black Edge Barber — mockup" loading="lazy" style="object-fit:contain;background:#0d0d12;" />
-        <div class="product-featured-badges">
-          <span class="badge badge-gold">⭐ Template disponível</span>
-          <span class="badge badge-category">Barbearia</span>
-          <span class="badge badge-green">● Disponível agora</span>
+    <div class="featured-grid reveal">
+
+      <!-- BLACK EDGE BARBER -->
+      <article class="product-card">
+        <div class="product-card-thumb">
+          <img src="assets/images/products/black-edge-barber-preview-hero-desktop.webp" alt="Template Black Edge Barber — barbearia premium" loading="lazy" />
+          <div class="product-card-overlay"><a href="demos/black-edge-barber/index.html" class="product-card-overlay-btn" target="_blank" rel="noopener">Ver demo →</a></div>
+          <div class="product-card-badges">
+            <span class="badge badge-gold">⭐ Mais vendido</span>
+            <span class="badge badge-category">Barbearia</span>
+          </div>
         </div>
-      </div>
-      <div class="product-featured-info">
-        <div>
-          <h3 class="display-lg" style="margin-bottom:14px;">Black Edge<br>Barber</h3>
-          <p class="product-featured-desc">Landing page premium para barbearias com visual moderno, responsivo e botão de WhatsApp integrado. Baixe, edite os textos e publique no mesmo dia — sem mensalidade, sem servidor especial.</p>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <span class="display-sm">Black Edge Barber</span>
+            <span class="product-card-price">R$29,90</span>
+          </div>
+          <p class="product-card-desc">Landing page premium dark para barbearias com visual moderno e responsivo.</p>
+          <div class="product-card-actions">
+            <a href="produto-black-edge-barber.html" class="btn btn-secondary btn-sm">Ver detalhes</a>
+            <a href="https://pay.cakto.com.br/o8phz3y_891834" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Comprar →</a>
+          </div>
         </div>
-        <div>
-          <span class="product-featured-price">R$29,90</span>
-          <span class="product-featured-price-note">pagamento único · sem mensalidade · codigo 100% seu</span>
+      </article>
+
+      <!-- ACADEMIA PREMIUM -->
+      <article class="product-card">
+        <div class="product-card-thumb">
+          <img src="assets/images/products/academia-premium-preview-hero-desktop.webp" alt="Template Academia Premium — academia fitness" loading="lazy" />
+          <div class="product-card-overlay"><a href="demos/academia-premium/index.html" class="product-card-overlay-btn" target="_blank" rel="noopener">Ver demo →</a></div>
+          <div class="product-card-badges">
+            <span class="badge badge-accent">🆕 Novo</span>
+            <span class="badge badge-category">Academia</span>
+          </div>
         </div>
-        <div class="product-featured-actions">
-          <a href="produto-black-edge-barber.html" class="btn btn-secondary btn-lg">Ver detalhes</a>
-          <a href="https://pay.cakto.com.br/o8phz3y_891834" class="btn btn-primary btn-lg" target="_blank" rel="noopener">🛒 Comprar agora →</a>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <span class="display-sm">Academia Premium</span>
+            <span class="product-card-price">R$29,90</span>
+          </div>
+          <p class="product-card-desc">Landing page dark athletica com animações premium, planos e resultados.</p>
+          <div class="product-card-actions">
+            <a href="produto-academia-premium.html" class="btn btn-secondary btn-sm">Ver detalhes</a>
+            <a href="https://pay.cakto.com.br/94ryhu7_902430" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Comprar →</a>
+          </div>
         </div>
-        <div class="product-featured-perks">
-          <span>Download imediato</span>
-          <span>Suporte incluido</span>
-          <span>Licenca comercial</span>
-          <span>Codigo comentado</span>
+      </article>
+
+      <!-- CLINICA SORRIA -->
+      <article class="product-card">
+        <div class="product-card-thumb">
+          <img src="assets/images/products/clinica-sorria-preview-hero-desktop.webp" alt="Template Clínica Sorria — clínica odontológica" loading="lazy" />
+          <div class="product-card-overlay"><a href="demos/clinica-sorria/index.html" class="product-card-overlay-btn" target="_blank" rel="noopener">Ver demo →</a></div>
+          <div class="product-card-badges">
+            <span class="badge badge-accent">🆕 Novo</span>
+            <span class="badge badge-category">Saúde</span>
+          </div>
         </div>
-      </div>
-    </article>
+        <div class="product-card-body">
+          <div class="product-card-meta">
+            <span class="display-sm">Clínica Sorria</span>
+            <span class="product-card-price">R$29,90</span>
+          </div>
+          <p class="product-card-desc">Landing page premium para clínicas odontológicas com serviços e antes/depois.</p>
+          <div class="product-card-actions">
+            <a href="produto-clinica-sorria.html" class="btn btn-secondary btn-sm">Ver detalhes</a>
+            <a href="https://pay.cakto.com.br/39m7338_896557" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Comprar →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
 
     <div style="text-align:center; margin-top:44px;">
-      <a href="catalogo.html" class="btn btn-outline btn-lg">Ver catálogo completo →</a>
+      <a href="catalogo.html" class="btn btn-outline btn-lg">Ver todos os 6 templates →</a>
     </div>
   </div>
 </section>
@@ -289,9 +343,9 @@
         <p>Código comentado, README incluso. Qualquer pessoa com noções básicas consegue personalizar.</p>
       </div>
       <div class="feature-card reveal">
-        <div class="feature-card-icon">💬</div>
-        <h3>WhatsApp integrado</h3>
-        <p>Botão direto no WhatsApp já configurado. O cliente clica e fala com você na hora.</p>
+        <div class="feature-card-icon">📩</div>
+        <h3>Contato integrado</h3>
+        <p>Formulário e botões de contato já configurados. O cliente clica e fala com você na hora.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-card-icon">🔍</div>
@@ -384,7 +438,7 @@
         <h4>Suporte</h4>
         <ul>
           <li><a href="contato.html">Fale conosco</a></li>
-          <li><a href="https://wa.me/5521972191212" target="_blank" rel="noopener">WhatsApp</a></li>
+          
           <li><a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener">TikTok</a></li>
           <li><a href="mailto:templux2026@gmail.com">E-mail</a></li>
@@ -394,9 +448,9 @@
     <div class="footer-bottom">
       <span>© 2025 Templux. Todos os direitos reservados.</span>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">📷</a>
-        <a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">🎵</a>
-        <a href="https://wa.me/5521972191212" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">💬</a>
+        <a href="https://www.instagram.com/templux2026?igsh=MTJpcHo5Zm9uaG90ZQ==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@templux7" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="mailto:templux2026@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
   </div>
