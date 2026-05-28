@@ -230,22 +230,20 @@ async function processTemplate(browser, tmpl) {
   await preloadAllImages(mob);
   await revealAll(mob);
 
-  // Esconde a nav e reseta o padding-top do hero (que compensava a nav fixa),
-  // para o clip mostrar o conteúdo real do hero desde o topo.
+  // Mantém a nav mobile visível (mostra hambúrguer → fica claro que é mobile)
+  // mas remove o padding-top excessivo do hero para aproveitar o clip ao máximo.
   await mob.evaluate(() => {
-    // Esconde navegação
-    const nav = document.querySelector('nav, .nav, #nav, .navbar, header:not(section header)');
-    if (nav) nav.style.display = 'none';
+    // Fecha menu mobile se aberto, mas mantém a navbar
     const mobileMenu = document.querySelector('.nav-mobile, #mobileMenu, .mobile-menu');
-    if (mobileMenu) mobileMenu.style.display = 'none';
+    if (mobileMenu) { mobileMenu.style.display = 'none'; mobileMenu.classList.remove('active', 'open'); }
 
-    // Remove o padding-top do hero que compensava a nav fixa
+    // Reseta o padding-top do hero (que compensava a nav fixa) para ~8px acima da nav
     const heroSection = document.querySelector(
       'section:first-of-type, #inicio, #hero, .hero-section, [class*="hero"]'
     );
     if (heroSection) {
-      heroSection.style.paddingTop = '32px';
-      heroSection.style.marginTop = '0';
+      heroSection.style.paddingTop = '8px';
+      heroSection.style.marginTop  = '0';
     }
 
     window.scrollTo(0, 0);
