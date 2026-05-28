@@ -789,6 +789,18 @@ body::before {
 }
 .gallery-thumb:hover { border-color: var(--accent); transform: scale(1.02); }
 .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+/* Imagem mobile portrait — não cortar, exibir completa com fundo escuro */
+.gallery-thumb img[src*="-hero-mobile"],
+.main-preview img[src*="-hero-mobile"] {
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 4px;
+}
+.gallery-thumb:has(img[src*="-hero-mobile"]),
+.main-preview:has(img[src*="-hero-mobile"]) {
+  background: #050505;
+}
 .gallery-placeholder {
   width: 100%; height: 100%;
   display: flex;

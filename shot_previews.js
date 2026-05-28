@@ -221,7 +221,7 @@ async function processTemplate(browser, tmpl) {
 
   // ── MOBILE hero ──
   const mob = await browser.newPage();
-  await mob.setViewport({ width: 390, height: 844, deviceScaleFactor: 2 });
+  await mob.setViewport({ width: 390, height: 844, deviceScaleFactor: 2, isMobile: true });
   mob.on('requestfailed', () => {});
 
   await mob.goto(absFile, { waitUntil: 'networkidle2', timeout: 45000 });
@@ -230,37 +230,47 @@ async function processTemplate(browser, tmpl) {
   await preloadAllImages(mob);
   await revealAll(mob);
 
-  // Mantém a nav mobile visível (mostra hambúrguer → fica claro que é mobile)
-  // mas remove o padding-top excessivo do hero para aproveitar o clip ao máximo.
+  // Fecha menu mobile e volta pro topo — sem mexer no padding do hero
   await mob.evaluate(() => {
-    // Fecha menu mobile se aberto, mas mantém a navbar
     const mobileMenu = document.querySelector('.nav-mobile, #mobileMenu, .mobile-menu');
     if (mobileMenu) { mobileMenu.style.display = 'none'; mobileMenu.classList.remove('active', 'open'); }
-
-    // Reseta o padding-top do hero (que compensava a nav fixa) para ~8px acima da nav
-    const heroSection = document.querySelector(
-      'section:first-of-type, #inicio, #hero, .hero-section, [class*="hero"]'
-    );
-    if (heroSection) {
-      heroSection.style.paddingTop = '8px';
-      heroSection.style.marginTop  = '0';
-    }
-
     window.scrollTo(0, 0);
   });
   await wait(400);
   await revealAll(mob);
   await wait(300);
 
-  // Clip 16:9 (390×219 CSS px → 780×438 px reais) — encaixa no thumbnail sem corte
-  await mob.screenshot({
-    path: path.join(OUT, `${tmpl.name}-preview-hero-mobile.webp`),
-    type: 'webp', quality: 88,
-    clip: { x: 0, y: 0, width: 390, height: 219 },
-  });
-  const mobKb = Math.round(
-    fs.statSync(path.join(OUT, `${tmpl.name}-preview-hero-mobile.webp`)).size / 1024
-  );
+  // Mede o bounding box real da seção hero (inclui conteúdo maior que o viewport)
+  const heroClip = await mob.evaluate((heroSel) => {
+    const candidates = [heroSel, '#inicio', '#hero', '.hero', '.hero-section', 'section:first-of-type'];
+    let el = null;
+    for (const sel of candidates) {
+      el = document.querySelector(sel);
+      if (el) break;
+    }
+    if (!el) return { x: 0, y: 0, width: 390, height: window.innerHeight };
+    const rect = el.getBoundingClientRect();
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    return {
+      x: 0,
+      y: Math.round(Math.max(0, rect.top + scrollTop)),
+      width: 390,
+      height: Math.round(el.offsetHeight),
+    };
+  }, tmpl.sections.hero);
+
+  // Se a hero for maior que o viewport atual, expande o viewport para capturar tudo
+  const neededH = heroClip.y + heroClip.height;
+  if (neededH > 844) {
+    await mob.setViewport({ width: 390, height: neededH, deviceScaleFactor: 2, isMobile: true });
+    await wait(200);
+    await revealAll(mob);
+    await wait(200);
+  }
+
+  const mobOut = path.join(OUT, `${tmpl.name}-preview-hero-mobile.webp`);
+  await mob.screenshot({ path: mobOut, type: 'webp', quality: 88, clip: heroClip });
+  const mobKb = Math.round(fs.statSync(mobOut).size / 1024);
   console.log(`    ✓ ${tmpl.name}-preview-hero-mobile.webp (${mobKb}KB)`);
   await mob.close();
 }
