@@ -274,60 +274,103 @@ VOZ: [se usar narração, o que falar]
 
 ## 7. Sistema de Screenshots e Conteúdo Visual
 
-### Regra absoluta — imagens reais obrigatórias na página do produto
+> **Lei absoluta:** NUNCA usar imagens genéricas (Unsplash, stock, placeholder).
+> NUNCA cortar textos, botões ou cards pela metade.
+> NUNCA capturar prints quebrados, desalinhados ou vazios.
+> Todo template DEVE ter screenshots reais integrados em todos os pontos de venda.
 
-**Nunca usar imagens genéricas (Unsplash, stock, placeholder) na galeria da página de produto.**
-Todo template deve ter prints reais do próprio template integrados na `produto-NOME.html`.
+---
 
-### Ordem obrigatória das imagens na galeria do produto
+### Ordem obrigatória das 7 imagens de prévia
 
-| Posição | Imagem | Arquivo |
-|---|---|---|
-| 1 (principal) | Hero desktop — topo completo com headline, CTA e visual forte | `preview-hero-desktop.jpg` |
-| 2 | Hero mobile — visão vertical do template no celular | `preview-hero-mobile.jpg` |
-| 3 | Seção de serviços, cards ou funcionalidades principais | `preview-servicos.jpg` |
-| 4 | Seção de prova social (depoimentos, antes/depois, resultados) | `preview-depoimentos.jpg` |
-| 5 | CTA final ou seção de fechamento | `preview-cta.jpg` |
+| # | Seção | O que mostrar | Arquivo |
+|---|---|---|---|
+| 1 | **Hero Desktop** | Navbar + headline + subheadline + CTA + imagem principal | `preview-hero-desktop.webp` |
+| 2 | **Hero Mobile** | Layout responsivo vertical completo do hero | `preview-hero-mobile.webp` |
+| 3 | **Sobre** | Seção "Sobre" com imagem + textos principais | `preview-sobre.webp` |
+| 4 | **Resultados / Benefícios** | Cards de métricas, resultados ou benefícios | `preview-resultados.webp` |
+| 5 | **Serviços / Skills** | Cards de serviços ou skills (com hover se possível) | `preview-skills.webp` |
+| 6 | **Depoimentos** | Seção de depoimentos inteira, cards completos | `preview-depoimentos.webp` |
+| 7 | **CTA Final** | Chamada final para ação, botão de compra/contato | `preview-cta.webp` |
 
-Mínimo obrigatório: **4 imagens**. Priorizar as partes mais bonitas e que mais vendem.
+Mínimo obrigatório: **4 imagens**. Ideal: todas as 7. Priorizar as partes mais bonitas.
 
-### Regras técnicas das imagens de prévia
+---
 
-- Todas as capturas em desktop: `viewport 1440×900, deviceScaleFactor: 1.5`
-- **Nunca usar** `full-desktop.jpg` (página inteira scrollada) na galeria do produto — a imagem fica com altura absurda e quebra o layout
-- **Nunca usar** `hero-mobile.jpg` em formato retrato direto — só usar se for dentro de mockup ou recortado em 16:9
-- Formato obrigatório: JPEG, qualidade 88
-- Salvar em `preview/screenshots/` com nomes do padrão acima
-- Copiar para `templux-site/assets/images/products/NOME-preview-hero-desktop.jpg` etc.
+### Regras de qualidade — sem exceção
 
-### CSS obrigatório nas páginas de produto
+- ✅ Screenshots limpas e profissionais
+- ✅ Elementos visíveis e completos — sem cortes
+- ✅ Seções sem overflow ou desalinhamento
+- ✅ Forçar `.reveal`, `[data-aos]` e animações visíveis antes de capturar
+- ❌ Não cortar textos, botões ou cards
+- ❌ Não deixar elementos pela metade
+- ❌ Não gerar screenshots vazias ou com fundo em branco inesperado
+- ❌ Não repetir imagens parecidas (ex: duas capturas do mesmo hero)
+- ❌ Não usar `full-desktop` (página inteira scrollada) — imagem fica altíssima e quebra o layout
+
+---
+
+### Configuração técnica obrigatória (Puppeteer)
+
+```js
+// Desktop — todas as seções
+viewport: { width: 1440, height: 900, deviceScaleFactor: 1.5 }
+format: 'webp', quality: 88
+// Antes de cada captura:
+await page.evaluate(() => {
+  document.querySelectorAll('.reveal, [data-aos]').forEach(el => {
+    el.classList.add('visible', 'aos-animate');
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+});
+await new Promise(r => setTimeout(r, 600));
+
+// Mobile hero
+viewport: { width: 390, height: 844, deviceScaleFactor: 2 }
+clip: { x: 0, y: 0, width: 390, height: 700 }  // captura só o hero
+```
+
+Salvar em `templates/NOME/preview/screenshots/` com os nomes do padrão acima.
+
+---
+
+### Integração obrigatória após capturar
+
+1. Copiar para `templux-site/assets/images/products/NOME-preview-hero-desktop.webp` etc.
+2. Atualizar `produto-NOME.html` — galeria com as imagens na ordem obrigatória
+3. Atualizar card em `catalogo.html` — usar `preview-hero-desktop.webp` como cover
+4. CSS obrigatório em todas as páginas de produto:
 
 ```css
 .main-preview img { object-fit: cover; object-position: top center; }
 .gallery-thumb img { object-fit: cover; object-position: top center; }
 ```
 
-Esse CSS garante que todas as imagens mostrem o topo (parte mais visual) de cada screenshot.
+---
 
-### Quando conseguir gerar automaticamente (via Puppeteer)
-Execute o script de screenshot para capturar:
+### Fluxo obrigatório após criar um template
 
-1. **Hero completo** — viewport 1440×900, topo da página → `preview-hero-desktop.jpg`
-2. **Seção de serviços/features** — → `preview-servicos.jpg`
-3. **Seção de prova social** — depoimentos, antes/depois → `preview-depoimentos.jpg`
-4. **CTA final** — seção de conversão → `preview-cta.jpg`
-5. **Hero mobile recortado em 16:9** — viewport 390, captura só o hero → `preview-hero-mobile.jpg`
+```
+1. Criar template (site/ completo)
+2. Abrir template no navegador (via Puppeteer)
+3. Capturar as 7 screenshots reais das seções obrigatórias
+4. Verificar cada imagem — descartar e recapturar se tiver corte ou bug visual
+5. Copiar para assets/images/products/ com nomeclatura correta
+6. Integrar previews na página do produto (produto-NOME.html)
+7. Atualizar cover no catálogo (catalogo.html)
+8. Commitar tudo junto
+```
 
-Configuração padrão: `width: 1440, height: 900, deviceScaleFactor: 1.5`
-Qualidade JPEG: 88. Forçar `.reveal` visível antes de capturar.
+---
 
 ### Quando não conseguir gerar automaticamente
 Crie o arquivo `preview/INSTRUCOES-SCREENSHOTS.md` com:
 - URL ou caminho do arquivo a abrir
-- Tamanho de janela exato
-- Quais seções fotografar
-- Onde salvar cada arquivo
-- Nome exato de cada arquivo
+- Tamanho de janela exato para cada seção
+- Quais seções fotografar e em que ordem
+- Nome exato de cada arquivo de saída
 
 ---
 
