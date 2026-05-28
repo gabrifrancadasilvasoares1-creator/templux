@@ -313,31 +313,115 @@ Mínimo obrigatório: **4 imagens**. Ideal: todas as 7. Priorizar as partes mais
 
 ### Configuração técnica obrigatória (Puppeteer)
 
-#### Desktop — todas as seções
-```js
-viewport: { width: 1440, height: 900, deviceScaleFactor: 1.5 }
-format: 'webp', quality: 88
+O script de referência é `shot_previews.js` na raiz do projeto. Sempre basear novos scripts nele.
 
-// Antes de cada captura — forçar animações visíveis:
-await page.evaluate(() => {
-  document.querySelectorAll('.reveal, [data-aos], [class*="animate"], [class*="fade"]').forEach(el => {
-    el.style.opacity = '1';
-    el.style.transform = 'none';
-    el.style.visibility = 'visible';
-    el.style.transition = 'none';
-    el.style.animation = 'none';
-    el.classList.add('visible', 'aos-animate', 'animated');
+#### Funções auxiliares obrigatórias
+
+```js
+// Força todos os elementos com animação a ficarem visíveis
+async function revealAll(page) {
+  await page.evaluate(() => {
+    document.querySelectorAll(
+      '.reveal, [data-aos], .animate-fade-up, .animate-fade-in, ' +
+      '.hero__content, .hero__visual, .section__header, .card, ' +
+      '.feature-item, .service-card, .testimonial-card, ' +
+      '[class*="animate"], [class*="reveal"], [class*="fade"]'
+    ).forEach(el => {
+      el.style.opacity    = '1';
+      el.style.transform  = 'none';
+      el.style.visibility = 'visible';
+      el.style.transition = 'none';
+      el.style.animation  = 'none';
+      el.classList.add('visible', 'aos-animate', 'animated', 'active', 'shown');
+    });
+    const menu = document.querySelector('.nav-mobile, #mobileMenu, .mobile-menu');
+    if (menu) { menu.style.display = 'none'; menu.classList.remove('active', 'open'); }
+    document.querySelectorAll('.overlay, .modal').forEach(el => { el.style.display = 'none'; });
   });
-});
-await new Promise(r => setTimeout(r, 600));
+}
+
+// Pre-scroll completo (topo → fim → topo) para forçar carregamento de imagens lazy
+// OBRIGATÓRIO antes de qualquer captura — sem isso imagens lazy ficam em branco
+async function preloadAllImages(page) {
+  await page.evaluate(async () => {
+    const totalHeight = document.body.scrollHeight;
+    for (let y = 0; y < totalHeight; y += 400) {
+      window.scrollTo(0, y);
+      await new Promise(r => setTimeout(r, 60));
+    }
+    window.scrollTo(0, totalHeight);
+    await new Promise(r => setTimeout(r, 500));
+    window.scrollTo(0, 0);
+  });
+  await page.evaluate(async () => {
+    const imgs = Array.from(document.images);
+    imgs.forEach(img => { img.loading = 'eager'; });
+    await Promise.all(
+      imgs.filter(img => !img.complete).map(img => new Promise(resolve => {
+        img.onload = resolve; img.onerror = resolve;
+        setTimeout(resolve, 5000);
+      }))
+    );
+  });
+  await new Promise(r => setTimeout(r, 700));
+}
+```
+
+#### Desktop — todas as seções
+
+```js
+// Configuração do viewport
+viewport: { width: 1440, height: 900, deviceScaleFactor: 1.5 }
+
+// Carregar página
+await page.goto(url, { waitUntil: 'networkidle2', timeout: 45000 });
+page.on('requestfailed', () => {}); // silenciar erros de rede
+
+// Revelar animações + pre-scroll para lazy images (SEMPRE nesta ordem)
+await revealAll(page);
+await wait(1000);
+await preloadAllImages(page);  // ← crítico: sem isso imagens lazy ficam brancas
+await revealAll(page);
+await wait(800);
+
+// Captura do hero (seção 1) — volta ao topo
+await page.evaluate(() => window.scrollTo(0, 0));
+await wait(500);
+await revealAll(page);
+await wait(400);
+await page.screenshot({ path: '...preview-hero-desktop.webp', type: 'webp', quality: 88, fullPage: false });
+
+// Captura das demais seções — scroll para cada âncora
+async function scrollTo(page, selector) {
+  const found = await page.evaluate((sel) => {
+    const el = document.querySelector(sel);
+    if (!el) return false;
+    const top = el.getBoundingClientRect().top + window.scrollY - 72;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+    return true;
+  }, selector);
+  await wait(500);
+  await revealAll(page);
+  await wait(400);
+  return found;
+}
+
+// Para cada seção: scrollTo(page, '#ancora') → revealAll → screenshot
+format: 'webp', quality: 88, fullPage: false  // NUNCA fullPage: true
 ```
 
 #### Mobile hero — obrigatório e crítico
+
 ```js
-// 1. Abrir com viewport mobile real
+// 1. Viewport mobile real (isMobile: true é obrigatório)
 viewport: { width: 390, height: 844, deviceScaleFactor: 2, isMobile: true }
 
-// 2. Carregar página, revelar animações, pre-scroll para lazy images
+// 2. Carregar + revelar + pre-scroll (igual ao desktop)
+await page.goto(url, { waitUntil: 'networkidle2', timeout: 45000 });
+await revealAll(page);
+await wait(800);
+await preloadAllImages(page);
+await revealAll(page);
 
 // 3. Fechar menu mobile, voltar ao topo — SEM mexer no padding-top do hero
 await page.evaluate(() => {
@@ -345,8 +429,11 @@ await page.evaluate(() => {
   if (menu) { menu.style.display = 'none'; menu.classList.remove('active', 'open'); }
   window.scrollTo(0, 0);
 });
+await wait(400);
+await revealAll(page);
+await wait(300);
 
-// 4. Medir o bounding box REAL da seção hero (inclui conteúdo maior que viewport)
+// 4. Medir o bounding box REAL da hero via offsetHeight (não getBoundingClientRect)
 const heroClip = await page.evaluate((heroSel) => {
   const candidates = [heroSel, '#inicio', '#hero', '.hero', '.hero-section', 'section:first-of-type'];
   let el = null;
@@ -358,7 +445,7 @@ const heroClip = await page.evaluate((heroSel) => {
     x: 0,
     y: Math.round(Math.max(0, rect.top + scrollTop)),
     width: 390,
-    height: Math.round(el.offsetHeight),   // altura REAL, não da viewport
+    height: Math.round(el.offsetHeight),  // altura REAL, não da viewport
   };
 }, tmpl.sections.hero);
 
@@ -369,13 +456,14 @@ if (neededH > 844) {
   await wait(200); await revealAll(page); await wait(200);
 }
 
-// 6. Screenshot com clip = bounding box da hero (resultado: portrait ~780x1800-2400px)
-await page.screenshot({ path: outFile, type: 'webp', quality: 88, clip: heroClip });
+// 6. Screenshot com clip = bounding box da hero
+await page.screenshot({ path: '...preview-hero-mobile.webp', type: 'webp', quality: 88, clip: heroClip });
+// Resultado esperado: ~780×1800–2400px (portrait vertical)
 ```
 
-> **Regra absoluta**: NUNCA usar `clip: { height: 219 }` ou qualquer recorte paisagem 16:9 para
-> a imagem mobile. O resultado obrigatório é portrait vertical (~780×1800–2400 px).
-> Largura sempre 780px (390 CSS × deviceScaleFactor 2). Altura definida pela hero real.
+> **Proibido**: `clip: { height: 219 }` ou qualquer recorte fixo 16:9 para mobile.
+> **Proibido**: `fullPage: true` para qualquer screenshot.
+> **Proibido**: capturar sem antes rodar `preloadAllImages` — imagens lazy ficam em branco.
 
 Salvar em `templates/NOME/preview/screenshots/` com os nomes do padrão acima.
 
