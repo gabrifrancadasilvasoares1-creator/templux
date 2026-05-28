@@ -274,25 +274,52 @@ VOZ: [se usar narração, o que falar]
 
 ## 7. Sistema de Screenshots e Conteúdo Visual
 
+### Regra absoluta — imagens reais obrigatórias na página do produto
+
+**Nunca usar imagens genéricas (Unsplash, stock, placeholder) na galeria da página de produto.**
+Todo template deve ter prints reais do próprio template integrados na `produto-NOME.html`.
+
+### Ordem obrigatória das imagens na galeria do produto
+
+| Posição | Imagem | Arquivo |
+|---|---|---|
+| 1 (principal) | Hero desktop — topo completo com headline, CTA e visual forte | `preview-hero-desktop.jpg` |
+| 2 | Hero mobile — visão vertical do template no celular | `preview-hero-mobile.jpg` |
+| 3 | Seção de serviços, cards ou funcionalidades principais | `preview-servicos.jpg` |
+| 4 | Seção de prova social (depoimentos, antes/depois, resultados) | `preview-depoimentos.jpg` |
+| 5 | CTA final ou seção de fechamento | `preview-cta.jpg` |
+
+Mínimo obrigatório: **4 imagens**. Priorizar as partes mais bonitas e que mais vendem.
+
+### Regras técnicas das imagens de prévia
+
+- Todas as capturas em desktop: `viewport 1440×900, deviceScaleFactor: 1.5`
+- **Nunca usar** `full-desktop.jpg` (página inteira scrollada) na galeria do produto — a imagem fica com altura absurda e quebra o layout
+- **Nunca usar** `hero-mobile.jpg` em formato retrato direto — só usar se for dentro de mockup ou recortado em 16:9
+- Formato obrigatório: JPEG, qualidade 88
+- Salvar em `preview/screenshots/` com nomes do padrão acima
+- Copiar para `templux-site/assets/images/products/NOME-preview-hero-desktop.jpg` etc.
+
+### CSS obrigatório nas páginas de produto
+
+```css
+.main-preview img { object-fit: cover; object-position: top center; }
+.gallery-thumb img { object-fit: cover; object-position: top center; }
+```
+
+Esse CSS garante que todas as imagens mostrem o topo (parte mais visual) de cada screenshot.
+
 ### Quando conseguir gerar automaticamente (via Puppeteer)
 Execute o script de screenshot para capturar:
 
-1. **Hero completo** — viewport 1440×900, topo da página
-2. **Seção de serviços/features** — recortada na seção
-3. **Seção de resultados ou prova social** — depoimentos, antes/depois
-4. **CTA final** — seção de conversão
-5. **Footer** — rodapé completo
-6. **Mobile hero** — viewport 390×844 (iPhone 14)
-7. **Full page** — página inteira scrollada
+1. **Hero completo** — viewport 1440×900, topo da página → `preview-hero-desktop.jpg`
+2. **Seção de serviços/features** — → `preview-servicos.jpg`
+3. **Seção de prova social** — depoimentos, antes/depois → `preview-depoimentos.jpg`
+4. **CTA final** — seção de conversão → `preview-cta.jpg`
+5. **Hero mobile recortado em 16:9** — viewport 390, captura só o hero → `preview-hero-mobile.jpg`
 
-Salve em `preview/screenshots/` com nomes descritivos:
-`hero-desktop.jpg`, `services-desktop.jpg`, `cta-desktop.jpg`, `hero-mobile.jpg`
-
-### Script padrão de screenshot (Puppeteer)
-Sempre use `shot_catalog.js` adaptado para o template.
 Configuração padrão: `width: 1440, height: 900, deviceScaleFactor: 1.5`
-Qualidade JPEG: 88
-Forçar `.reveal` visível antes de capturar.
+Qualidade JPEG: 88. Forçar `.reveal` visível antes de capturar.
 
 ### Quando não conseguir gerar automaticamente
 Crie o arquivo `preview/INSTRUCOES-SCREENSHOTS.md` com:
