@@ -499,13 +499,107 @@ Salvar em `templates/NOME/preview/screenshots/` com os nomes do padrão acima.
 
 ```
 1. Criar template (site/ completo)
-2. Abrir template no navegador (via Puppeteer)
-3. Capturar as 7 screenshots reais das seções obrigatórias
-4. Verificar cada imagem — descartar e recapturar se tiver corte ou bug visual
-5. Copiar para assets/images/products/ com nomeclatura correta
-6. Integrar previews na página do produto (produto-NOME.html)
-7. Atualizar cover no catálogo (catalogo.html)
-8. Commitar tudo junto
+2. Capturar as 7 screenshots  →  node shot_previews.js NOME
+3. Gerar vídeos showcase      →  node record_showcase.js NOME
+4. Verificar cada imagem e vídeo — descartar e regerar se tiver bug visual
+5. Integrar previews na página do produto (produto-NOME.html)
+6. Atualizar cover no catálogo (catalogo.html)
+7. Commitar tudo junto
+```
+
+---
+
+## 7b. Sistema de Vídeo Showcase (Obrigatório)
+
+> Todo template novo deve ter vídeo showcase gerado automaticamente.
+> Script de referência: `record_showcase.js` na raiz do projeto.
+
+### Arquivos gerados por template
+
+| Arquivo | Formato | Uso |
+|---|---|---|
+| `NOME-showcase-desktop.mp4` | 1080×1920 H.264 30fps | TikTok / Reels mostrando desktop |
+| `NOME-showcase-mobile.mp4`  | 1080×1920 H.264 30fps | TikTok / Reels mostrando mobile |
+| `NOME-showcase-thumb.jpg`   | Frame do 1,5s do desktop | Thumbnail do vídeo |
+
+Salvos em `templux-site/assets/videos/`.
+
+### Como gerar
+
+```bash
+# Um template específico
+node record_showcase.js black-edge-barber
+
+# Todos os templates
+node record_showcase.js all
+```
+
+### O que o vídeo captura automaticamente
+
+**Cena desktop (~35s)**
+1. Cursor entra pelo lado direito → move até o headline
+2. Tremores leves no headline (simulando leitura humana)
+3. Move para o botão CTA principal → pausa com hover effect
+4. Scroll suave até seção "sobre" → cursor explora o conteúdo
+5. Scroll até serviços/skills → cursor passeia pelos cards
+6. Scroll até depoimentos → pausa
+7. Scroll até CTA final → cursor pousa no botão
+
+**Cena mobile (~28s)**
+1. "Touch" entra do topo → move até headline
+2. Tremores no headline
+3. Scroll pelo hero
+4. Scroll por sobre → skills → CTA final
+
+### Padrão técnico obrigatório
+
+```js
+// Desktop recording
+viewport: { width: 1280, height: 720, deviceScaleFactor: 1 }
+// CDP screencast: { format: 'jpeg', quality: 88, everyNthFrame: 1 }
+// ffmpeg vf: scale=1080:-2, pad=1080:1920, color=0x050505
+
+// Mobile recording
+viewport: { width: 390, height: 844, deviceScaleFactor: 2, isMobile: true }
+// ffmpeg vf: scale=1080:1920 force_original_aspect_ratio=decrease, pad=1080:1920
+
+// Cursor premium injetado via JS (dot 14px + ring 34px com glow na cor accent do template)
+// Movimento com easing easeInOutCubic + wobble aleatório ±3px (humanização)
+// Scroll com easeInOutCubic (nunca instant, nunca linear)
+// Output: libx264, preset slow, crf 18, pix_fmt yuv420p, movflags +faststart
+```
+
+### Regras de qualidade — vídeo
+
+- ✅ Cursor sempre visível com glow na cor accent do template
+- ✅ Scroll suave — nunca jump instantâneo
+- ✅ Movimento de cursor com tremor humano (±3px random)
+- ✅ Revelar animações antes de cada cena (`revealAll`)
+- ✅ Pré-carregar lazy images antes de gravar (`preloadImages`)
+- ✅ Desktop pillarbox: barra #050505 acima e abaixo do site
+- ✅ Mobile ocupa a tela inteira (sem barras laterais)
+- ❌ Não usar viewport fullscreen (esconde barras de controle UI)
+- ❌ Não gravar sem injetar cursor — vídeo sem cursor parece robótico
+- ❌ Não pular `preloadImages` — imagens lazy ficam em branco no vídeo
+
+### Adicionar novo template ao script
+
+Ao criar um novo template, adicionar na array `TEMPLATES` em `record_showcase.js`:
+
+```js
+{
+  name: 'NOME-DO-TEMPLATE',
+  file: 'templates/NOME-DO-TEMPLATE/site/index.html',
+  // ou: 'templux-site/demos/NOME-DO-TEMPLATE/index.html'
+  accent: '#HEXCOR',  // cor accent do template (para o glow do cursor)
+  sections: {
+    hero:        '#inicio',      // âncora da seção hero
+    sobre:       '#sobre',       // âncora da seção sobre
+    skills:      '#servicos',    // âncora de serviços/skills/programas
+    depoimentos: '#depoimentos', // âncora de depoimentos
+    cta:         '#contato',     // âncora do CTA final
+  },
+},
 ```
 
 ---
